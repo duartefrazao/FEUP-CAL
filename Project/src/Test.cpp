@@ -203,6 +203,7 @@ void test_floydWarshall() {
 
 }
 
+
 bool runAllTests(int argc, char const *argv[]) {
 	cute::suite s { };
 	s.push_back(CUTE(test_dijkstra));

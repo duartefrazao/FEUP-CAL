@@ -365,8 +365,6 @@ void Graph<T>::floydWarshallShortestPath() {
 	m= newV;
 	next=newNext;
 
-
-
 }
 
 template<class T>
