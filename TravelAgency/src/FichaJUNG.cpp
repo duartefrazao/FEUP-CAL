@@ -8,7 +8,7 @@
 #include <unordered_map>
 #include "Link.h"
 
-void sleepU(int sec){
+void sleepU(int sec) {
 
 #ifdef __linux__
 	sleep(sec);
@@ -17,13 +17,10 @@ void sleepU(int sec){
 #endif
 }
 
-
-void test(std::string nodes, std::string edges)
-{
+void test(std::string nodes, std::string edges) {
 
 	std::unordered_map<int, Location *> locations;
 	Graph<Location, Link> *myGraph = new Graph<Location, Link>();
-
 
 	GraphViewer *gv = new GraphViewer(600, 600, false);
 
@@ -38,83 +35,77 @@ void test(std::string nodes, std::string edges)
 	inFile.open(nodes);
 
 	if (!inFile) {
-	    cerr << "Unable to open file datafile.txt";
-	    exit(1);   // call system to stop
+		cerr << "Unable to open file datafile.txt";
+		exit(1);   // call system to stop
 	}
 
-	std::string   line;
+	std::string line;
 
-	int idNo=0;
-	int X=0;
-	int Y=0;
+	int idNo = 0;
+	int X = 0;
+	int Y = 0;
 
-	while(std::getline(inFile, line))
-	{
-	    std::stringstream linestream(line);
-	    std::string			data;
+	while (std::getline(inFile, line)) {
+		std::stringstream linestream(line);
+		std::string data;
 
-	    linestream >> idNo;
+		linestream >> idNo;
 
-	    std::getline(linestream, data, ';');  // read up-to the first ; (discard ;).
-	    linestream >> X;
-	    std::getline(linestream, data, ';');  // read up-to the first ; (discard ;).
-	    linestream >> Y;
-	    gv->addNode(idNo,X,Y);
+		std::getline(linestream, data, ';'); // read up-to the first ; (discard ;).
+		linestream >> X;
+		std::getline(linestream, data, ';'); // read up-to the first ; (discard ;).
+		linestream >> Y;
+		gv->addNode(idNo, X, Y);
 
-
-	    Location * location = new Location(idNo,X,Y, "");
-	    locations.insert({idNo, location});
-	    myGraph->addVertex(location);
+		Location * location = new Location(idNo, X, Y, "");
+		locations.insert( { idNo, location });
+		myGraph->addVertex(location);
 	}
 
 	inFile.close();
 
-
 	//Ler o ficheiro arestas.txt
 	inFile.open(edges);
 
-		if (!inFile) {
-		    cerr << "Unable to open file datafile.txt";
-		    exit(1);   // call system to stop
-		}
+	if (!inFile) {
+		cerr << "Unable to open file datafile.txt";
+		exit(1);   // call system to stop
+	}
 
-		int idAresta=0;
-		int idNoOrigem=0;
-		int idNoDestino=0;
+	int idAresta = 0;
+	int idNoOrigem = 0;
+	int idNoDestino = 0;
 
-		while(std::getline(inFile, line))
-		{
-		    std::stringstream linestream(line);
-		    std::string data;
+	while (std::getline(inFile, line)) {
+		std::stringstream linestream(line);
+		std::string data;
 
+		linestream >> idAresta;
 
-		    linestream >> idAresta;
+		std::getline(linestream, data, ';'); // read up-to the first ; (discard ;).
+		linestream >> idNoOrigem;
+		std::getline(linestream, data, ';'); // read up-to the first ; (discard ;).
+		linestream >> idNoDestino;
+		gv->addEdge(idAresta, idNoOrigem, idNoDestino, EdgeType::DIRECTED);
 
-		    std::getline(linestream, data, ';');  // read up-to the first ; (discard ;).
-		    linestream >> idNoOrigem;
-		    std::getline(linestream, data, ';');  // read up-to the first ; (discard ;).
-		    linestream >> idNoDestino;
-		    gv->addEdge(idAresta,idNoOrigem,idNoDestino, EdgeType::DIRECTED);
+		Location * locationOrigem = locations.at(idNoOrigem);
+		Location * locationDestino = locations.at(idNoDestino);
+		myGraph->addEdge(locationOrigem, locationDestino,
+				locationOrigem->distance(locationDestino));
+	}
 
-		    Location * locationOrigem = locations.at(idNoOrigem);
-		    Location * locationDestino = locations.at(idNoDestino);
-		    myGraph->addEdge(locationOrigem, locationDestino, locationOrigem->distance(locationDestino));
-		}
+	inFile.close();
 
-		inFile.close();
+	gv->rearrange();
 
+	int mode;
 
-		gv->rearrange();
+	cout << "\n1 - One node to another\n";
+	cout << "2 - Travel starting at one node and passing by a set of nodes\n";
+	cout << "Type of operation: ";
+	std::cin >> mode;
 
-
-		int mode;
-
-		cout << "\n1 - One node to another\n";
-		cout << "2 - Travel starting at one node and passing by a set of nodes\n";
-		cout << "Type of operation: ";
-		std::cin >> mode;
-
-		if (mode == 1){
+	if (mode == 1) {
 
 		int startNodeI, endNodeI;
 		std::cout << "\nStart node index: ";
@@ -123,46 +114,57 @@ void test(std::string nodes, std::string edges)
 		std::cout << "End node index: ";
 		std::cin >> endNodeI;
 
-	    Location * origin = locations.at(startNodeI);
-	    Location * dest = locations.at(endNodeI);
-
+		Location * origin = locations.at(startNodeI);
+		Location * dest = locations.at(endNodeI);
 
 		vector<Location *> path;
 
-
 		int algorithm;
-		std::cout << "\nAlgorithm: "<<std::endl;
-		std::cout << "1 - Dijkstra"<<std::endl;
-		std::cout << "2 - A*"<<std::endl;
+		std::cout << "\nAlgorithm: " << std::endl;
+		std::cout << "1 - Dijkstra" << std::endl;
+		std::cout << "2 - A*" << std::endl;
 		std::cout << "Select: ";
 		std::cin >> algorithm;
 
-		switch(algorithm){
-		case 1: path = myGraph->dijkstra(origin, dest); break;
-		case 2: path = myGraph->aStar(origin, dest); break;
+		switch (algorithm) {
+		case 1:
+			path = myGraph->dijkstra(origin, dest);
+			break;
+		case 2:
+			path = myGraph->aStar(origin, dest);
+			break;
 		}
 
-		for(auto l : path){
+		for (auto l : path) {
 			gv->setVertexColor(l->getId(), "green");
 		}
 		gv->rearrange();
 
+	} else if (mode == 2) {
+		vector<Location*> places;
+		int node = 0;
+		while (true) {
+			cout << "Node: ";
+			cin >> node;
+			if (node == 1000)
+				break;
+			Location * place = locations.at(node);
+			places.push_back(place);
 		}
-		else if (mode ==2){
-
-		}
-
+		vector<Location*> v ;
+		myGraph->heldKarpAlgorithm(places);
+	}
 
 }
 
-void inputTest(std::string &nodes, std::string &edges){
+void inputTest(std::string &nodes, std::string &edges) {
 	int input;
-	std::cout << "1 - Graph 1"<< std::endl;
+	std::cout << "1 - Graph 1" << std::endl;
 	std::cout << "2 - Graph 2" << std::endl;
 	std::cout << "Select graph: ";
 	std::cin >> input;
 
-	switch(input){
+	switch (input) {
 	case 1:
 		nodes = "nos.txt";
 		edges = "arestas.txt";
@@ -171,7 +173,8 @@ void inputTest(std::string &nodes, std::string &edges){
 		nodes = "nos2.txt";
 		edges = "arestas2.txt";
 		break;
-	default :break;
+	default:
+		break;
 	}
 }
 
@@ -179,7 +182,7 @@ int main() {
 	std::string nodes;
 	std::string edges;
 
-	inputTest(nodes,edges);
+	inputTest(nodes, edges);
 	test(nodes, edges);
 	getchar();
 	return 0;

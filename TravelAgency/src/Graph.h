@@ -5,6 +5,7 @@
 #include <limits.h>
 #include <cfloat>
 #include "Location.h"
+#include <map>
 #include <algorithm>
 
 #define INF std::numeric_limits<double>::max()
@@ -22,6 +23,8 @@ class Graph {
 	vector<V *> vertexSet;    // vertex set
 	vector<vector<double>> weights;
 	vector<vector<int>> next;
+	vector<map<vector<V*>, pair<double, vector<V*>>>> hkAuxMemory;
+	V* hkBegin;
 
 public:
 
@@ -42,7 +45,8 @@ public:
 	vector<V *> aStar(V *origin, V *dest);
 
 	//other algorithms
-	double heldKarpAlgorithm(V *origin, vector<V*> dest);
+	vector<V*> heldKarpAlgorithm(vector<V*> dest);
+	pair<double, vector<V*>> heldKarpAlgorithm(V* dest, vector<V*> places);
 };
 
 template<class V, class E>
@@ -151,12 +155,12 @@ void Graph<V, E>::dijkstraShortestPath(V *origin) {
 }
 
 /**************** A STAR ************/
-template <class V, class E>
-bool Graph<V,E>::aStarAlgorithm(V *origin, V *dest) {
+template<class V, class E>
+bool Graph<V, E>::aStarAlgorithm(V *origin, V *dest) {
 
 	MutablePriorityQueue<V> openSet;
 
-	for(auto vertex : vertexSet){
+	for (auto vertex : vertexSet) {
 		vertex->f = INF;
 		vertex->dist = INF;
 		vertex->path = NULL;
@@ -173,23 +177,23 @@ bool Graph<V,E>::aStarAlgorithm(V *origin, V *dest) {
 	start->inOpenSet = true;
 	openSet.insert(start);
 
-	while(!openSet.empty()){
+	while (!openSet.empty()) {
 
 		V * v = openSet.extractMin();
 		v->inClosedSet = true;
 		v->inOpenSet = false;
 		std::cout << "\n\nId: " << v->getId() << std::endl;
-		if(v == end){
+		if (v == end) {
 			return true;
 		}
 
-		for(E edge : v->adj){
+		for (E edge : v->adj) {
 			V * destV = edge.getDest();
 
-			if(destV->inClosedSet)
+			if (destV->inClosedSet)
 				continue;
 
-			if(!destV->inOpenSet){
+			if (!destV->inOpenSet) {
 				destV->dist = v->dist + edge.weight;
 				destV->path = v;
 				destV->updateF(heuristic, end);
@@ -198,7 +202,7 @@ bool Graph<V,E>::aStarAlgorithm(V *origin, V *dest) {
 				continue;
 			}
 
-			if(destV->calculateF(heuristic, end) < destV->f){
+			if (destV->calculateF(heuristic, end) < destV->f) {
 				destV->dist = v->dist + edge.weight;
 				destV->path = v;
 				destV->updateF(heuristic, end);
@@ -333,39 +337,90 @@ vector<V> Graph<V, E>::getfloydWarshallPath(const V &orig,
 
 /*****************TRAVELING SALESMAN PROBLEM ALGORITHMS**********************/
 
-
-/*
 template<class V, class E>
-double Graph<V, E>::heldKarpAlgorithm(V * dest, vector<V*> interm) {
+vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 
+	/* Initializing the auxiliar memory structure */
 
-
-	 //Computing all pairs shortest path
-	 this->floydWarshallShortestPath();
-
-
-	if (interm.size() == 1) {
-
-		return weights[dest->index][interm[0]->index];
+	this->hkAuxMemory.clear();
+	map<vector<V*>, pair<double, vector<V*>>> m;
+	for (int i = 0; i < vertexSet.size(); i++) {
+		hkAuxMemory.push_back(m);
 	}
 
-	else {
-		//auxiliar variables
-		double minWeight = INF;
-		unsigned int leadingVertex = 0;
-		vector<V*> auxDest;
-		V* auxOrigin;
+	this->floydWarshallShortestPath();
 
-		for (unsigned int i = 0; i < interm.size(); i++) {
-			auxDest = dest;
-			auxDest.erase(auxDest.begin() + i);
-			double result = heldKarpAlorithm(interm.at(i), auxDest);
-			minWeight = (result < minWeight) ? result : minWeight;
+	for (int i = 0; i < dest.size(); i++) {
+		hkAuxMemory[i][ { }].first = weights[dest.at(0)->index][i];
+	}
+
+	//this->hkAuxMemory = vector<map<vector<V*>, pair<double, vector<V*>>>>(dest.size(), m);
+	vector<V*> copyDest = dest;
+	copyDest.erase(copyDest.begin());
+	hkBegin = dest.at(0);
+
+	pair<double, vector<V*>> p = this->heldKarpAlgorithm(hkBegin, copyDest);
+
+	if (p.first == INF)
+	cout << "O Percurso escolhido é impossível" << endl;
+	else
+	{
+		cout << "O peso de todo o percurso é: " << p.first << endl;
+		cout << "O percurso é: ";
+		for (int i = 0; i < p.second.size() -1; i++) {
+			cout << p.second.at(i)->index << " - ";
+
 		}
-
-		return minWeight;
+		cout << p.second.at(p.second.size()-1)->index;
 	}
 
 }
 
-*/
+template<class V, class E>
+pair<double, vector<V*>> Graph<V, E>::heldKarpAlgorithm(V* dest,
+		vector<V*> places) {
+	pair<double, vector<V*>> p;
+
+	try {
+		p = hkAuxMemory[dest->index].at(places);
+
+	} catch (out_of_range &e) {
+		if (places.empty()) {
+
+			p.first = weights[hkBegin->index][dest->index];
+			p.second.push_back(hkBegin);
+			p.second.push_back(dest);
+		} else {
+			pair<double, vector<V*>> auxResult;
+			int bestNextLocation = 0;
+			double bestWeight = INF;
+
+			for (int i = 0; i < places.size(); i++) {
+
+				vector<V*> nextPlaces = places;
+				V* nextDest = nextPlaces.at(i);
+				if (nextPlaces.size() > 1)
+					nextPlaces.erase(nextPlaces.begin() + i);
+				else
+					nextPlaces = {};
+				auxResult = heldKarpAlgorithm(nextDest, nextPlaces);
+				double tempWeight = weights[hkBegin->index][dest->index]
+						+ auxResult.first;
+
+				if (tempWeight < bestWeight) {
+					bestNextLocation = i;
+					bestWeight = tempWeight;
+				}
+
+			}
+			vector<V*> finalPath = auxResult.second;
+			finalPath.push_back(dest);
+			//initializing p
+			p.first = bestWeight;
+			p.second = finalPath;
+
+		}
+	}
+	//the wanted pair is already in the data structure
+	return p;
+}
