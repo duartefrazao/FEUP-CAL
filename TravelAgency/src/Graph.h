@@ -255,16 +255,16 @@ vector<V *> Graph<V, E>::dijkstra(V *origin, V *dest) {
 template<class V, class E>
 void Graph<V, E>::floydWarshallShortestPath() {
 
-	vector<double> line(vertexSet.size(), INT_MAX);
+	vector<double> line(vertexSet.size(), INF);
 	vector<vector<double>> newV(vertexSet.size(), line);
 
-	vector<int> lineV(vertexSet.size(), NULL);
+	vector<int> lineV(vertexSet.size(), INT_MAX);
 	vector<vector<int>> newNext(vertexSet.size(), lineV);
 
 	//Initialize array
 	for (int i = 0; i < vertexSet.size(); i++) {
 		for (int j = 0; j < vertexSet.size(); j++) {
-			j == i ? newV.at(i).at(j) = 0 : newV.at(i).at(j) = INT_MAX;
+			j == i ? newV.at(i).at(j) = 0 : newV.at(i).at(j) = INF;
 		}
 	}
 
@@ -283,8 +283,8 @@ void Graph<V, E>::floydWarshallShortestPath() {
 				if (newV.at(i).at(j)
 						> newV.at(i).at(k)
 								+ newV.at(k).at(
-										j) && newV.at(i).at(k) != INT_MAX
-										&& newV.at(k).at(j) != INT_MAX) {
+										j) && newV.at(i).at(k) != INF
+										&& newV.at(k).at(j) != INF) {
 					newV.at(i).at(j) = newV.at(i).at(k) + newV.at(k).at(j);
 					newNext.at(i).at(j) = newNext.at(i).at(k);
 				}
@@ -296,20 +296,18 @@ void Graph<V, E>::floydWarshallShortestPath() {
 	next = newNext;
 
 	/*
-	 *
-	 * for tests
-	 for (int i = 0; i < weights.size(); i++) {
-	 cout << vertexSet.at(i)->getId();
-	 for (int j = 0; j < weights[0].size(); j++) {
-	 if (weights[i][j] == INT_MAX)
-	 cout << "INF" << " ";
-	 else cout << weights[i][j] <<  " ";
-	 }
-	 cout << endl;
-	 }
-
-	 */
-
+	// for tests
+	for (int i = 0; i < weights.size(); i++) {
+		cout << vertexSet.at(i)->getId();
+		for (int j = 0; j < weights[0].size(); j++) {
+			if (weights[i][j] == INF)
+				cout << "INF" << " ";
+			else
+				cout << weights[i][j] << " ";
+		}
+		cout << endl;
+	}
+*/
 }
 
 template<class V, class E>
@@ -321,7 +319,7 @@ vector<V> Graph<V, E>::getfloydWarshallPath(const V &orig,
 
 	vector<int> path;
 
-	if (next.at(oIndex).at(dIndex) == NULL)
+	if (next.at(oIndex).at(dIndex) == INT_MAX)
 		return path;
 
 	path.push_back(oIndex + 1);
@@ -404,7 +402,7 @@ pair<double, vector<V*>> Graph<V, E>::heldKarpAlgorithm(V* dest,
 				else
 					nextPlaces = {};
 				auxResult = heldKarpAlgorithm(nextDest, nextPlaces);
-				double tempWeight = weights[hkBegin->index][dest->index]
+				double tempWeight = weights[nextDest->index][dest->index]
 						+ auxResult.first;
 
 				if (tempWeight < bestWeight) {
