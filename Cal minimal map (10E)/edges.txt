@@ -1,0 +1,9 @@
+13278020;Rua do Infante Dom Henrique;True
+26207858;Rua da Fonte Taurina;False
+31261920;Rua da Reboleira;False
+39679893;Cais da Estiva;False
+39679967;Rua do Cais da Ribeira;True
+211120097;Largo do Terreiro;False
+211122347;Praça da Ribeira;False
+211127713;Praça da Ribeira;False
+332154474;;False
