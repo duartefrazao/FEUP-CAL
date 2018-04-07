@@ -40,7 +40,7 @@ public:
 	void dijkstraShortestPath(V *s);
 	bool aStarAlgorithm(V *origin, V *dest);
 	void floydWarshallShortestPath();
-	vector<V> getfloydWarshallPath(const V &origin, const V &dest) const;
+	vector<int> getfloydWarshallPath(const V &origin, const V &dest) const;
 	vector<V *> dijkstra(V *origin, V *dest);
 	vector<V *> aStar(V *origin, V *dest);
 
@@ -282,9 +282,9 @@ void Graph<V, E>::floydWarshallShortestPath() {
 			for (int j = 0; j < vertexSet.size(); j++) {
 				if (newV.at(i).at(j)
 						> newV.at(i).at(k)
-								+ newV.at(k).at(
-										j) && newV.at(i).at(k) != INF
-										&& newV.at(k).at(j) != INF) {
+						+ newV.at(k).at(
+								j) && newV.at(i).at(k) != INF
+						&& newV.at(k).at(j) != INF) {
 					newV.at(i).at(j) = newV.at(i).at(k) + newV.at(k).at(j);
 					newNext.at(i).at(j) = newNext.at(i).at(k);
 				}
@@ -296,39 +296,37 @@ void Graph<V, E>::floydWarshallShortestPath() {
 	next = newNext;
 
 	/*
-	// for tests
-	for (int i = 0; i < weights.size(); i++) {
-		cout << vertexSet.at(i)->getId();
-		for (int j = 0; j < weights[0].size(); j++) {
-			if (weights[i][j] == INF)
-				cout << "INF" << " ";
-			else
-				cout << weights[i][j] << " ";
-		}
-		cout << endl;
-	}
-*/
+	 // for tests
+	 for (int i = 0; i < weights.size(); i++) {
+	 cout << vertexSet.at(i)->getId();
+	 for (int j = 0; j < weights[0].size(); j++) {
+	 if (weights[i][j] == INF)
+	 cout << "INF" << " ";
+	 else
+	 cout << weights[i][j] << " ";
+	 }
+	 cout << endl;
+	 }
+	 */
 }
 
 template<class V, class E>
-vector<V> Graph<V, E>::getfloydWarshallPath(const V &orig,
+vector<int> Graph<V, E>::getfloydWarshallPath(const V &orig,
 		const V &dest) const {
 
-	int oIndex = this->findVertex(orig)->index;
-	int dIndex = this->findVertex(dest)->index;
-
+	int oIndex = orig.index;
+	int dIndex = dest.index;
 	vector<int> path;
 
 	if (next.at(oIndex).at(dIndex) == INT_MAX)
 		return path;
 
-	path.push_back(oIndex + 1);
+	path.push_back(oIndex);
 
 	while (oIndex != dIndex) {
 		oIndex = next.at(oIndex).at(dIndex);
-		path.push_back(oIndex + 1);
+		path.push_back(oIndex);
 	}
-
 	return path;
 
 }
@@ -341,23 +339,37 @@ vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 	/* Initializing the auxiliar memory structure */
 
 	this->hkAuxMemory.clear();
-	map<vector<V*>, pair<double, vector<V*>>> m;
-	for (int i = 0; i < vertexSet.size(); i++) {
-		hkAuxMemory.push_back(m);
-	}
-
+	this->hkAuxMemory = vector<map<vector<V*>, pair<double, vector<V*>>>>(
+			vertexSet.size());
 	this->floydWarshallShortestPath();
-
-	for (int i = 0; i < dest.size(); i++) {
-		hkAuxMemory[i][ { }].first = weights[dest.at(0)->index][i];
-	}
-
-	//this->hkAuxMemory = vector<map<vector<V*>, pair<double, vector<V*>>>>(dest.size(), m);
-	vector<V*> copyDest = dest;
-	copyDest.erase(copyDest.begin());
 	hkBegin = dest.at(0);
 
+	for (int i = 1; i < dest.size(); i++) {
+		hkAuxMemory[i][ { }].first = weights[dest.at(0)->index][i];
+		hkAuxMemory[i][ {}].second = {dest.at(i), hkBegin};
+	}
+
+	vector<V*> copyDest = dest;
+	copyDest.erase(copyDest.begin());
+
 	pair<double, vector<V*>> p = this->heldKarpAlgorithm(hkBegin, copyDest);
+	vector<V*> result = p.second;
+	vector<V*> fullPath;
+	int endResult = result.size()-1;
+	for (int i = 0; i < endResult; i++) {
+		fullPath.push_back(result.at(i));
+		vector<int> intermediate = this->getfloydWarshallPath(*result.at(i),
+				*result.at(i + 1));
+		if (intermediate.size() > 2) {
+			int interEnd = intermediate.size() -1;
+			for (int j = 1; j < interEnd; j++) {
+				int index = intermediate.at(j);
+				fullPath.push_back(vertexSet.at(index));
+			}
+		}
+
+	}
+	fullPath.push_back(result.at(endResult));
 
 	if (p.first == INF)
 	cout << "O Percurso escolhido é impossível" << endl;
@@ -365,11 +377,10 @@ vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 	{
 		cout << "O peso de todo o percurso é: " << p.first << endl;
 		cout << "O percurso é: ";
-		for (int i = 0; i < p.second.size() -1; i++) {
-			cout << p.second.at(i)->index << " - ";
+		for (int i = 0; i < fullPath.size(); i++) {
+			cout << fullPath.at(i)->index << " - ";
 
 		}
-		cout << p.second.at(p.second.size()-1)->index;
 	}
 
 }
@@ -384,41 +395,43 @@ pair<double, vector<V*>> Graph<V, E>::heldKarpAlgorithm(V* dest,
 
 	} catch (out_of_range &e) {
 		if (places.empty()) {
-
 			p.first = weights[hkBegin->index][dest->index];
-			p.second.push_back(hkBegin);
-			p.second.push_back(dest);
+			p.second.insert(p.second.begin(), hkBegin);
+			p.second.insert(p.second.begin(), dest);
+
 		} else {
 			pair<double, vector<V*>> auxResult;
-			int bestNextLocation = 0;
+			vector<V*> bestPath;
 			double bestWeight = INF;
 
 			for (int i = 0; i < places.size(); i++) {
 
 				vector<V*> nextPlaces = places;
 				V* nextDest = nextPlaces.at(i);
-				if (nextPlaces.size() > 1)
-					nextPlaces.erase(nextPlaces.begin() + i);
-				else
-					nextPlaces = {};
+				nextPlaces.erase(nextPlaces.begin() + i);
 				auxResult = heldKarpAlgorithm(nextDest, nextPlaces);
-				double tempWeight = weights[nextDest->index][dest->index]
+				double tempWeight = weights[dest->index][nextDest->index]
 						+ auxResult.first;
 
 				if (tempWeight < bestWeight) {
-					bestNextLocation = i;
+					bestPath = auxResult.second;
 					bestWeight = tempWeight;
 				}
 
 			}
-			vector<V*> finalPath = auxResult.second;
-			finalPath.push_back(dest);
+			vector<V*> finalPath = bestPath;
+			finalPath.insert(finalPath.begin(), dest);
+
 			//initializing p
 			p.first = bestWeight;
 			p.second = finalPath;
 
+			//optimization
+			hkAuxMemory[dest->index][places] = p;
+
 		}
 	}
-	//the wanted pair is already in the data structure
+
+//the wanted pair is already in the data structure
 	return p;
 }
