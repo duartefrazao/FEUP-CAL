@@ -104,6 +104,7 @@ void test(std::string nodes, std::string edges) {
 	cout << "2 - Travel starting at one node and passing by a set of nodes\n";
 	cout << "Type of operation: ";
 	std::cin >> mode;
+	vector<Location *> path;
 
 	if (mode == 1) {
 
@@ -116,8 +117,6 @@ void test(std::string nodes, std::string edges) {
 
 		Location * origin = locations.at(startNodeI);
 		Location * dest = locations.at(endNodeI);
-
-		vector<Location *> path;
 
 		int algorithm;
 		std::cout << "\nAlgorithm: " << std::endl;
@@ -135,11 +134,6 @@ void test(std::string nodes, std::string edges) {
 			break;
 		}
 
-		for (auto l : path) {
-			gv->setVertexColor(l->getId(), "green");
-		}
-		gv->rearrange();
-
 	} else if (mode == 2) {
 		vector<Location*> places;
 		int node = 0;
@@ -151,9 +145,13 @@ void test(std::string nodes, std::string edges) {
 			Location * place = locations.at(node);
 			places.push_back(place);
 		}
-		vector<Location*> v ;
-		myGraph->heldKarpAlgorithm(places);
+		path = myGraph->heldKarpAlgorithm(places);
 	}
+
+	for (auto l : path) {
+				gv->setVertexColor(l->getId(), "green");
+			}
+			gv->rearrange();
 
 }
 

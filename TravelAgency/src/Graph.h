@@ -355,6 +355,7 @@ vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 	pair<double, vector<V*>> p = this->heldKarpAlgorithm(hkBegin, copyDest);
 	vector<V*> result = p.second;
 	vector<V*> fullPath;
+	if (p.first == INF) return fullPath;
 	int endResult = result.size()-1;
 	for (int i = 0; i < endResult; i++) {
 		fullPath.push_back(result.at(i));
@@ -370,18 +371,7 @@ vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 
 	}
 	fullPath.push_back(result.at(endResult));
-
-	if (p.first == INF)
-	cout << "O Percurso escolhido é impossível" << endl;
-	else
-	{
-		cout << "O peso de todo o percurso é: " << p.first << endl;
-		cout << "O percurso é: ";
-		for (int i = 0; i < fullPath.size(); i++) {
-			cout << fullPath.at(i)->index << " - ";
-
-		}
-	}
+	return fullPath;
 
 }
 
