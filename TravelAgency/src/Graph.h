@@ -340,13 +340,16 @@ vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 
 	this->hkAuxMemory.clear();
 	this->hkAuxMemory = vector<map<vector<V*>, pair<double, vector<V*>>>>(
-			vertexSet.size());
+			dest.size());
 	this->floydWarshallShortestPath();
 	hkBegin = dest.at(0);
+
+	dest.at(0)->auxIndex = 0;
 
 	for (int i = 1; i < dest.size(); i++) {
 		hkAuxMemory[i][ { }].first = weights[dest.at(0)->index][i];
 		hkAuxMemory[i][ {}].second = {dest.at(i), hkBegin};
+		dest.at(i)->auxIndex = i;
 	}
 
 	vector<V*> copyDest = dest;
@@ -381,7 +384,7 @@ pair<double, vector<V*>> Graph<V, E>::heldKarpAlgorithm(V* dest,
 	pair<double, vector<V*>> p;
 
 	try {
-		p = hkAuxMemory[dest->index].at(places);
+		p = hkAuxMemory[dest->auxIndex].at(places);
 
 	} catch (out_of_range &e) {
 		if (places.empty()) {
@@ -417,7 +420,7 @@ pair<double, vector<V*>> Graph<V, E>::heldKarpAlgorithm(V* dest,
 			p.second = finalPath;
 
 			//optimization
-			hkAuxMemory[dest->index][places] = p;
+			hkAuxMemory[dest->auxIndex][places] = p;
 
 		}
 	}

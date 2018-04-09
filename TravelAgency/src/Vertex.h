@@ -11,7 +11,7 @@ template <class E>
 class Vertex {
 	static int counter;
 	const int index;
-
+	int auxIndex;
 
 	bool inClosedSet;         	 	// auxiliary field
 	bool inOpenSet;
