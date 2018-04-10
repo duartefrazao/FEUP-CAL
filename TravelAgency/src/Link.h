@@ -12,7 +12,7 @@ class Link : public Edge<Location>{
 	std::string transport;
 
 public:
-	Link(Location *d, double w);
+	Link(Location *d, double w, int id);
 	virtual ~Link();
 	int getId();
 };

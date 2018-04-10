@@ -16,21 +16,18 @@ class Vertex {
 	bool inClosedSet;         	 	// auxiliary field
 	bool inOpenSet;
 
+	int queueIndex = 0; 		// required by MutablePriorityQueue
+
+protected:
 	double dist;
 	double f;
 	double h;
 	double g;
-
-	Vertex<E> *path = NULL;
-
-	int queueIndex = 0; 		// required by MutablePriorityQueue
-
-protected:
 	void addEdge(Vertex<E> *dest, double w);
 	std::vector<E> adj;  // outgoing edgess
 
 public:
-
+	Vertex<E> *path = NULL;
 	Vertex();
 	bool operator<(Vertex<E> & vertex) const;	// required by MutablePriorityQueue
 	double getDist() const;

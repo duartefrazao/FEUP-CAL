@@ -11,7 +11,7 @@
 
 #include <vector>
 #include <cstdio>
-
+#include <iostream>
 
 using namespace std;
 
@@ -69,6 +69,9 @@ void MutablePriorityQueue<T>::insert(T *x) {
 template <class T>
 void MutablePriorityQueue<T>::heapifyUp(unsigned i) {
 	auto x = H[i];
+
+	if(parent(i) == 0) return;
+
 	while (i > 1 && *x < *H[parent(i)]) {
 		set(i, H[parent(i)]);
 		i = parent(i);

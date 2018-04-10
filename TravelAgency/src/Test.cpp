@@ -20,14 +20,14 @@
 //}
 //
 //
-//void geneateRandomGridGraph(int n, Graph<pair<int,int>> & g) {
+//void geneateRandomGridGraph(int n, Graph<pair<int,int>, Edge<pair<int,int>>> & g) {
 //    std::random_device rd;
 //    std::mt19937 gen(rd());
 //    std::uniform_int_distribution<int> dis(1, n);
 //
 //	for (int i = 0; i < n; i++)
 //		for (int j = 0; j < n; j++)
-//			g.addVertex(make_pair(i,j));
+//			g.addVertex(new Vertex<pair<int,int>>(make_pair(i,j)));
 //
 //	for (int i = 0; i < n; i++)
 //		for (int j = 0; j < n; j++)

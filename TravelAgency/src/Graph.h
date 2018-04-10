@@ -14,7 +14,6 @@ template<class T>
 double heuristic(Vertex<T> * v1, Vertex<T> *v2) {
 	Location *t1 = static_cast<Location*>(v1);
 	Location *t2 = static_cast<Location*>(v2);
-
 	return t1->distance(t2);
 }
 
@@ -32,7 +31,7 @@ public:
 	V *findVertex(const V &in) const;
 	bool inVertexSet(V *in) const;
 	bool addVertex(V *in);
-	bool addEdge(V *sourc, V *dest, double w);
+	bool addEdge(V *sourc, V *dest, double w, unsigned long int id);
 	int getNumVertex() const;
 	vector<V *> getVertexSet() const;
 
@@ -47,6 +46,7 @@ public:
 	//other algorithms
 	vector<V*> heldKarpAlgorithm(vector<V*> dest);
 	pair<double, vector<V*>> heldKarpAlgorithm(V* dest, vector<V*> places);
+	//vector<V*> Graph<V, E>::opt2(vector<V*> dest);
 };
 
 template<class V, class E>
@@ -101,11 +101,11 @@ bool Graph<V, E>::addVertex(V *in) {
  * Returns true if successful, and false if the source or destination vertex does not exist.
  */
 template<class V, class E>
-bool Graph<V, E>::addEdge(V *sourc, V *dest, double w) {
+bool Graph<V, E>::addEdge(V *sourc, V *dest, double w, unsigned long int id) {
 	if (!inVertexSet(sourc) || !inVertexSet(dest))
 		return false;
 
-	sourc->addEdge(dest, w);
+	sourc->addEdge(dest, w, id);
 	return true;
 }
 
@@ -113,43 +113,48 @@ bool Graph<V, E>::addEdge(V *sourc, V *dest, double w) {
 
 template<class V, class E>
 void Graph<V, E>::dijkstraShortestPath(V *origin) {
-	MutablePriorityQueue<V> g;
 
-	for (V * v : this->vertexSet) {
-		v->dist = DBL_MAX;
-		v->path = NULL;
+	for(auto it = vertexSet.begin(); it != vertexSet.end(); ++it){
+		(*it)->dist = INF;
+		(*it)->inClosedSet = false;
+		(*it)->path = NULL;
 	}
 
-	V * node = origin;
+	V * s = origin;
 
-	node->dist = 0;
-	g.insert(node);
+	if(s == NULL) return;
 
-	while (!g.empty()) {
-		node = g.extractMin();
+	MutablePriorityQueue<V> q;
 
-		node->inClosedSet = true;
+	s->dist = 0;
+	q.insert(s);
 
-		for (E e : node->adj) {
-			//Past distance
-			double d = e.dest->dist;
+	V * v;
 
-			if (node->dist + e.weight < d) {
+	while(!q.empty()){
 
-				//New calculated distance
-				double newT = node->dist + e.weight;
+		v = q.extractMin();
 
-				e.dest->dist = newT;
-				e.dest->path = node;
+		for(auto it = v->adj.begin(); it != v->adj.end(); ++it){
 
-				//Se ainda não estava na fila insere-se
-				if (d == DBL_MAX)
-					g.insert(e.dest);
-				else
-					g.decreaseKey(e.dest);
+			double newDist = v->dist + it->weight;
+
+			if(newDist < it->dest->dist){
+				it->dest->dist = newDist;
+				it->dest->path = v;
+
+
+				if(it->dest->inClosedSet){
+					q.decreaseKey(it->dest);
+				}
+				else{
+					q.insert(it->dest);
+					it->dest->inClosedSet = true;
+				}
+
 			}
-
 		}
+
 	}
 
 }
@@ -169,8 +174,8 @@ bool Graph<V, E>::aStarAlgorithm(V *origin, V *dest) {
 	}
 
 	V * end = dest;
-
 	V * start = origin;
+
 	start->dist = 0;
 	start->updateF(heuristic, end);
 	start->inClosedSet = false;
@@ -180,16 +185,16 @@ bool Graph<V, E>::aStarAlgorithm(V *origin, V *dest) {
 	while (!openSet.empty()) {
 
 		V * v = openSet.extractMin();
+//		std::cerr << "Id: " << v->getId()<< std::endl;
 		v->inClosedSet = true;
 		v->inOpenSet = false;
-		std::cout << "\n\nId: " << v->getId() << std::endl;
 		if (v == end) {
 			return true;
 		}
 
 		for (E edge : v->adj) {
 			V * destV = edge.getDest();
-
+//			std::cerr << "IdA: " << destV->getId() << std::endl;
 			if (destV->inClosedSet)
 				continue;
 
@@ -235,8 +240,8 @@ vector<V *> Graph<V, E>::aStar(V *origin, V *dest) {
 
 template<class V, class E>
 vector<V *> Graph<V, E>::dijkstra(V *origin, V *dest) {
-	this->dijkstraShortestPath(origin);
 
+	this->dijkstraShortestPath(origin);
 	vector<V *> res;
 	V * v = dest;
 

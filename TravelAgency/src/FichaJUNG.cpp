@@ -57,7 +57,7 @@ void test(std::string nodes, std::string edges) {
 		linestream >> Y;
 		gv->addNode(idNo, X, Y);
 
-		Location * location = new Location(idNo, X, Y, "");
+		Location * location = new Location(idNo, X, Y, X, Y, "");
 		locations.insert( { idNo, location });
 		myGraph->addVertex(location);
 	}
@@ -91,7 +91,7 @@ void test(std::string nodes, std::string edges) {
 		Location * locationOrigem = locations.at(idNoOrigem);
 		Location * locationDestino = locations.at(idNoDestino);
 		myGraph->addEdge(locationOrigem, locationDestino,
-				locationOrigem->distance(locationDestino));
+				locationOrigem->distance(locationDestino), idAresta);
 	}
 
 	inFile.close();
@@ -178,12 +178,12 @@ void inputTest(std::string &nodes, std::string &edges) {
 	}
 }
 
-int main() {
-	std::string nodes;
-	std::string edges;
-
-	inputTest(nodes, edges);
-	test(nodes, edges);
-	getchar();
-	return 0;
-}
+//int main() {
+//	std::string nodes;
+//	std::string edges;
+//
+//	inputTest(nodes, edges);
+//	test(nodes, edges);
+//	getchar();
+//	return 0;
+//}
