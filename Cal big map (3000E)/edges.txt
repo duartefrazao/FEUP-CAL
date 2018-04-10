@@ -1,0 +1,3733 @@
+8366889;Rua de Ramalho Ortigão;False
+8366893;Rua da Conceição;False
+8366896;Rua de José Falcão;False
+8366901;Rua de Avis;False
+8367054;Rua da Maternidade;False
+8367055;Rua do Rosário;False
+8367058;Rua do Breiner;False
+8367068;Praça da República;False
+8367069;Rua Álvares Cabral;False
+8367070;Rua dos Bragas;False
+8367072;;False
+8367073;Rua da Boa Hora;False
+8367074;Rua do Padre Cruz;False
+8367089;Rua de Carlos Alberto;True
+8367092;Rua da Boavista;False
+8367093;Rua da Regeneração;False
+8367098;Rua do Alferes Malheiro;False
+8367103;Rua de Fernandes Tomás;False
+8367104;Rua do Bonjardim;False
+8367114;Rua da Firmeza;False
+8367118;Rua da Alegria;False
+8367133;Rua Dom Agostinho de Jesus e Sousa;False
+8367143;Rua de Rodolfo de Araújo;False
+8367147;Rua Doutor Alves da Veiga;False
+8367153;Rua das Carvalheiras;False
+8367154;Rua da Escola Normal;False
+8367155;Rua Santa Catarina;False
+8367160;Rua Dom João IV;False
+8367164;Travessa de Anselmo Braancamp;False
+12296516;Rua do Ouro;True
+12297710;;False
+12297977;;False
+12298305;Via Panorâmica;False
+12298717;Viaduto do Cais das Pedras;True
+12300169;Rua Ferreira Borges;False
+12300807;Ponte da Arrábida;False
+12543090;Radial de Gondomar;False
+12543115;Radial de Gondomar;False
+12543140;;False
+12543151;;False
+12543154;;False
+12543217;;False
+12543263;;False
+12543322;;False
+12543642;;False
+12543749;;False
+12543986;Rua Conde de Silva Monteiro;False
+12544130;Rua da Levada;True
+12544276;Estrada da Circunvalação;False
+12544650;Túnel da Ribeira;True
+13263613;Rua de Carlos Malheiro Dias;False
+13265074;Rua da Constituição;False
+13268415;Rua de Carlos Malheiro Dias;False
+13277357;Alameda de Basilio Teles;True
+13278020;Rua do Infante Dom Henrique;True
+13278159;Rua Clube Fluvial Portuense;True
+13278787;Avenida José Domingues dos Santos;False
+13530808;;False
+13702685;Rua de João Grave;False
+13702711;Rua de António Bessa Leite;False
+13702954;;False
+13703039;Via de Cintura Interna;False
+13703046;Via de Cintura Interna;False
+13703054;Via de Cintura Interna;False
+13703057;Via de Cintura Interna;False
+13703302;;False
+13703336;;False
+13703402;;False
+13703488;;False
+13704034;;False
+13704086;;False
+13712233;;False
+13712407;;False
+13712456;;False
+13712631;;False
+13712762;;False
+13712770;;False
+13712830;Rua de Grijó;True
+13713599;;True
+13713693;;False
+13713704;;False
+13713710;;False
+13713756;;False
+13715172;Rua de Nossa Senhora de Fátima;True
+13715388;Rua de Latino Coelho;False
+13715562;Rua de João Pedro Ribeiro;False
+13716129;Praça do Marquês de Pombal;False
+13716160;Praça do Marquês de Pombal;False
+13716624;Praça de Teixeira de Pascoais;False
+13797599;Rua de Antero de Quental;True
+13800268;Rua de Diogo Botelho;False
+13800389;Rua do Campo Alegre;False
+13800986;Rua da Piedade;False
+13801323;Rua de Dom Manuel II;False
+13801868;Rua de Alberto Aires de Gouveia;False
+13802005;Rua da Restauração;False
+13836129;;False
+13836474;Rua das Musas;False
+13848026;Rua de Pedro Olaio;False
+13848099;Rua de Pedro Olaio;False
+13848119;Rua de Grijó;False
+13848351;Túnel do Campo Alegre;False
+13848683;Rua de Entre Campos;False
+13848688;Via Panorâmica;False
+13848825;Praça do Bom Sucesso;False
+13848836;Praça do Bom Sucesso;False
+13849075;;False
+13849088;Rua Arquitecto Marques da Silva;False
+13854847;Avenida da Boavista;False
+13854848;Avenida da Boavista;False
+14326174;Rua do Bom Sucesso;False
+14326205;Rua Gonçalo Sampaio;True
+14326256;Largo de Ferreira Lapa;False
+14326258;Praça do Bom Sucesso;False
+14326464;Rua de São Filipe de Nery;False
+14326487;Rua Doutor Ferreira da Silva;True
+14326493;Campo dos Mártires da Pátria;False
+14326558;Rua dos Clérigos;False
+14326572;Rua Heróis e Mártires de Angola;False
+14326733;Rua de Clemente Meneres;False
+14327260;Rua das Fontainhas;False
+14327274;;False
+14327318;Rua de Alexandre Herculano;False
+14327351;Rua de Alexandre Herculano;False
+14327438;Avenida de Rodrigues de Freitas;False
+14327505;Avenida de Rodrigues de Freitas;True
+14327522;Rua Dom João IV;False
+14327545;Rua de Santo Ildefonso;False
+14327867;Praça dos Poveiros;False
+14327868;Rua do Campinho;False
+14327876;Rua de Entreparedes;False
+14328357;Rua Santo Ildefonso;False
+14328446;Rua de Fernandes Tomás;False
+14328611;Campo 24 de Agosto;False
+14329027;Rua Moreira da Assunção;False
+14329062;Rua de Santa Helena;False
+14329124;Largo da Lapa;False
+14332819;Praça da Rainha Dona Amélia;False
+14332849;Rua dos Navegantes;False
+14332900;Rua de Gil Vicente;False
+14333264;Rua Paula Vicente;False
+14333276;Rua Doutor Carlos Cal Brandão;False
+14333321;Rua de Jorge Viterbo Ferreira;False
+14333465;Rua Cândido dos Reis;False
+14333474;Rua da Galeria de Paris;False
+14333500;Rua Arquitecto Nicolau Nasoni;False
+14333733;Rua Chã;False
+14333888;Rua do Bonjardim;False
+14333954;Rua do Morgado de Mateus;False
+14333980;Rua do Visconde de Bóbeda;True
+14333991;Rua do Barão de São Cosme;False
+14334003;Rua do Duque da Terceira;False
+14334037;Rua de São Victor;False
+14334057;;True
+14334086;Rua do Duque de Palmela;False
+14334141;Rua do Conde de Ferreira;False
+14334161;Largo Soares dos Reis;False
+14334228;Praça das Flores;False
+14334234;Avenida de Camilo;False
+14334249;Rua de António Granjo;False
+14334291;Rua de António Carneiro;False
+14334358;Rua Cardeal Dom Américo;False
+14334376;Travessa de Fernão de Magalhães;False
+14334429;Rua de Anselmo Braamcamp;False
+23393876;Rua do Major David Magno;False
+25410272;Estrada da Circunvalação;False
+25410287;Rotunda Manuel Pinto de Azevedo Júnior;False
+25410297;;True
+25410462;Avenida de Paiva Couceiro;False
+25410468;Avenida de Paiva Couceiro;False
+25410493;Avenida José Domingues dos Santos;False
+25410513;Rotunda Artur Cupertino de Miranda;False
+25410521;Rua Luís de Camões;False
+25700630;Rua de Olivença;False
+26119759;Rua de Santa Catarina;False
+26119844;Praça Guilherme Gomes Fernandes;False
+26119862;Rua Doutor Tiago de Almeida;False
+26119880;Túnel dos Almadas;False
+26119900;Rua Elísio de Melo;False
+26119992;Rua Dom Pedro V;True
+26207695;Rua de Dom João I;False
+26207784;Rua de Trás;False
+26207794;Rua da Vitória;False
+26207858;Rua da Fonte Taurina;False
+26207885;Rua de O Comércio do Porto;False
+26207889;Rua da Bolsa;False
+26207896;Rua de São Francisco;False
+26735732;;False
+27149272;Avenida de Fernão de Magalhães;False
+27149317;Rua do Gólgota;False
+27149319;Rua da Piedade;False
+27149321;;False
+27292882;Rua da Alegria;False
+27292930;Praça Doutor Francisco Sá Carneiro;False
+27292953;Rua de Oliveira Martins;False
+27292961;Rua de João Ramalho;False
+27293098;Rua de Vasco de Lobeira;False
+27293190;Travessa das Antas;False
+27293205;Rua Manuel Carqueja;False
+27293217;Rua de Francisco Carqueja;False
+27293224;Rua Bento Carqueja;False
+27293235;Rua do Conde de Burnay;False
+27293261;Rua Cunha Espinheira;False
+27293272;Rua Doutor Alberto de Aguiar;False
+27293276;Rua Câmara Pestana;False
+27293302;Rua da Póvoa;False
+27293318;Rua da Bataria;False
+28193881;Rua Professor Vicente José de Carvalho;False
+28193886;Rua de Clemente Meneres;False
+28193999;Rua de Monchique;True
+28394276;Rua de António Cardoso;False
+28394279;Rua da Venezuela;False
+28394284;Rua da Venezuela;False
+28593894;Rua de Serralves;False
+28618235;Rua das Taipas;False
+28618311;;False
+28618312;Rua de Diogo Botelho;False
+28618313;Rua de António Bessa Leite;True
+28618362;Rua da Meditação;False
+28996911;Rua Guerra Junqueiro;False
+29036532;;False
+29036533;;False
+29036535;;False
+29036536;;False
+29036539;;False
+29036540;;False
+29036541;;False
+29036542;;False
+29036543;;False
+29036544;;False
+29036545;;False
+29036546;;False
+29036547;;False
+29036549;;False
+29036551;;False
+29036553;;False
+29036554;;False
+29036555;;False
+30405423;Rua da Torrinha;False
+30405489;Rua Joaquim de Vasconcelos;False
+30405504;Rua da Igreja de Cedofeita;False
+30405528;Rua de Rodrigues Lobo;False
+30405557;Rua do Bom Sucesso;False
+30405564;Rua de Ricardo Severo;False
+30405571;Rua da Paz;False
+30405598;Rua dos Vanzeleres;False
+30405603;Rua das Artes Gráficas;False
+30417985;Rua João Martins Branco;False
+30417987;Rua Duque de Loulé;True
+30417989;Avenida Dom Afonso Henriques;True
+30417990;Rua do Barão de Forrester;True
+30417991;Rua do Monte Aventino;False
+30444185;Calçada do Ouro;False
+30911266;Rua José Monteiro da Costa;False
+30912869;Rua do Lindo Vale;False
+30912920;Rua do Tenente Valadim;False
+30912922;Rua Fernandes Costa;False
+30912924;Rua de Augusto Gil;False
+30912927;Rua António José Costa;False
+30912936;Rua Diogo Brandão;False
+30912941;Rua de Brito Capelo;False
+30912960;Travessa de Salgueiros;False
+31060211;Rua do General Silveira;False
+31060242;Rua Sá de Noronha;False
+31261920;Rua da Reboleira;False
+31396393;Rua de São Brás;False
+31396444;Travessa de São Brás;False
+31572903;;False
+31573135;Rua de Augusto Rosa;False
+31573198;Rua João de Oliveira Ramos;False
+31720870;Rua de Miraflor;False
+31721081;Rua do Heroísmo;False
+31721584;Largo da Estação;False
+31983039;;False
+34597437;Rua de Santa Catarina;False
+34607492;Rua de Gonçalo Cristóvão;False
+34607518;Rua do Almada;False
+34607524;Praça da República;False
+34612905;Rua Aurélia de Sousa;False
+34613951;Rua das Doze Casas;False
+34614000;Rua de Gil Vicente;False
+34614186;Rua do Moreira;False
+34627575;Rua Sacadura Cabral;False
+34647798;Largo da Paz;False
+34648522;Largo da Paz;False
+34653072;Rua de Fonseca Cardoso;False
+34683151;Rua de Aníbal Cunha;False
+34683791;Rua do Carmo;False
+34684086;Rua de São João;False
+34711004;;False
+34712768;;False
+34731974;Praça da Rainha Dona Amélia;False
+34732006;Rua do Seixal;False
+34732332;Praça da Rainha Dona Amélia;False
+34732363;Praça de Teixeira de Pascoais;False
+34772371;Rua de Camões;False
+34916303;Rua de Coelho Neto;False
+34935294;Praça de Teixeira de Pascoais;False
+34935295;Rua de Santos Pousada;False
+34935395;Rua Bairro do Comércio do Porto;False
+34988345;Rua da Lapa;False
+35043277;Rua Professor Manuel Baganha;False
+35043629;Via Futebol Clube do Porto;False
+35043631;Rua João Marques Pinto;False
+35043632;Rua da Lameira de Cima;False
+35078246;Rua de Tomás Ribeiro;False
+35084624;Rua do Major David Magno;False
+35111843;Travessa da Fontinha;False
+35112247;Rua Manuel Carqueja;False
+35168581;Rua de São Roque da Lameira;False
+35168583;Rua de São Roque da Lameira;False
+35168906;Túnel das Antas II;False
+35168907;Túnel das Antas II;False
+35171965;Rua Saraiva de Carvalho;True
+35202691;Avenida da Boavista;False
+35203542;Rua de João das Regras;False
+35203817;Rua das Oliveiras;False
+35229256;;False
+35261109;Rua Sociedade Protectora dos Animais;False
+35330759;Rua de Joaquim Urbano;False
+35330760;Avenida 25 de Abril;False
+35331288;Rua do Freixo;True
+35331290;;False
+35331292;;False
+35331293;Rua do Freixo;False
+35331294;Rua do Freixo;False
+35331299;;False
+35331409;;False
+35331594;Rua do Freixo;False
+35379620;Túnel Goelas de Pau;False
+35379621;Túnel Goelas de Pau;False
+35379623;Rua Fernando Moreira da Silva;False
+35379625;Rua da Fonte Velha;False
+35382873;Rua da Fábrica "A Invencível";False
+35382875;Rua da Fábrica "A Invencível";False
+35382876;Rua da Fábrica "A Invencível";False
+35382877;Avenida 25 de Abril;False
+35382878;Avenida 25 de Abril;False
+35382879;Avenida 25 de Abril;False
+35382883;Avenida 25 de Abril;False
+35382885;Avenida 25 de Abril;False
+35382888;Avenida 25 de Abril;False
+35382890;Avenida 25 de Abril;False
+35382898;Avenida 25 de Abril;False
+35382900;Avenida 25 de Abril;False
+35382988;Rua da Fábrica "A Invencível";False
+35383148;Rua Doutor Maurício Esteves Pereira Pinto;False
+35383635;Rua de Barros Lima;False
+35384499;;False
+35384647;;False
+35384689;;False
+35385034;;False
+35416640;Praça da Corujeira;False
+35429390;Rua do Monte da Costa;False
+35443468;Rua de Bonjóia;False
+35443469;Travessa da Corujeira de Baixo;False
+35443470;Rua Ferreira dos Santos;False
+35443471;Rua do Pinheiro de Campanhã;False
+35443676;Rua da Igreja de Campanhã;False
+35443677;Rua da Corujeira de Baixo;False
+35446605;;False
+35446606;;False
+35447220;Rua do Amparo;False
+35539786;Via de Cintura Interna;False
+35540218;;False
+35731561;Avenida 25 de Abril;False
+35731564;Praça das Flores;False
+35732205;Rua das Antas;False
+35744643;;False
+36268629;Campo 24 de Agosto;False
+36268630;Campo 24 de Agosto;False
+36268853;Campo 24 de Agosto;False
+36740122;Rua de Dom Manuel II;False
+36747395;Rua Câmara Pestana;False
+36747397;Rua Câmara Pestana;False
+36748083;Rua de Entre Quintas;False
+36748084;Rua de Júlio Dinis;True
+36748085;Rua do Bom Sucesso;False
+36835965;Rua de Felicidade Brown;False
+36835967;Rua de António Patrício;True
+36835968;Rua de António Nobre;False
+36835969;Rua do Doutor José de Figueiredo;False
+36835970;Rua de Alberto Oliveira;False
+36835972;Rua da Graciosa;False
+36836149;Rua do Professor Câmara Sinval;False
+36836152;Rua de Feliciano de Castilho;False
+36836248;Rua do Cónego Ferreira Pinto;False
+36836250;Rua de Dom António Barroso;False
+36836258;Rua da Infanta Dona Maria;False
+37406652;Via de Cintura Interna;False
+37406655;;False
+37413317;Via Engenheiro Edgar Cardoso;False
+37956817;Rua Paula Vicente;False
+37956823;Rua Paula Vicente;False
+38336627;Rua das Carvalheiras;False
+38336628;Rua da Trindade;False
+38336633;Rua de Faria Guimarães;False
+38336634;Rua de Gonçalo Cristóvão;False
+38336635;Rua de Gonçalo Cristóvão;False
+38336638;Rua de Gonçalo Cristóvão;False
+38336639;;False
+38336641;Rua do Bonjardim;False
+38336643;Rua da Firmeza;False
+38336644;Praça da República;False
+39507992;Travessa dos Campos;False
+39549565;Rua Doutor Mário de Vasconcelos e Sá;False
+39549792;Travessa da Senhora da Conceição;False
+39549879;Travessa de Antero de Quental;True
+39549900;Rua da Senhora da Lapa;True
+39549954;Rua da Glória;True
+39549961;Travessa da Senhora da Lapa;True
+39549973;Rua do Monte da Lapa;True
+39549982;Calçada da Lapa;True
+39550749;Travessa da Senhora da Conceição;False
+39586894;Rua dos Burgães;False
+39586911;Rua do Soajo;False
+39586944;Rua do Melo;False
+39587009;Rua do Monte Cativo;True
+39587067;Rua da Bouça;False
+39587108;Rua do Gerês;False
+39587490;Rua de Marques Marinho;False
+39588456;Rua da Peneda;False
+39590128;Rua do Marão;False
+39590262;Rua Sport Comércio e Salgueiros;False
+39597607;Rua de Cervantes;False
+39597692;Rua de Cervantes;False
+39597779;Rua de Cervantes;False
+39597832;Rua de Alves Redol;False
+39597960;Rua de Alves Redol;False
+39598055;Rua de Salgueiros;False
+39631877;Rua Augusto Luso;False
+39631983;Praça de Pedro Nunes;False
+39632053;Rua do Instituto de Cegos de São Manuel;False
+39632140;Rua de Santa Isabel;False
+39632191;Travessa da Paz;False
+39632852;Largo do Priorado;False
+39633008;Rua de São Martinho;False
+39633344;Rua Padre Luís Rodrigues;False
+39653306;Rua Capitão Henrique Galvão;False
+39653580;Travessa das Águas Férreas;False
+39653923;Alameda dos Capitães de Abril;False
+39653956;;False
+39653971;Rua da Liberdade;False
+39657916;Largo da Lapa;False
+39657990;Rua de Antero de Quental;False
+39657991;Largo da Lapa;False
+39658536;Pátio do Bolhão;False
+39658629;;False
+39658831;Rua Ateneu Comercial do Porto;False
+39668434;Rua do Conde de Vizela;False
+39668885;Rua de Sampaio Bruno;False
+39669069;Largo da Porta do Olival;False
+39669178;Rua dos Caldeireiros;False
+39669207;Rua de São Miguel;False
+39669380;Travessa de São Bartolomeu;True
+39670022;Rua Francisco da Rocha Soares;False
+39670043;Rua de Tomás Gonzaga;False
+39670412;Rua das Virtudes;False
+39670422;Rua Doutor Barbosa de Castro;False
+39670508;Rua de Azevedo de Albuquerque;False
+39670518;Passeio das Virtudes;False
+39670525;Calçada das Virtudes;True
+39671211;Largo do Viriato;False
+39678582;Rua de Sobre-o-Douro;False
+39679497;Calçada de Monchique;False
+39679530;Rua de Miragaia;False
+39679893;Cais da Estiva;False
+39679967;Rua do Cais da Ribeira;True
+39682329;Rua do Ferraz;False
+39685406;Travessa de São Sebastião;False
+39690284;Calçada da Vandoma;True
+39690472;Rua dos Pelames;True
+39701842;Rua de São Sebastião;True
+39701846;;False
+39846855;Rua de Soares de Passos;False
+39846859;Praça de Teixeira Lopes;False
+39846874;Rua de Coelho Lousada;False
+39862487;Rua do Arcediago Van Zeller;True
+39862511;Rua do Abade de Baçal;False
+39862802;Beco de São Macário;True
+39865747;Rua de Calouste Gulbenkian;True
+39865748;Via Particular;False
+39888043;Campo do Rou;False
+39888045;Alameda de Basilo Teles;False
+39888049;Alameda de Basilo Teles;False
+39888118;Rua do Outeiro;False
+39888367;Largo do Adro;False
+39888368;Calçada de Sobre-o-Douro;False
+39888370;Rua do Cristelo;False
+39888372;Rua do Cais das Pedras;False
+39888400;;False
+39894728;Rua da Restauração;False
+39895274;Rua da Boa Viagem;False
+39895279;Rua Capitão Salgueiro Maia;False
+39895281;Calçada da Boa Viagem;False
+39895285;Rua da Rainha Dona Estefânia;False
+39895287;Rua Professor Abel Salazar;False
+39895290;Travessa da Pena;False
+39895304;Rua da Pena;False
+39896043;Via Panorâmica;False
+39896045;Calçada da Arrábida;False
+39896053;Rua do Bicalho;False
+39896732;;False
+39896739;Via Panorâmica Edgar Cardoso;False
+39911736;Rua do Professor José Valente;False
+39911740;Travessa de Entre Campos;False
+39911779;Rua do Gólgota;False
+39911793;Largo do Professor João Baptista;False
+39911797;Rua do Universo;False
+39911803;Rua Professor Henrique David;False
+39911806;Rua Professor Abílio Cardoso;False
+39911810;Travessa de Entre Campos;False
+39911832;Via Panorâmica;False
+39914599;Travessa de Entrecampos;False
+39914609;Rua da Mocidade da Arrábida;False
+39914619;Travessa do Alto da Arrábida;False
+39914653;Beco do Campo Alegre;False
+39914658;Rua do Progresso;False
+39914661;Travessa da Arrábida;False
+39914721;Travessa da Arrábida;False
+39915315;Rua da Sociedade Nacional dos Fósforos;False
+39915326;Rua de Carvalho Barbosa;False
+39915333;Rua de Arnaldo Leite;False
+39931009;Travessa do Senhora da Boa Morte;False
+39931644;Rua do Senhor da Boa Morte;False
+41097165;Rua de Raul Dória;False
+41097166;Largo da Fontinha;False
+41097167;Rua da Fábrica Social;False
+41097168;Rua do Alto da Fontinha;False
+41097169;Rua da Bela da Fontinha;False
+41097170;Rua da Fontinha;False
+41097754;Travessa das Musas;False
+41097755;Calçada do Leal;False
+41097758;Calçada do Leal;False
+41182333;Rua de Manuel Bandeira;False
+41182334;;False
+41182337;Rua da Venezuela;False
+41182338;Rua de Ruben A.;False
+41182340;Rua de Manuel Bandeira;False
+41182342;Rua de Manuel Bandeira;False
+41182343;Rua de Manuel Bandeira;False
+41379105;Rua de Ruben A.;False
+41379106;Rua de Júlio Brandão;False
+41379111;Rua de Ruben A.;False
+41597817;Rua Fernando Pessoa;True
+41597818;;True
+41597820;;True
+41597821;;True
+41597823;Rua de Afonso Lopes Vieira;True
+41598352;;True
+41598354;;True
+41738234;Rua de Santo Isidro;False
+41738237;Travessa de Santo Isidro;False
+41738238;Rua do Monte do Tadeu;False
+41738246;Rua do Monte dos Congregados;False
+41738248;Travessa do Monte de Tadeu;False
+41738249;Rua Particular de Santo Isidro;False
+41738424;Travessa do Monte dos Congregados;False
+41738588;Calçada da Póvoa;False
+41738590;Travessa da Póvoa;False
+41738732;Rua do Doutor Alberto Sousa Costa;False
+42743767;Rua de Gomes Leal;False
+42743769;Travessa do Bonfim;False
+42743770;Rua do Monte do Bonfim;False
+42743772;Rua das Eirinhas;False
+42744003;Rua de Justino Teixeira;False
+44093324;Rua de Godim;False
+44093325;Rua de São Rosendo;False
+44093328;Rua do Conselheiro Correia de Barros;False
+44094125;Rua do Monte da Estação;False
+44094128;Travessa Nova da Estação;False
+44094131;Travessa do Monte da Estação;False
+44095082;Travessa da Lomba;False
+44095084;Rua do Lourenço;False
+44095086;;False
+44095088;Rua de Frei Heitor Pinto;False
+44157232;Travessa do Freixo;False
+44157233;Travessa da Presa da Agra;False
+44157234;Rua de Sabrosa;False
+44157235;Rua do Rêgo Lameiro;False
+44157236;Calçada de Nova Sintra;False
+44157237;Calçada do Rego Lameiro;False
+44157239;Rua da Formiga;True
+44157240;Travessa Nova da China;True
+44157244;Travessa de Nova Sintra;True
+44157245;Rua da Formiga;True
+44157246;Rua da Presa Velha;False
+44157247;Travessa da Presa Velha;False
+44157249;Rua Particular de Novais da Cunha;False
+44157410;Travessa da Formiga;False
+44157562;Rua da Noeda;False
+44157563;Largo de Noeda;False
+44157564;Rua do Arco da Noeda;False
+44157565;Travessa do Arco da Noeda;False
+47938035;;False
+49982592;Ponte Infante Dom Henrique;False
+51228956;Rua de Marracuene;False
+51230332;Rua Professor Vicente José de Carvalho;True
+52704506;;False
+52889667;Rotunda Edgar Cardoso;False
+53354064;Via Engenheiro Edgar Cardoso;False
+53354065;;False
+54372092;Rotunda Edgar Cardoso;False
+54936540;Travessa Fonte Lodosa;True
+54936546;;False
+54936548;;False
+59525257;Rua de Miguel Bombarda;False
+59525260;Rua de Cedofeita;False
+60175223;Rua de Ricardo Jorge;False
+60175224;Rua da Picaria;False
+60175590;Rua Doutor António Luís Gomes;False
+60175941;Rua do Clube dos Fenianos;False
+60461087;Rua do Bonjardim;False
+60461092;Rua do Bonjardim;False
+63202741;Via de Cintura Interna;False
+63202743;;False
+63202744;Via de Cintura Interna;False
+63202748;Via de Cintura Interna;False
+63634695;;False
+63634696;;False
+94481884;Travessa de Ferreira dos Santos;False
+94481885;Rua da Corujeira de Baixo;False
+94481886;;False
+94481887;;False
+94481890;Rua do Alto da Bela;False
+94481891;Alameda de Cartes;False
+94481893;Alameda de Cartes;False
+94481895;Rua das Escolas;False
+94482355;Avenida Artur Andrade;False
+94482366;Rua do Lagarteiro;False
+94482367;Avenida Artur Andrade;False
+95119705;Avenida Dom João II;False
+95119706;Avenida Dom João II;False
+95120166;Avenida Dom João II;False
+95120329;Avenida Dom João II;False
+95127163;Rua Nossa Senhora do Calvário;False
+95127165;Radial de Gondomar;False
+95127166;Rotunda de Cartes;False
+95127168;Rua Nossa Senhora do Calvário;False
+95127169;Rua de São Roque da Lameira;False
+95162985;Radial de Gondomar;False
+95163000;Avenida Artur Andrade;False
+95163003;Radial de Gondomar;False
+95163006;Avenida Artur Andrade;False
+95163017;Avenida Artur Andrade;False
+95163019;Avenida Artur Andrade;False
+95367763;Via de Cintura Interna;False
+95374579;Via de Cintura Interna;False
+95374583;Via de Cintura Interna;False
+95374587;;False
+95374589;Via de Cintura Interna;False
+95374596;Via de Cintura Interna;False
+95374600;Via de Cintura Interna;False
+95374603;Via de Cintura Interna;False
+95374606;Via de Cintura Interna;False
+95582019;Rua de Guilherme Braga;False
+95841100;Via Panorâmica;False
+95841106;;False
+95841112;Rua de Entre Campos;False
+95841120;Via Panorâmica;False
+95841122;;False
+95841130;;False
+95841135;Rua de Entre Campos;False
+95841140;;False
+95841143;Via de Cintura Interna;False
+95841144;;False
+95841153;;False
+95841157;Túnel dos Almadas;False
+95843585;Rua de Camões;False
+95843586;Viaduto de Gonçalo Cristóvão;True
+95984866;;True
+95984867;;True
+95984872;;True
+95984902;;True
+95984907;;True
+95984909;;True
+95984918;;False
+95984946;;False
+95984958;Via de Cintura Interna;False
+95984973;;False
+96151239;Rua Nova da Alfândega;True
+97721305;;False
+97721307;;False
+97721308;;False
+97721317;Rotunda Gil Eanes;False
+97721324;;False
+97721326;Rua Azevedo Magalhães;False
+97721329;;False
+97721343;;False
+97721345;;False
+97721346;Rua Silva Tapada;False
+97721347;;False
+97721352;;False
+97721358;Rua Silva Tapada;False
+97721372;;False
+97721380;;False
+97721387;;False
+97721399;;False
+97726873;;False
+98675889;;False
+98675891;;False
+98675892;;False
+98675895;;False
+98675898;;False
+98675900;;False
+98675901;;False
+98675902;;False
+98675903;;False
+98675904;Rua do Areínho;True
+98675905;;True
+98675907;Travessa Azevedo Magalhães;True
+98675908;Travessa Azevedo Magalhães;True
+98675910;;True
+98675911;;True
+98675915;;True
+98675916;Rua Vieira Pinto;True
+98675917;;False
+98675918;;False
+98675920;;False
+98675922;;False
+98753900;;False
+98753918;;False
+98753928;;False
+98753931;Travessa Vieira Pinto;False
+98753940;;False
+98753943;;False
+98753947;;False
+98753952;;False
+98753957;;False
+98753963;Rua Luis de Camões;False
+98753966;;False
+98753971;;False
+98753982;;False
+98753984;;False
+98753991;;False
+98753992;Rua Azevedo Magalhães;False
+98754000;;False
+98754003;;False
+98754009;;False
+98754010;Rua Rodrigues de Freitas;True
+98754014;Rua Cabo Simão;False
+98754027;;False
+98754031;;False
+98754040;Rua Ernesto Silva;False
+98754047;;False
+98754054;;False
+98754058;;False
+98754063;;False
+98754068;;False
+98754072;;False
+98754078;Rua Cabo Simão;False
+98754079;Rua Diogo Cassels;False
+98754087;;False
+98754091;;False
+98754098;;False
+98754109;;False
+98754113;;False
+98754116;;False
+98754121;;False
+98754125;Rampa do Infante Santo;True
+98754134;;True
+98754136;;True
+98754139;;False
+98754140;;False
+98754143;;False
+98754146;;False
+98754153;;False
+98754154;;False
+98754161;;False
+98754162;;False
+98754167;Rua Azevedo Magalhães;False
+98754172;;False
+98754177;;False
+98754180;;False
+98754188;;False
+98754192;;False
+98754195;;False
+98754199;;False
+98754200;;False
+98754207;;False
+98754211;;False
+98754213;;False
+98754217;;False
+98754219;;False
+98754223;;False
+98754225;;False
+98754226;;False
+98754231;Rua dos Polacos;False
+98754232;;False
+98754234;;False
+98754238;;False
+98754242;;False
+98754243;Rua Antero de Quental;False
+98754247;;False
+98754249;;False
+98754254;;False
+98754260;;False
+98754261;;False
+98754266;;False
+98754274;;False
+98754277;;False
+98754280;;False
+98754283;;False
+98754288;;False
+98754290;;False
+98754297;;False
+98754298;;False
+98754303;;False
+98754307;;False
+98754311;;False
+98754316;;False
+98754326;;False
+98754331;Rua do Bolhão;False
+98754336;;False
+98754337;;False
+98754341;;False
+98754345;Rua Dona Maria da Costa Basto;False
+98754348;;False
+98754350;;False
+98754352;;False
+98754371;;False
+98754380;Rua da Fonte da Rija;False
+98754385;;False
+98754387;;False
+98754392;;False
+98754394;;False
+98754398;;False
+98754405;;False
+98754413;;False
+98754417;Variante Silva Tapada;False
+98754426;;False
+98754431;Rua de Marciano de Azuaga;False
+98754443;;False
+98754446;;False
+98754464;;False
+98754469;;False
+98754477;;False
+98754480;;False
+98754497;Rua 2 82;False
+98754517;;False
+98754518;Rua Silva Tapada;False
+98754525;;False
+98754530;;False
+98754540;;False
+98754553;;False
+98754570;;False
+98754576;;False
+98754584;;False
+98754585;;False
+98754590;Rua 1º de Maio;False
+98754594;;False
+98754595;;False
+98754599;Rua Azevedo Magalhães;False
+98754605;;False
+98754611;;False
+98754616;Rua Gonçalves Zarco;False
+98754617;Alameda da Serra do Pilar;True
+98754620;;True
+98754624;;True
+98754626;;True
+98754635;;True
+98754638;Alameda do Areinho;True
+98754643;;True
+98754669;;True
+98754675;;True
+98754677;;True
+98754679;;True
+98754684;;True
+98754685;Rua Dr. Alfredo Faria Magalhães;True
+98754689;;True
+98754695;;True
+98754699;;True
+98754704;;True
+98754709;;True
+98754714;;True
+98754717;;True
+98754728;;True
+98754729;;True
+98754740;;True
+98754742;Calçada Serra;False
+98754750;;False
+98754753;;False
+98754761;;False
+98754764;;False
+98754768;Rua de S. Salvador;False
+98754769;;False
+98754772;;False
+98754774;Rua Elias Garcia;False
+98754782;;False
+98754785;;False
+98754794;;False
+98754797;;False
+98754800;;False
+98754801;Rua Rodrigues de Freitas;False
+98754808;;False
+98754812;;False
+98754818;;False
+98754822;Rua 14 de Outubro;False
+98754827;Rua Dona Maria da Costa Basto;False
+98754828;;False
+98754835;;False
+98825971;;False
+98825973;;False
+98825975;;False
+98825976;;False
+98835801;;False
+98835805;Travessa Nova de Bustes;False
+98835808;Avenida dos Escultores;False
+98835816;;False
+98835821;;False
+98835823;;False
+98835825;Rua General Torres;False
+98835829;Rua António Praça;False
+98835831;;True
+98835832;Rua dos Navegadores;True
+98835841;;True
+98835843;;True
+98835846;;True
+98835848;Largo Dom Luís I;True
+98835851;Rua do Mártir São Sebastião;True
+98835855;Praceta de Bustes;True
+98835856;Rua Tareija Vaz de Altaro;False
+98835859;Avenida dos Escultores;False
+98835866;Travessa das Águas;False
+98835867;Rua Particular João Félix;True
+98835869;Rua de Bustes;True
+98835870;Rua Serpa Pinto;False
+98835873;;False
+98835875;;False
+98835876;;False
+98835877;Rua da Barroca;False
+98835878;;False
+98835882;Avenida Padre Alves Correia;True
+98835883;Rua de Bustes;True
+98835886;Rua Encosta do Sol;True
+98835888;Rua de Azevedo Coutinho;True
+98835892;;True
+98835893;Rua Doutor Eduardo de Matos;True
+98835894;;True
+98835898;Travessa do Capitão Ribeiro;True
+98835902;Rua do Mártir São Sebastião;True
+98835906;Rua Escola de São Paio;True
+98835908;Rua Grémio da Prosperidades;False
+98835909;Rua Daciano Baptista Marques;False
+98835912;Rua do Monte da Costa;False
+98835914;Rua São João do Porto;False
+98835915;Rua Particular João Félix;True
+98835917;Rua Doutor Ribeiro de Magalhães;True
+98835918;;True
+98835922;Rua de Santarém;True
+98835923;;False
+98835924;Rua Pereira da Costa;False
+98835932;Rua Abílio de Azevedo;False
+98835935;Rampa da Ribeira da Costa;False
+98835940;;False
+98835941;Rua Particular João Félix;True
+98835943;;False
+98835945;;False
+98835947;Rua de São Pedro;False
+98835948;Rua Alexandre Herculano;False
+98835949;Avenida dos Escultores;False
+98835952;Rua 27 de Fevereiro;False
+98835955;Rua Sport Clube de Canidelo;False
+98835956;Rua Abílio de Azevedo;False
+98835958;;False
+98835959;Rua Daciano Baptista Marques;True
+98835962;Rua da Ribeira da Costa;True
+98835964;;False
+98835965;Rua Particular João Félix;True
+98835967;;False
+98835968;;False
+98835969;Cais de Gaia;False
+98835972;;False
+98835974;;False
+98835975;;False
+98835977;;True
+98835984;Rua Doutor Eduardo de Matos;True
+98835987;;False
+98835993;Rua Particular João Félix;True
+98835995;Rua do Agro;True
+98835996;Rua Diogo Cassels;False
+98835997;Largo da Cruz;False
+98835999;Rua do Cavaco;False
+98836000;;False
+98836002;Rua Bombeiros Voluntários de Coimbrões;False
+98836004;Rua Agostinho Albano;False
+98836005;;False
+98836008;Rua Quinta do Fontão;False
+98836010;Rua Manuel da Silva Cruz;False
+98836011;;False
+98836014;Rua Margarida da Silva Cruz;False
+98836018;;False
+98836019;Rua de General Torres;True
+98836023;;True
+98836025;;False
+98836026;Travessa do Tenente Valadim;True
+98836027;;True
+98836028;;True
+98836034;Rua das Escadas de São Paio;False
+98836036;;False
+98836037;;False
+98836042;Rua de Cândido dos Reis;False
+98836043;;False
+98836045;Rua Particular das Regadas;False
+98836046;Avenida da República;False
+98836052;;False
+98836054;Rua de Costa Goodolfim;False
+98836055;Rua do Caminho Velho;False
+98836058;Rua de São Paio;False
+98836060;;False
+98836061;Rampa do Monte da Luz;False
+98836064;Rua Nova de Bustes;False
+98836069;;False
+98836070;Rua da Bélgica;True
+98836073;;True
+98836077;;True
+98836078;Rua António Costa Bernardes;True
+98836080;Rua de Alves Correia;True
+98836084;Rua de Bairro de São Paio;True
+98836085;Rua Rocha Leão;False
+98836092;;False
+98836093;Rua do Choupelo;True
+98836099;;True
+98836101;Rua do Motor;True
+98836103;Rua Vasco da Gama;False
+98836104;Rua Dona Leonor Freitas;False
+98836107;Rua da Pedra Alta;False
+98836110;Rua Alto do Monte da Luz;False
+98836113;Rua Encostado Sol;False
+98836115;Rua João de Deus;False
+98836117;;False
+98836118;;False
+98836120;;False
+98836125;Rua do Espinheiro;False
+98836126;Rua da Piedade;False
+98836127;;False
+98836479;Avenida da República;False
+99016331;;False
+99016337;;False
+99016338;;False
+99016339;Rua da Cabaça;False
+99016343;;False
+99016350;;False
+99016357;;False
+99016359;;False
+99016362;Via de Cintura Interna;False
+99016365;;False
+99016367;;False
+99016368;;False
+99016374;;False
+99016378;;False
+99016382;;False
+99016386;;False
+99016387;;False
+99016390;;False
+99016393;;False
+99016400;;False
+99016402;;False
+99016403;Rua Capitão Ribeiro;False
+99016414;;False
+99016420;;False
+99016423;;False
+99016431;;False
+99016455;;False
+99016465;;False
+99016467;;False
+99016470;;False
+99016478;;False
+99016482;;False
+99016486;;False
+99016488;;False
+99016503;;False
+99016507;;False
+99016541;;False
+99016544;;False
+99016561;;False
+99016574;;False
+99016577;;False
+99016587;Rua Camilo Castelo Branco;False
+99016590;;False
+99016593;;False
+99016596;;False
+99016598;;False
+99016618;;False
+99016619;;False
+99016620;Rua Guilherme Duarte Camarinha;False
+99016627;;False
+99016635;Rua do Bairro da CP;True
+99016644;Rua Camilo Castelo Branco;False
+99016660;;False
+99016663;;False
+99016664;;False
+99016668;;False
+99016673;;False
+99016680;;False
+99016683;;False
+99016684;;False
+99016689;;False
+99016697;;False
+99016708;;False
+99016719;;False
+99016721;;False
+99016725;;False
+99016728;;False
+99016730;Rua do Cavaco;True
+99016731;;False
+99016736;;False
+99016737;;False
+99016738;;False
+99016739;;False
+99016741;;False
+99016742;;False
+99016745;;False
+99016748;;False
+99016752;;False
+99016754;;False
+99016758;;False
+99016761;;False
+99016766;Praceta José Fernandes Caldas;True
+99016781;;False
+99016785;;False
+99016786;;False
+99116300;Alameda dos Jardins da Arrábida;False
+99116306;Alameda dos Jardins da Arrábida;False
+99116311;Rua do Mártir São Sebastião;False
+99116315;Alameda dos Jardins da Arrábida;False
+99116323;Rua do Mártir São Sebastião;False
+99116348;Rua de Trás;False
+99116355;;False
+99116382;Travessa dos Campos;True
+99116389;;True
+99116393;;True
+99116397;Rua Consiglieri Pedroso;True
+99116401;Rua do Mártir São Sebastião;True
+99116405;Rua da Paz;True
+99116410;;True
+99116427;;True
+99116430;;True
+99116433;;True
+99116438;Rua do Mártir São Sebastião;True
+99116452;Rua do Mártir São Sebastião;True
+99176879;Travessa do Motor;True
+99238756;Rua Encostado Sol;True
+99238761;;True
+99238762;;False
+99238765;;False
+99238766;;False
+99238770;;False
+99238772;;False
+99238783;;False
+99238786;;False
+99238799;;False
+99238804;;False
+99238809;;False
+99238818;;False
+99238819;;False
+99238820;;False
+99238824;;False
+99238826;;False
+99238828;;False
+99238833;;False
+99238836;;False
+99238837;;False
+99238840;;False
+99238849;Rua de Jordão;False
+99238850;Rua Encostado Sol;False
+99238852;;False
+99238858;;False
+99238859;;False
+99238860;;False
+99256623;Rua da Fonte;False
+99256627;Largo Joaquim de Araújo;False
+99256632;;False
+99256633;Avenida dos Escultores;False
+99256637;Travessa Nova do Fontão;False
+99256639;Calçada do Monte da Luz;False
+99256641;Travessa da Bélgica;False
+99256651;;False
+99256655;Rua Nova do Espinheiro;False
+99256656;Rua do Senhor do Aflitos;False
+99256658;Rua do Rio dos Agriões;False
+99256662;Praceta Nova do Fontão;False
+99256663;Rua da Quinta da Vinha;False
+99256664;Rua Abílio de Azevedo;False
+99256669;;False
+99256677;Rua do Alto da Dormideira;False
+99256682;Caminho do Espinheiro;False
+99256686;Travessa de Bustes;False
+99256692;Travessa Rio dos Agriões;False
+99256698;;False
+99256710;;False
+99256711;Rua da Creche;False
+99256719;;False
+99256728;;False
+99256732;;False
+99256736;Travessa Rio dos Agriões;False
+99256738;Rua do Mártir São Sebastião;False
+99256742;;True
+99256743;Travessa da Rampa do Monte da Luz;True
+99256748;;True
+99256749;Rua do Emissor;True
+99256752;;True
+99256755;Beco do Espinheiro;True
+99256757;Calçada do Monte da Luz;True
+99256760;Calçada do Monte da Luz;True
+99256766;;False
+99256770;;False
+99256771;;False
+99256774;;False
+99256777;Rua Nova do Fontão;False
+99256779;Travessa Escola de São Paio;False
+99272539;Rua da Chouselas;False
+99272565;;False
+100639159;;False
+100639215;Rua Sporting Clube do Candalense;True
+100639235;;True
+100639250;;True
+100639350;;True
+100639364;;True
+100862814;Rua de Faria Guimarães;False
+100862815;Rua de Faria Guimarães;False
+103844309;Rua Central da Corujeira;False
+103844310;Rua Nova da Corujeira;False
+103844311;Rua Central da Corujeira;False
+103844313;Rua Emílio Biel;False
+103847400;Rua Camilo Pessanha;False
+103847402;Rua Camilo Pessanha;False
+103847403;Rua do Maestro Raúl Casimiro;False
+103847404;Rua 1;False
+103847406;Rua Cecília Meireles;False
+103847407;Rua Monte da Bela;False
+103847409;Rua Camilo Pessanha;False
+104685831;;False
+104687535;;False
+104687536;;False
+104688711;Rua do Monsenhor Fonseca Soares;True
+104688715;Rua Pedro Veiga;True
+105671668;;False
+106278871;Travessa das Antas;False
+107430880;;True
+107613615;Rua das Estrelas;True
+107958529;Rua de Belos Ares;False
+108385735;Rua do Padre Alexandre;False
+108385736;Rua 15 de Novembro;False
+108386752;Rua Emídio Pinto;True
+108386753;;True
+109406983;Rua Doutor Emílio Peres;True
+109406984;;False
+109406985;Rua Veiga Leitão;False
+109406986;Rua da Saudade;True
+109406987;Rua Veiga Leitão;True
+109406988;Rua Veiga Leitão;False
+109406989;;True
+109406990;Rua da Saudade;False
+110334887;Rua de Belomonte;True
+110447477;Rua Tenente Valadim;True
+110447478;Rua Fonte Lodosa;True
+110560969;;True
+110561028;;True
+110561051;;True
+110561053;;True
+110801268;Avenida da Boavista;False
+110801275;Avenida da Boavista;False
+112064480;Rua de Arnaldo Gama;False
+112448957;Rua de São João;False
+112465238;Rua de Alexandre Braga;False
+112465240;Praça Gen. Humberto Delgado;False
+112465243;Rua Formosa;False
+112516904;Avenida Diogo Leite;False
+112517772;Rua Guilherme Gomes Fernandes;False
+112517773;;False
+112517774;;False
+112517775;Rua Cândido dos Reis;False
+112517776;;False
+112631100;Rua de São João Novo;False
+112631504;Rua de São Bento da Vitória;False
+112635323;Rua Sá de Noronha;False
+114207932;Rua do Palácio;False
+114207934;Avenida Escritor Costa Barreto;True
+114207935;Estrada Nacional 108;False
+114207936;;False
+116015041;Travessa da Póvoa;False
+120692681;Avenida de Fernão de Magalhães;False
+120693468;;False
+120820880;Rua da Fábrica "A Invencível";False
+121386840;Rua do Tenente Valadim;False
+121389579;Rua Consiglieri Pedroso;True
+121389580;Rua Camilo Castelo Branco;False
+121389581;Rua de Vera Cruz;True
+121389582;Rua do Recanto;True
+121389583;Rua Fábrica da Lã;True
+121389585;Largo Montinho;True
+121389587;Rua Camilo Castelo Branco;True
+121389588;Rua Fernandes dos Anjos;True
+124539825;;False
+124539828;Rua de Ceuta;False
+125102901;Rua da Madeira;True
+125102902;;True
+125102904;;True
+125150860;Largo da Estação;False
+125150861;Largo da Estação;False
+125151090;;True
+125151097;;True
+125151109;;True
+125151117;;False
+125151118;;False
+125151123;;False
+125513760;Largo da Estação;False
+125513761;Rua Pinto Bessa;False
+125513762;Rua de Justino Teixeira;False
+125513764;Rua de Justino Teixeira;False
+125513766;;True
+125513767;;True
+125513768;;False
+125513771;;False
+125513772;Rua de Justino Teixeira;False
+125513773;;False
+125711516;;False
+128131495;Rua de Barbosa du Bocage;True
+128131496;Largo de Ferreira Lapa;False
+128133836;Rua de Oliveira Monteiro;False
+128244780;Avenida da Boavista;False
+128245297;Rua de Júlio Dinis;True
+128245298;Rua de Júlio Dinis;True
+128245299;Largo de Ferreira Lapa;False
+128245300;Largo de Ferreira Lapa;False
+128245796;Rua Augusto Luso;False
+128245797;Rua da Boavista;False
+128246658;Largo do Priorado;False
+128246659;Rua de Aníbal Cunha;False
+128246660;Rua de Aníbal Cunha;False
+128246785;Praça de Pedro Nunes;False
+128362569;Túnel do Campo Alegre;False
+128362570;Rua da Pena;False
+128363655;Rua Gonçalo Sampaio;False
+128363656;;False
+128363657;Rua de Entre Campos;False
+128363658;Rua do Campo Alegre;True
+128363659;Rua do Campo Alegre;False
+128363661;Rua do Campo Alegre;False
+128463450;Largo de Ferreira Lapa;False
+128463451;Largo de Ferreira Lapa;False
+128463452;Rua de São Paulo;False
+128463453;Travessa da Carvalhosa;False
+128463454;Viela da Carvalhosa;False
+128635021;Rua de Ruben A.;False
+128635022;Rua de Ruben A.;False
+128823187;Largo da Maternidade de Júlio Dinis;False
+128823189;Rua Adolfo Casais Monteiro;False
+128825637;Praça de Carlos Alberto;False
+128825638;Praça Coronel Pacheco;False
+128825640;Rua do Pinheiro;False
+128825641;Rua dos Mártires da Liberdade;False
+128825643;Travessa de São Carlos;False
+128828529;Largo da Lapa;False
+128828725;;False
+130666508;;False
+133211822;Rua da Bandeirinha;False
+135404444;Avenida da República;False
+135411080;Avenida da Boavista;False
+135411081;Avenida da Boavista;False
+139449001;;False
+139455413;Via de Cintura Interna;False
+139465323;;False
+140054045;Ponte do Freixo;False
+140357935;Rua Robert Smith;True
+141434573;;True
+141434580;Travessa de São Pedro;True
+141434594;;True
+141434612;;True
+141434618;Rua do Doutor José Marques;True
+141434619;Praceta João Glama;True
+141434622;Rua 3;True
+141434623;;True
+141434643;Nó Mercado Abastecedor;False
+141434657;Rua 8;False
+141434660;Rua de São Pedro;False
+141434666;;False
+141434669;Rua do Freixo;True
+141434688;Rua 10;True
+141434689;Rua Conde de Silva Monteiro;True
+141434702;Rua do Rio da Vila;True
+141434703;;True
+141434712;Associação Nun'Álvares de Campanhã;True
+141434725;Rua Conde de Silva Monteiro;True
+141434748;Rua do Peso da Régua;True
+141434749;Rua de Chaves de Oliveira;True
+141434750;Rua 4;True
+141434760;Rua de Azevedo;False
+141434771;Rua Costa Barreto;False
+141435067;Rua Teófilo Seyrig;False
+141435071;Rua da Cooperativa do Pêgo Negro;False
+141435079;Rua Carrington da Costa;False
+141435093;Rua de Chaves de Oliveira;False
+141435096;Calçada de São Pedro;False
+141435105;Rua Reinaldo Oudinot;False
+141435109;Largo de São Pedro;False
+141435143;Rua de Santa Marta de Penaguião;False
+141435152;Travessa do Falcão;False
+141435156;;False
+141435176;Rua do Peso da Régua;False
+141435186;Travessa da Palheta;False
+141435188;Beco do Meiral;False
+141435190;Rua Conde de Silva Monteiro;False
+141435194;Alameda de Cartes;False
+141435201;Travessa de Chaves de Oliveira;False
+141435203;Rua do Meiral;False
+141435206;;False
+141435207;Calçada de São Pedro;False
+141435210;Associação Nun'Álvares de Campanhã;False
+141435214;;False
+141435225;;False
+141435226;Rua 2;False
+141435229;Calçada de Chaves de Oliveira;False
+141435235;Travessa do Meiral;False
+141435242;Rua Bouça Ribas;False
+141435244;;False
+141435246;Rua de Chaves de Oliveira;False
+141435259;;False
+141435262;Travessa de Bonjóia;False
+141435264;Rua do Rio Tinto;False
+141435268;Rua do Monte de Campanhã;False
+141444180;Largo Primeiro de Dezembro;False
+141444234;Rua da Corticeira;True
+141444282;Praça da Alegria;False
+141694626;;False
+141694630;;False
+141694637;;False
+141694651;;False
+141694660;;False
+141694819;;False
+141694831;;False
+141694870;;False
+142213955;;False
+142213956;Rua do Freixo;False
+142213957;;False
+142214758;Rua de Santa Catarina;False
+142214759;Rua de Passos Manuel;False
+142214763;Rua 31 de Janeiro;False
+146186757;Rua de Sabrosa;False
+146190183;Rua da Fonte de Massarelos;False
+146203732;Rua do Pinheiro de Campanhã;False
+146203740;Rua Inácio Alberto de Sousa;False
+146203750;Travessa do Pinheiro de Campanhã;False
+151516202;;True
+151516210;;False
+151516214;;True
+151516220;;False
+151516222;;False
+151516231;;True
+151516232;;False
+151516233;;False
+151516236;;True
+151516237;;True
+151516245;;False
+151516247;;False
+151516248;;False
+151516250;;False
+151516251;;False
+151516253;;True
+153804023;;True
+153804024;;True
+153804025;;True
+153804026;;True
+153804027;;True
+153804028;Rua da Argentina;True
+153804029;;True
+153804352;;True
+153804354;;True
+153804356;;True
+153804357;;True
+153804358;Rua Orfeão do Porto;True
+154489300;Rua de Dionísio de Pinho;False
+154505299;Rua do Sol;False
+154505906;Rua do Jau;False
+154507727;Rua Daniel Serrão;False
+154507729;Rua 20 de Junho;False
+154507730;Rua de General Torres;True
+154510612;Rua Doutor Mário Cal Brandão;True
+154510615;;True
+156208916;;False
+156208919;Túnel dos Almadas;False
+156209004;;False
+156209009;;False
+156211618;Rua de Dom Manuel II;True
+156211619;Rua de Clemente Meneres;False
+156211620;Rua de Dom Manuel II;False
+156952257;Rua da Bélgica;False
+157156090;Beco do Paço;False
+160503761;;False
+160503764;;True
+160503767;;True
+160503774;;False
+160503784;;True
+160503808;;True
+160528050;Rua Daciano Baptista Marques;True
+165660759;Ponte Dom Luís I (tabuleiro inferior);False
+167014506;Travessa da Fonte Velha;False
+167057944;;False
+167487329;Calçada da Arrábida;False
+167487340;Largo de Ferreira Lapa;False
+167487341;Largo de Ferreira Lapa;False
+167487342;Largo de Ferreira Lapa;False
+167487343;Largo de Ferreira Lapa;False
+167487356;Rua de Pedro Hispano;True
+167487357;Rua de Camões;False
+167487358;Rua de Agramonte;False
+167487359;Rua de Agramonte;False
+167487363;Rua de Dom Manuel II;False
+167487364;Rua de Dom Manuel II;False
+167487370;Rua de Júlio Dinis;True
+167487371;Rua de Júlio Dinis;False
+167487372;Rua de Júlio Dinis;False
+167487377;Rua do Campo Alegre;False
+167487378;Rua do Campo Alegre;False
+167487379;Rua do Melo;False
+167487380;Rua das Águas Férreas;False
+167487384;Rua dos Vanzeleres;False
+167487385;Via Panorâmica;False
+167487387;Rua do Mártir São Sebastião;False
+167487388;;False
+167487390;Rua Cardeal Dom Américo;False
+167487394;Rua Cardeal Dom Américo;False
+167487397;;False
+167487399;;False
+167487414;Rua do Mártir São Sebastião;False
+167487416;;False
+167487423;;True
+167487428;Largo Alexandre Sá Pinto;False
+167487441;;False
+167487451;;False
+167487468;;False
+167487473;;False
+167487479;;False
+167487483;;False
+167487490;;False
+167487491;;False
+167487492;Rua da Lapa;False
+167487497;;False
+167487498;;False
+167487506;Calçada da Arrábida;False
+167487508;;False
+167487519;;True
+167487522;Rua do Mártir São Sebastião;True
+167487526;Rua de Dom Manuel II;False
+167487529;;False
+167487535;;False
+167487536;;False
+167487538;;False
+167490113;;False
+169284350;;False
+169284351;;False
+171944850;Travessa da Regeneração;False
+173072132;Avenida Dom João II;False
+173072134;Avenida Dom João II;False
+173072135;Avenida Dom João II;False
+173072150;Rua de Jordão;False
+173072157;;False
+173072164;Ponte Infante Dom Henrique;False
+173072170;;False
+173072179;;False
+173184596;;False
+173184597;;False
+173184598;Rua de José Monteiro Salazar;True
+173184599;;False
+173184600;Rua de José Monteiro Salazar;True
+173184601;Rua de Pedro Olaio;False
+173184602;Rua de José Monteiro Salazar;False
+173184603;;False
+173184604;;False
+173372575;Rua de Agramonte;False
+173372578;;False
+173372581;Rua de Pedro Hispano;False
+173372583;Rua do Padre António Vieira;False
+173372584;;False
+173372585;;False
+173372587;;True
+173372588;;False
+174689855;Rua de Gonçalo Cristóvão;False
+174689856;Rua de Santa Catarina;False
+174689857;Rua da Fábrica;False
+176070912;;False
+176070913;;False
+176070914;Rua Capitão Henrique Galvão;False
+176070927;Rua General Norton de Matos;False
+176070929;;False
+176943863;Rua de O Primeiro de Janeiro;False
+178413104;Rua da Cooperativa do Povo Portuense;False
+178413106;Rua de Alves Redol;False
+178413108;Rua de Santa Catarina;False
+185013249;;True
+189908445;Avenida da Boavista;False
+189908446;Praça Mouzinho de Albuquerque;False
+189908447;Avenida da Boavista;False
+189908448;;False
+190128487;Rua Doutor Magalhães Lemos;False
+190128490;Rua de José Falcão;False
+194846557;;False
+194846905;;True
+194847542;;True
+194847817;;True
+194848300;Travessa do Campo 24 de Agosto;False
+194848512;Rua da Póvoa;True
+194848524;;True
+194848544;;True
+194848547;;True
+194848890;Rua da Póvoa;True
+194849406;Rua das Goelas de Pau;True
+194849475;Rua José Teixeira Barreto;True
+194849518;;True
+194849571;;True
+194849612;;True
+197434949;Rua do Loureiro;True
+197464423;Rua de Santa Teresa;False
+197464424;Rua Actor João Guedes;False
+198188205;Rua 14 de Outubro;True
+198188726;;False
+198235291;Rua General Torres;True
+198235292;Rua General Torres;True
+198235293;Rua Luís de Camões;False
+198235467;;False
+198236120;Rua Fervença;False
+198514517;;False
+198515209;;False
+198515210;;False
+198515507;;False
+198515579;;False
+198515580;;False
+198515581;;False
+198515632;Rua de São Filipe de Nery;False
+198516608;;False
+198516609;;False
+198516610;;False
+198516611;;False
+199263663;Rua Cabo Borges;False
+199263664;;False
+199264685;;False
+199488827;Avenida da França;False
+200072875;Praça da Galiza;True
+200493996;;True
+200658763;Rua de Artur Napoleão;False
+200836230;;False
+200836232;Largo do Padre Baltazar Guedes;False
+200836234;;False
+200967938;Travessa do Carregal;False
+204786523;;False
+205600060;Travessa da Corujeira de Baixo;False
+205600061;Rua da Corujeira de Baixo;False
+205636003;;False
+205636004;;False
+206100515;;True
+206540907;Travessa das Antas;False
+206541394;;False
+206544631;;False
+206720845;Rua de Fernandes Tomás;False
+206720846;Rua Formosa;False
+207634492;Rua de Júlio Dinis;True
+207634505;Rua do Campo Alegre;True
+207634513;;False
+207634520;Rua de Justino Teixeira;False
+207634521;Rua Pinto Bessa;False
+207634523;Rua do Campo Alegre;True
+207634527;Rua das Condominhas;False
+207634530;Rua das Condominhas;True
+207724051;Rua do Bolhão;False
+207724055;Rua do Bolhão;False
+207724065;Rua Guedes de Azevedo;False
+208580373;Rua Guedes de Azevedo;False
+209442098;Rua Helena Sá e Costa;False
+210073245;Avenida de Camilo;False
+210073247;;False
+210073256;Rua do Doutor Sousa Avides;False
+210073259;Túnel dos Almadas;False
+210073280;;False
+210073281;;False
+210073282;;False
+210073283;;False
+210073284;;True
+210073285;;False
+210073286;;False
+210073287;;False
+210073288;;False
+210073290;;False
+210073291;;False
+210073293;;False
+210073294;;False
+210073295;;False
+210073297;;False
+210073299;;False
+210073300;;False
+210073301;;False
+210073302;;False
+210328130;Travessa Rua Formosa;False
+210328137;Rua de Sá da Bandeira;False
+210328138;Pátio do Bonjardim;True
+210328147;Rua Rodrigues Sampaio;False
+210328149;Praça de Almeida Garrett;False
+210336696;Travessa de Passos Manuel;True
+210336697;Travessa de Cimo de Vila;False
+210336698;Rua do Cativo;False
+210336707;Beco Passos Manuel;True
+210339821;Rua da Porta do Sol;True
+210339822;Rua de Santa Clara;True
+210346011;Rua do Miradouro;True
+210365854;Rua Escura;False
+210365858;Rua do Corpo da Guarda;True
+210365861;Travessa da Bainharia;False
+210365864;Rua da Bainharia;False
+210444158;Calçada de Dom Pedro Pitões;False
+210444160;Rua de São Sebastião;True
+210444161;Rua de São Sebastião;True
+210444168;;True
+210507317;Rua de Santa Ana;True
+210541437;;True
+210669782;Rua de Gonçalo Cristóvão;False
+210669783;Rua de Camões;False
+210670986;Largo da Lapa;False
+210670987;Rua de João das Regras;False
+210670988;Rua do Paraíso;False
+210670990;Rua de Antero de Quental;False
+210673563;Rua de Gonçalo Cristóvão;False
+210831460;Praça de Almeida Garrett;False
+210841125;Rua Guedes de Azevedo;False
+210851328;Praça da Batalha;False
+211119459;Largo de São Domingos;False
+211119460;Largo de São Domingos;False
+211119461;Largo de São Domingos;False
+211120097;Largo do Terreiro;False
+211122347;Praça da Ribeira;False
+211127713;Praça da Ribeira;False
+211292798;Rua de Belomonte;False
+211292806;;False
+211297734;Largo de São João Novo;False
+211297737;;False
+211297742;Largo da Esperança;False
+211297746;;False
+211309273;;False
+211314340;Rua das Taipas;False
+211317178;;False
+211317179;;False
+211317181;;False
+211337863;;False
+211337875;;False
+211337879;;False
+211342284;Praça da República;False
+211342286;Praça da República;False
+211436103;Campo dos Mártires da Pátria;False
+211482370;Largo Actor Dias;False
+211483668;Largo Actor Dias;False
+211641909;;True
+211641911;Rua General Sousa Dias;True
+211656637;Passeio das Fontaínhas;True
+211737444;;False
+211898766;Terminal Rodoviário da Batalha;False
+211898767;;False
+211898768;;False
+211898769;;False
+211898772;;False
+211898774;;False
+211905477;;True
+211911544;;False
+211924702;;False
+212361874;Rua Central do Bairro Herculano;False
+212706762;Rua de Júlio Dinis;True
+212706766;Praça da Galiza;False
+212711374;Rua Capitão Henrique Galvão;False
+212711375;Rua 5 de Outubro;False
+212712362;Rua de José Monteiro Salazar;False
+213473435;;False
+215079212;;False
+215079214;;False
+215079215;;False
+215079216;;False
+215080697;;False
+215135703;Praça da Liberdade;False
+215162241;Avenida dos Aliados;False
+215162243;;False
+215194131;Rua da Fábrica;False
+215200349;Praça Dona Filipa de Lencastre;False
+215200352;;False
+215210562;Rua das Carmelitas;False
+215301975;Rua das Carmelitas;False
+215301977;Praça Gomes Teixeira;False
+215301978;;False
+215301979;;False
+215309515;;False
+215331280;Rua de Carlos Alberto;False
+215331281;;False
+215331282;;False
+215331285;Rua de Carlos Alberto;False
+215605435;;True
+215605436;;False
+215605437;;False
+215611423;Travessa da Figueirôa;False
+215613895;;True
+216159806;Rua Doutor António Sousa Macedo;False
+216262193;Largo de São Pedro de Miragaia;False
+216269248;Terreiro da Sé;False
+216274195;;False
+216416642;Viela de Sant'Ana;False
+216483076;Rua da Laje;False
+216490935;Largo da Alfândega;False
+216891254;Rua de Mouzinho da Silveira;True
+216891255;Rua Trindade Coelho;False
+216969809;Praça de Gomes Teixeira;False
+216972581;Avenida dos Aliados;False
+216972801;Praça da Liberdade;False
+217344337;Rua de Mouzinho da Silveira;True
+217628814;Largo do Viriato;False
+217628815;Largo do Viriato;False
+217763622;;False
+218011414;;False
+218011855;;False
+218012128;;False
+218012130;;False
+218012360;;False
+218014836;;False
+218014837;;False
+218014923;;False
+218014925;;False
+218014926;;False
+218014929;;False
+218015835;;False
+218016617;;False
+218016619;;False
+218016620;;False
+218016621;;False
+218016622;;False
+218019037;;False
+218020117;;False
+218279465;Rua de Miragaia;True
+218365914;Viela do Monte do Seminário;True
+218365915;;True
+218370464;;True
+218390661;;True
+218392212;;True
+218392219;;True
+218392220;;True
+218392225;;True
+218396609;Ilha 1;True
+218396793;;True
+218396851;Ilha 2;True
+218541292;;True
+218541988;Ilha;True
+218542234;;True
+218542545;Ilha;True
+218902543;Ilha;True
+218904143;Ilha;True
+219527968;Avenida da França;False
+219536349;;False
+219536350;Rua do Doutor Alfredo de Magalhães;False
+219770320;Ilha;False
+220232893;Rua de Sá da Bandeira;True
+220233689;Rua do Doutor Alfredo Magalhães;False
+220233692;Rua de Gonçalo Cristóvão;False
+220255994;;False
+220256009;Ilha;False
+220258361;Ilha;False
+220259572;Ilha;False
+220882087;Ilha;False
+220883185;Ilha;False
+220884705;;False
+220884722;Ilha;False
+220884732;;False
+220886469;;False
+220886471;Ilha;False
+221013310;Rua de São Dionísio;True
+221029569;;True
+221030659;Rua da Associação de Moradores de São Victor;False
+221031457;Rua da Associação Moradores de São Victor;False
+221031462;Rua da Associação Moradores de São Victor;False
+221039825;Passeio das Fontainhas;True
+221056168;;True
+221369282;;True
+221372021;;True
+221684836;;False
+221684839;;False
+221687617;;False
+221905592;Largo do Padrão;False
+221999039;;False
+223053869;Rua da Madeira;True
+223372788;;True
+223372789;;True
+223372791;;True
+223372794;;True
+223372796;;True
+223780992;;True
+224637998;Rua Gonçalo Sampaio;True
+224646232;Rua do Campo Alegre;True
+224646233;Avenida da Boavista;False
+224647868;Avenida da Boavista;False
+224648421;Rua do Campo Alegre;True
+224749647;Rua Doutor António E. Magalhães;False
+224854242;;False
+225312154;Avenida Dom João II;False
+226060583;;False
+226083083;Rua João de Deus;True
+226429775;;False
+226429998;;False
+226432346;Travessa da Rua Formosa;False
+226444484;;False
+226452170;Rua Bateria da Vitória;False
+226624856;Rua de Rodrigues Sampaio;True
+226879097;Avenida Ramos Pinto;False
+226908041;Rua do Infante Dom Henrique;False
+226908049;Rua do Infante Dom Henrique;False
+226909939;;False
+226912646;;False
+226921792;Rua da Bolsa;True
+226921951;;False
+226921952;;False
+227888232;;False
+227888233;;False
+227888235;;False
+227888628;;False
+227888631;Rua Guilherme da Costa Carvalho;False
+227888748;;False
+227888749;;False
+227932388;;True
+227932391;;True
+227932394;;True
+227932399;;True
+227980132;;False
+227982906;Rua do Estêvão;False
+227991568;;False
+228569801;Rua de São Brás;False
+228894146;;False
+228926086;;False
+228926087;;False
+228926088;;False
+228926091;;False
+228931095;Rua de Santa Catarina;False
+229184974;Largo de Mompilher;False
+229194693;Largo de Mompilher;False
+229278901;;True
+229319074;;True
+229784702;;True
+229784704;;True
+229784705;;True
+229784709;;True
+229784712;;True
+229784713;;True
+229784714;;True
+229784715;;True
+229784716;;True
+229802211;Rua de Carlos Alberto;False
+229816562;Rua de Carlos Alberto;False
+229817535;;False
+229818921;Praça de Carlos Alberto;False
+231325189;;False
+231325191;;False
+231325193;;False
+232389249;Avenida Manoel de Oliveira;False
+232445175;Rua 5 de Outubro;False
+232574615;Rua Luís de Camões;False
+232574616;;False
+232574617;Rua Luís de Camões;False
+232574618;;False
+232574619;Rua do Freixo;False
+232574620;Rua do Freixo;False
+232574621;Rua do Freixo;False
+232574622;Rua do Freixo;False
+232574625;Rua do Freixo;False
+233006425;Travessa do Carregal;False
+233007929;Calçada do Carregal;True
+233026842;;True
+233026843;;True
+233055818;Túnel dos Almadas;False
+233057240;;True
+233098267;Rua Professor Jaime Rios de Sousa;False
+233232639;;False
+233238143;;False
+233291398;Rua Doutor Joaquim Manuel da Costa;False
+233453892;;False
+233688631;Rua da Faia;False
+233688633;;False
+233688634;Rua do Freixo;False
+233688640;Rua do Freixo;False
+233688643;Rua do Esteiro de Campanhã;False
+233688644;Rua do Esteiro de Campanhã;False
+233883392;Avenida José Domingues dos Santos;False
+233883393;Avenida José Domingues dos Santos;False
+233883394;Avenida José Domingues dos Santos;False
+233883395;Avenida José Domingues dos Santos;False
+236802883;Avenida de Paiva Couceiro;True
+236802885;Rua de Azevedo;False
+236802887;Estrada da Circunvalação;False
+237399230;;False
+237532598;;False
+237532599;;False
+237532600;;True
+238829173;;False
+238831062;Rua Tareija Vaz de Altaro;False
+238831761;Rua do Corpo da Guarda;True
+238872916;Avenida Gustavo Eiffel;True
+238873106;Ilha;True
+238912242;;True
+239593895;Rua de Sá da Bandeira;True
+239593896;;False
+239593897;Rua Ateneu Comercial do Porto;False
+240124255;;False
+240124256;;False
+240124257;;False
+240126041;;False
+240126042;;False
+240126043;;False
+240126044;;True
+241247623;;True
+241248489;Rua dos Armazéns;False
+241248490;Rua de São Pedro de Miragaia;False
+243767583;;False
+243767585;;False
+243771635;;False
+243771637;;False
+243771639;;False
+243771642;;False
+243771644;;False
+243771645;;False
+243806519;;True
+243806524;;True
+243806526;;True
+243807208;;False
+243807209;;False
+243807211;;False
+244346541;;False
+244396336;;False
+244408625;;False
+244409369;;False
+244457582;;False
+244457584;;False
+244542791;;False
+244563847;;False
+250949165;Avenida da Boavista;False
+251257501;Rua João de Deus;False
+251257511;;False
+252253611;Avenida de Paiva Couceiro;True
+252253615;;False
+252255465;Rua Luís de Camões;False
+252255481;Rua Luís de Camões;False
+252518642;Rua da Restauração;True
+252518644;Rua da Restauração;True
+252518836;Rua da Torrinha;False
+252519111;Rua da Piedade;False
+252519112;Rua do Padre Cruz;False
+252519361;Rua João de Deus;False
+252526950;Rua da Alegria;False
+252526951;Rua da Alegria;False
+252526952;Rua da Firmeza;False
+252526954;Rua de Santa Catarina;False
+252526955;Rua da Firmeza;False
+252527740;Rua Dom João IV;False
+252527749;Rua de São Victor;False
+252527889;Rua dos Manjericos;False
+252527890;Rua da Senhora das Dores;False
+252529844;Rua da Formiga;False
+252543082;Rua de São Roque da Lameira;False
+255778742;;False
+255778743;Rua de Entre Quintas;False
+255848372;Rua do Adro;False
+256001680;;False
+256001690;;False
+256165013;;False
+256165014;Rua do Abade de Faria;False
+256249046;Rua do Arcediago Van Zeller;False
+256249047;Rua do Abade de Faria;True
+256249048;Rua do Abade de Faria;False
+256249538;;False
+256249540;;False
+256249541;;False
+256277474;;False
+256277806;Rua do Abade de Baçal;False
+256283186;;False
+256283595;;False
+256284476;;False
+256421288;;False
+256422371;;False
+256422375;;False
+256422384;;False
+256430674;;False
+256431162;Rua do Casal do Pedro;False
+256431396;;False
+256431399;;False
+257856618;;True
+257944944;;True
+258022474;;False
+258128895;;False
+258128896;;False
+258204912;;False
+258205040;;True
+258205591;;False
+258205593;Rotunda Edgar Cardoso;False
+258205598;;False
+258205599;Via 8;False
+258205600;Via Engenheiro Edgar Cardoso;False
+258205601;Via Engenheiro Edgar Cardoso;False
+258206486;Via Engenheiro Edgar Cardoso;False
+258206487;Via Engenheiro Edgar Cardoso;False
+258206488;Via Engenheiro Edgar Cardoso;False
+258206490;Via Engenheiro Edgar Cardoso;False
+258215254;;False
+258215258;Rua do Clube Desportivo do Candal;False
+258215259;;False
+258215260;Rua Princesa Gaia;False
+258215759;Via 8;False
+258215761;Via Engenheiro Edgar Cardoso;False
+258215766;Via Engenheiro Edgar Cardoso;False
+258215853;;False
+258215854;Rua Rei Ramiro;False
+258216352;;False
+258217610;Rua Rei Ramiro;False
+258220293;;False
+258220297;;False
+258220299;;False
+258220300;;False
+258220302;;False
+258220304;;False
+258220539;Via Engenheiro Edgar Cardoso;False
+258220540;Via Engenheiro Edgar Cardoso;False
+258220541;Via Engenheiro Edgar Cardoso;False
+258220639;;False
+258325191;;False
+258325192;;False
+258333437;Rua Tenente Valadim;False
+258333440;;False
+258335660;Rua de Vera Cruz;False
+258356094;;False
+258356095;Rua Grémio da Prosperidades;False
+258356481;Rua Castro Portugal;False
+258359677;;False
+258359679;Alameda da Empresa;False
+258359681;Rua 28 de Janeiro;False
+258359683;;False
+258360485;;False
+258374541;;False
+258376189;;False
+258379126;;False
+258380436;;False
+258383190;Vereda da Bélgica;False
+258383191;;False
+258383192;;False
+258383193;;False
+258387610;;False
+258387612;;False
+258387614;;False
+258559409;Rua Cabo Simão;False
+258560835;Rua Casino da Ponte;False
+258560836;Rua Rocha Leão;False
+258674311;;False
+258674314;;True
+258696766;Rua do Recanto;False
+258750431;Cais do Lugan;True
+258750432;Rua da Praia;True
+258853578;;False
+258853579;Rua do Carmo;False
+258853580;Rua do Carmo;False
+258853581;Rua de Alberto Aires de Gouveia;False
+258915957;;False
+258915958;Avenida Mestre José Rodrigues;False
+258915959;;False
+258915961;Avenida Mestre José Rodrigues;False
+258916271;Avenida Mestre José Rodrigues;False
+258916272;;False
+259888928;Rua da Restauração;False
+261556129;;False
+261739718;;False
+261739719;Rua do Palácio;False
+261739720;;False
+261980631;Rua do Duque de Palmela;False
+261980633;Rua Joaquim António de Aguiar;False
+261980634;Rua do Duque da Terceira;False
+261980635;Avenida de Rodrigues de Freitas;True
+261980637;Avenida de Rodrigues de Freitas;True
+261980638;Rua do Barão de São Cosme;True
+261980641;Avenida de Rodrigues de Freitas;True
+261980642;Rua Joaquim António de Aguiar;False
+261980643;Rua do Duque da Saldanha;False
+261980644;Rua Joaquim António de Aguiar;False
+262150129;Rua João Pregueira Mendes;False
+262150130;Rua Carlos Graça;False
+262150131;Rua Oliveira Santos;False
+262150132;Rua de Francisco Carqueja;False
+262150133;Rua das Antas;True
+262150135;Rua João Pregueira Mendes;True
+262150136;Rua Oliveira Santos;False
+262258885;;False
+262473261;Ilha;False
+262473262;;False
+262474849;Rua da Restauração;True
+262562257;;False
+262579556;Rua de Calouste Gulbenkian;False
+262579557;Rua de Calouste Gulbenkian;False
+262580848;;False
+262580849;;False
+262613778;;False
+262613779;;False
+262613780;Parque Mota-Galiza;False
+262616020;Rua de Calouste Gulbenkian;False
+262616021;Via Particular;False
+262616022;Via Particular;False
+262617278;;False
+262617734;;False
+262623002;Rua de Calouste Gulbenkian;False
+262623003;Rua de Calouste Gulbenkian;False
+262797434;;False
+262799008;;False
+262799009;;False
+262801392;;False
+262945890;Rua da Boa Nova;False
+267026311;;False
+269856842;;False
+270443013;Rua de Vieira Portuense;False
+270443014;Rua General Norton de Matos;False
+271000655;;False
+273625809;Rua Rei Ramiro;False
+274467054;Rua Doutor Alves da Veiga;False
+274894722;Rua de Tirares;True
+275860210;Travessa do Cativo;False
+278570711;;False
+278570718;Travessa das Almas;True
+279525891;Rua do Freixo;True
+279525892;Rua da Senhora da Hora;False
+279525893;Rua do Meiral;False
+280782604;Ilha;False
+280786930;Ilha;False
+280949034;Ilha;False
+280966568;;False
+280966569;;False
+280966571;;False
+281224991;;False
+284770886;;True
+284770887;;False
+284775782;;False
+284775785;;False
+284775786;;False
+284777297;;False
+285944901;;False
+286004317;;False
+286004375;;False
+286005192;;True
+286006222;;True
+286356084;Rua do Mártir São Sebastião;False
+286356085;Rua Quinta das Chãs;False
+286439779;Rua André Castro;False
+286754358;;False
+286754361;;False
+286779044;;False
+286782663;;False
+286782664;;False
+287648368;;False
+287648784;;False
+287648900;Rua de Camões;True
+287906089;;True
+287933160;;True
+287933164;;True
+287933167;;True
+288961296;;True
+289161877;Rua de São Luís;True
+289165980;;True
+290230302;;True
+290230303;;True
+290230304;;True
+290446564;;False
+290446567;;False
+290580546;;False
+290580548;;False
+290580549;;False
+290586123;;False
+290586125;;False
+291331346;Travessa de Nova Sintra;False
+292119381;Rua do Campo Alegre;False
+294240864;;False
+294240865;;False
+298568012;Largo Soares dos Reis;False
+298568014;Largo Soares dos Reis;False
+298568016;Largo Soares dos Reis;False
+298568017;Largo Soares dos Reis;False
+298568019;Rua de Ferreira Cardoso;False
+298577597;Rua Joaquim António de Aguiar;False
+298838091;Rua de Frei Heitor Pinto;False
+302975744;;False
+302975749;;False
+303512918;Rua da Quinta das Pedras;False
+303512920;Rua Cândido dos Reis;False
+304680071;Rua do Campo Alegre;False
+304680072;Rua Gonçalo Sampaio;False
+304680073;;False
+304680074;Rua do Bom Sucesso;True
+304680075;Rua de Agramonte;False
+304680849;;False
+304682487;Largo dos Lóios;False
+304684297;Rua de Mouzinho da Silveira;True
+304684302;;False
+304684788;;False
+304688472;Rua Dom Pedro V;True
+304688473;Rua de Vilar;False
+304688479;Rua de Vilar;False
+304688480;Rua de Dom Manuel II;False
+304688481;;False
+304688482;Rua Sá da Bandeira;False
+304690305;;False
+304690306;Rua de Carlos Malheiro Dias;True
+305708885;;True
+306780233;Rua da Bouça;False
+306780234;Rua do Monte Cativo;False
+306780458;Travessa de Antero de Quental;False
+307088020;;False
+307090815;Travessa de Salgueiros;False
+307126889;Rua de Cervantes;False
+307804459;Praça de Almeida Garrett;False
+307804460;;False
+307804461;Praça de Almeida Garrett;False
+308766174;;False
+308769686;;False
+308771430;Calçada Marques Marinho;False
+308771431;Rua da Peneda;False
+308771715;;False
+308992300;;False
+309387164;;False
+309425930;;False
+309548445;;False
+309550975;;False
+309550976;;False
+309557721;;False
+309557722;;False
+309609103;;False
+309609104;;False
+309609105;;False
+309613709;;False
+309613710;;False
+309613711;;False
+309613712;;False
+309850502;;False
+309850504;;False
+309850505;;False
+309850506;;False
+309945301;;False
+309946468;;False
+309946469;;False
+309946470;;False
+309946471;;False
+309983298;;False
+309983299;;False
+309983300;;False
+309983301;;False
+310408556;;False
+310746310;Rua de Damião de Góis;False
+310786269;Rua de Cervantes;False
+311573814;Rua Zeferino Costa;False
+311839036;Rua André Castro;False
+313476528;;False
+313476529;;False
+313477160;;False
+314026522;Rua de Grijó;True
+316966747;Rua António Maria de Sena;False
+316967084;Rua de Grijó;True
+316967086;Rua de Grijó;True
+318745009;Rua das Águas Férreas;True
+321496804;Largo Soares dos Reis;True
+321507690;Calçada da Boa Viagem;True
+321507691;Calçada da Boa Viagem;True
+323156957;;False
+323352180;;False
+323352182;;False
+324604400;;False
+326594065;Avenida Ramos Pinto;False
+326594074;;False
+326765451;Travessa Azevedo Magalhães;False
+327439257;Avenida da Boavista;False
+330586900;;False
+331313322;Rua do Freixo;False
+331313324;;False
+331459114;Ilha;False
+331655265;;False
+331655267;;False
+331694596;;False
+332053082;Rua da Restauração;False
+332053097;;False
+332053100;;False
+332053109;;False
+332053112;;False
+332053113;;False
+332154457;;False
+332154459;;False
+332154461;;True
+332154462;;True
+332154468;;True
+332154471;;True
+332154473;;True
+332154474;;True
+332154475;;True
+332154476;;True
+332154477;;True
+332154478;;True
+332179488;;True
+332348178;Rua do Freixo;False
+332348179;Rua do Freixo;False
+332348180;Rua do Freixo;False
+332348181;Rua do Freixo;False
+332348231;;False
+332348235;;False
+332479847;Alameda de Basilo Teles;False
+332479850;Rua da Restauração;False
+332479851;;False
+332479931;;False
+332479933;;False
+332479935;;False
+332479938;;False
+332760576;;False
+332760578;;False
+332760579;;False
+332760581;;False
+332760586;;False
+332760592;;True
+332760593;;True
+332760597;;True
+332760598;;True
+332760603;;True
+332760606;;True
+332760613;;True
+332760614;;True
+332760623;;True
+332760625;;True
+332760626;;True
+332760631;;True
+332760635;;True
+332760640;;True
+332760646;;True
+332760657;;True
+332760658;;True
+332760661;;True
+332760662;;True
+332760664;;False
+332760665;;False
+332760669;;False
+332760670;;False
+332930932;;False
+332930933;;False
+332930935;;False
+332930936;;False
+332930937;;False
+332930938;;False
+332930944;;False
+332930946;;False
+336758567;Avenida de Fernão de Magalhães;False
+337165204;;False
+337170209;;False
+337170234;;False
+337170235;;False
+337170236;;False
+337170237;;False
+337598659;;False
+337598660;;False
+337598661;;False
+337598663;;False
+338224362;;False
+338314207;;False
+338599334;;False
+338599335;;False
+338599348;;False
+338621663;;False
+338621710;;False
+346654346;;False
+346992934;Rua de Vilar;False
+346993984;;False
+346993987;;False
+347743211;;False
+348012722;;False
+348446383;;False
+348446384;;False
+349620089;Avenida Dom Afonso Henriques;False
+349620090;Avenida Dom Afonso Henriques;False
+349620091;Rua Trindade Coelho;False
+349620094;;False
+349620097;;False
+349661208;Avenida da República;False
+349661209;Avenida da República;True
+350915445;Rua do Moreira;False
+350915448;Rua de Anselmo Braamcamp;False
+350915450;Rua de Santos Pousada;False
+350915451;Rua do Monte do Tadeu;False
+351205373;Rua Professor Ernesto de Morais;False
+351205816;;False
+351205818;;False
+352366152;;False
+352693493;Rua Brigadeiro Nunes da Ponte;False
+356310188;Rua do Rêgo Lameiro;False
+359839661;Rua da Lameira de Baixo;False
+364711967;;False
+364711968;;False
+364711969;;False
+364712287;;False
+364828782;;False
+364828783;;False
+364828784;;False
+364828785;;False
+365010794;;False
+365020864;;True
+365020865;;True
+365020866;;False
+365020867;;True
+365021648;;True
+365044226;;True
+365044424;;True
+365047874;;True
+365315017;Ponte do Freixo;False
+365315018;;False
+365315019;Ponte do Freixo;False
+365315020;Ponte do Freixo;False
+365423939;Travessa da Rua Formosa;False
+365436693;;False
+365452182;;False
+365461932;;False
+365578411;;False
+365578412;;False
+365578413;;False
+365578414;;False
+365578951;;False
+365609533;;False
+365609534;;False
+365792754;;False
+365792757;;False
+365792759;;False
+365798962;;False
+365798963;;False
+365803921;;False
+365803922;;False
+365803923;;False
+365804362;;False
+365804363;;False
+365804364;;False
+366594499;Avenida de Rodrigues de Freitas;True
+366594500;;False
+366594501;;False
+366750649;Rua José Falcão;False
+368009830;Travessa de Nova Sintra;False
+368009831;Rua da Formiga;False
+368010882;Travessa de Miraflor;False
+369859479;Rua Manuel Moreira de Barros;False
+369859481;;False
+369859483;;False
+369859485;;False
+369859487;Via Engenheiro Edgar Cardoso;False
+369859488;;False
+369859489;;False
+369859491;;False
+369859492;;False
+369859493;;False
+369859494;;False
+370297653;;False
+370332314;;False
+370332316;Via Engenheiro Edgar Cardoso;False
+370332318;;False
+370332320;Via Engenheiro Edgar Cardoso;False
+370332321;;False
+370332323;Rua de Chãs;False
+370332326;;False
+370332329;;False
+370332331;;False
+370332333;;False
+370332334;;False
+370332336;;False
+370332338;;False
+370332339;;False
+370332341;;False
+370332343;;False
+370334924;;False
+370334925;;False
+370334926;;False
+370334927;;False
+370730625;Via da Misericórdia;True
+371664136;Rua do Fontão;True
+374346167;Largo Doutor Pedro Vitorino;False
+374346168;Largo de São Domingos;False
+374346169;Praça de Carlos Alberto;False
+374346170;Praça de Carlos Alberto;False
+374346172;Rua das Flores;False
+374346173;Rua dos Caldeireiros;False
+376599038;Rua de Agramonte;False
+376599040;Rua de Agramonte;False
+376599074;;False
+376599075;;False
+376599076;;False
+376613816;Rua da Fonte Velha;False
+376613818;;False
+377094125;Rua Nova de São Paio;False
+377094131;Rua Doutor Eduardo de Matos;False
+377094134;CAminho da Associação;False
+379397896;;False
+381421886;Avenida Artur Andrade;False
+381421887;Avenida Artur Andrade;False
+381421888;Avenida Artur Andrade;False
+381423573;;False
+381423594;;False
+381423613;Rua do Lagarteiro;False
+381423696;;False
+381423701;;False
+381423747;Rua do Lagarteiro;False
+381423765;Rua do Peso da Régua;False
+381423769;;False
+381423784;;False
+381423785;;False
+381423798;Rua do Peso da Régua;False
+381423855;Rua do Lagarteiro;False
+381423865;Rua do Cerco do Porto;False
+381423871;;False
+381423884;;False
+381423938;Rua do Peso da Régua;False
+381423979;Rua de Tirares;False
+382530392;;False
+385795770;Rua Formosa;False
+385795773;Rua de Santa Catarina;False
+385795791;;False
+386286205;Largo do Pinheiro;False
+386286206;Largo do Pinheiro;False
+386286210;Rua de Dom Manuel II;True
+386440344;;False
+386578574;;False
+386578577;;False
+386690150;Bairro da Padaria;False
+388048413;Rua de Nossa Senhora de Fátima;False
+388048416;Rua do Barão de Forrester;False
+390157753;;False
+390157754;;False
+390157761;;False
+390157767;;False
+390157770;Ponte do Freixo;False
+390157771;;False
+390157775;;False
+390157776;Ponte do Freixo;False
+391814310;;False
+391814311;;False
+391814312;;False
+391839882;Calçada de Godim;False
+391839883;Campo 24 de Agosto;False
+391839888;Rua do Duque da Saldanha;False
+391839890;Rua Particular dos Ferroviários;False
+391839891;Rua Particular dos Ferroviários;False
+391839893;Rua Santo Ildefonso;False
+391839895;Rua de Ferreira Cardoso;False
+391839896;Rua da Fonte Velha;False
+391839898;Rua de Justino Teixeira;False
+391839899;Rua de Justino Teixeira;False
+391839901;Rua do Bonfim;False
+391839909;Rua do Bonfim;False
+391839910;Rua do Bonfim;False
+391839911;Rua do Bonfim;False
+391839912;Travessa de Fernão de Magalhães;False
+391839938;;False
+391839939;;False
+391839942;;False
+394169424;;False
+394998026;Rua do Bonjardim;True
+395649572;;True
+396485358;;True
+400055054;Rua da Cooperativa da Zona da Boavista;True
+400055056;Rua da Cooperativa da Zona da Boavista;True
+400077009;Rua de Cimo de Vila;False
+404635506;Via de Cintura Interna;False
+404635517;;False
+404635518;;False
+404635520;;False
+405214778;;False
+405214785;;False
+405214786;;False
+405228374;Cais Capelo e Ivens;False
+405228377;Cais da Fontaínha;False
+405228379;Cais do Cavaco;False
+405235474;Alameda dos Jardins da Arrábida;True
+405235475;Alameda dos Jardins da Arrábida;True
+405235476;Alameda dos Jardins da Arrábida;True
+405235477;Alameda dos Jardins da Arrábida;True
+405235478;;True
+405235479;Alameda dos Jardins da Arrábida;True
+405235480;Alameda dos Jardins da Arrábida;True
+405520660;Largo de José Moreira da Silva;False
+407752150;;True
+407752152;;True
+407752155;;True
+407752157;;False
+414268432;Rua de Chaves de Oliveira;False
+415309319;Rua do Verdinho;False
+415566516;Via de Cintura Interna;False
+417882301;Alameda do Conde de Samodães;False
+417882305;Rua José Meneres;False
+417887999;Rua Afonso de Albuquerque;False
+417888000;Rua do Casal;False
+417894136;Rua Dr. Alfredo Faria Magalhães;False
+417894138;Rua Dr. Alfredo Faria Magalhães;False
+417894141;Variante Silva Tapada;False
+417894143;Rua Silva Tapada;False
+417894147;Rua Silva Tapada;False
+417894149;Rua da Fábrica;False
+417894152;Rua Nova de S. Salvador;False
+417894155;Rua Calouste Gulbenkian;False
+417894157;Rua Calouste Gulbenkian;False
+417894160;Rua Manuel Pinto de Azevedo;False
+417894162;Rua Silva Tapada;False
+418392738;Rua Rei Ramiro;False
+418392740;;False
+418392741;;False
+418392742;;False
+419935503;Rua de Mouzinho da Silveira;False
+419935504;Rua de Mouzinho da Silveira;False
+420021609;Rua do Infante Dom Henrique;True
+420021610;Rua do Infante Dom Henrique;True
+424745508;Acesso Hotel Miradouro e Restaurante Portucale;True
+425318823;Rua de Nossa Senhora de Fátima;True
+426474367;;True
+432472357;Rua do Barão de Nova Sintra;True
+432472358;Rua do Barão de Nova Sintra;True
+434857293;Rua Doutor Ferreira da Silva;True
+434860177;Rua de Dom Manuel II;True
+434872534;Avenida dos Aliados;False
+434872537;Rua da Boavista;False
+434872538;Rua de Camões;False
+434872539;Rua de Camões;False
+434872540;Rua de Gonçalo Cristóvão;False
+434872541;Rua de João das Regras;False
+434878400;Rua de Fernandes Tomás;False
+434878401;Rua de Sá da Bandeira;True
+434879921;Rua Formosa;False
+434879924;Rua de Cedofeita;False
+434879926;Rua de Sá da Bandeira;True
+434882583;Largo de Ferreira Lapa;False
+434882592;Rua Caldas Xavier;False
+434882601;Rua de Oliveira Monteiro;False
+434884635;Largo de Ferreira Lapa;False
+434896885;Largo da Estação;False
+434896892;Largo da Estação;False
+434897749;Rotunda do Freixo;False
+434897752;Rua da Estação;False
+440120459;;False
+440120460;;False
+440421754;;False
+440421755;;False
+440421756;;False
+440421757;;False
+440422431;Largo de Chaves de Oliveira;False
+441685499;Avenida 25 de Abril;False
+441685500;Avenida 25 de Abril;False
+441685553;;False
+441685554;;False
+441685557;;False
+441685558;;False
+441685560;Avenida 25 de Abril;False
+441685561;;False
+441685562;Rua Agostinho José Freire;False
+441685565;Avenida 25 de Abril;False
+441685566;;False
+441685567;;False
+441685568;;False
+441685569;;False
+441685570;Avenida 25 de Abril;False
+441685571;;False
+441685572;Avenida 25 de Abril;False
+441685573;Avenida 25 de Abril;False
+441685579;;False
+441685580;;False
+441685583;;False
+441685584;Rua da Lameira de Baixo;False
+441685585;;False
+441685586;;False
+441702408;Radial de Gondomar;False
+441811697;;False
+441811709;;False
+441811713;;False
+441811719;;False
+441811723;;False
+441811727;;False
+441811728;;False
+441811749;;False
+441811752;;False
+441811755;;False
+441811756;;False
+441811761;;False
+441811766;;False
+441811776;;False
+441811778;;False
+441811780;;False
+441811792;;False
+442208742;Rua do Peso da Régua;False
+443225948;Rua da Fonte Velha;False
+446875918;;False
+446875919;;False
+446876722;Rua do Aleixo;False
+446878975;Rua das Condominhas;False
+447242455;;False
+447242456;;False
+447242457;;False
+447242458;;False
+447242459;;False
+447242460;;False
+447242482;Rua do Lagarteiro;False
+447242484;Rua de Azevedo;False
+447242485;Beco do Campo;False
+447242487;Travessa do Meiral;False
+447242488;Rua Beija-Flor;False
+447242489;Rua da Palheta;True
+447242490;Travessa da Levada;True
+447242492;Rua da Levada;True
+447242493;Rua do Bacelo;True
+447242494;;True
+447242495;Calçada de São Pedro;True
+447242496;Calçada de São Pedro;True
+447242497;Calçada de São Pedro;True
+447242498;;True
+447242499;;True
+447242501;Rua da China;True
+447242503;Travessa da China;True
+447248044;Rua das Eirinhas;True
+447248047;;True
+447248049;;True
+447248051;;True
+447248053;;True
+447313060;Via de Cintura Interna;False
+447313061;Via de Cintura Interna;False
+447313062;Via de Cintura Interna;False
+447313531;Via de Cintura Interna;False
+447313532;Ponte da Arrábida;False
+448190680;Rua Dominguez Alvarez;False
+448195831;Rua do Alto da Arrábida;False
+448195832;;False
+448195833;;False
+448195834;Rua Duruelo De La Sierra;False
+448195853;Rua Firmino Pereira;False
+448195854;;False
+448195856;Rua Particular de Justino Teixeira;False
+448195860;Rua de Silva Pereira;False
+448195861;;False
+448195870;Rua Cidália Meireles;False
+448195871;Travessa do Poço das Patas;False
+448195874;;False
+448195875;;False
+448195876;;False
+448195877;;False
+448195878;Travessa do Campo de Paiva;False
+448195879;Travessa do Campo de Paiva;False
+448195880;Travessa do Campo de Paiva;False
+448568816;Rua de Dom António Barroso;False
+448822073;;False
+448824904;;False
+448824907;Travessa de Pinto Bessa;False
+448828345;;False
+448828346;;False
+448828348;;False
+448828349;;False
+448828351;;False
+448828352;;False
+448828353;;False
+448828354;;False
+448828358;;False
+448828360;;False
+448828361;;False
+448828362;;False
+448828363;;False
+448828365;;False
+448828366;;False
+448828367;;False
+448828368;;False
+448828369;;False
+448828370;;False
+448828371;;False
+448828372;;False
+448828373;;False
+448828375;;False
+448828376;;False
+448828377;;False
+448828378;;False
+448832524;Rua do Falcão;False
+448832525;Rua da Igreja de Campanhã;False
+448832527;Adro da Igreja de Campanhã;False
+448832528;Rua Padre Domingos de Azevedo;False
+448832529;;False
+448832530;Rua 5;False
+448832532;Rua 6;False
+448832536;Rua 11;False
+448832537;Beco de Bonjóia;False
+448832539;Beco de Bonjóia;False
+448832541;Rua 9;False
+448832545;Travessa do Monte da Bela;False
+448832550;Viela de Bonjóia;False
+448832553;Associação Nun'Álvares de Campanhã;False
+448834151;Rua Cecília Meireles;False
+448834152;Praceta do Maestro Afonso Valentim;False
+448834153;Rua do Maestro Raúl Casimiro;False
+448834154;Rua do Maestro Raúl Casimiro;False
+448834156;Travessa das Antas;False
+448834157;Travessa das Antas;False
+448834158;Rua do Doutor António Ramos de Almeida;False
+448834159;Rua de José da Silva;False
+448834160;Rua do Tenente Vidal Pinheiro;False
+448834161;Rua do Engenheiro Mem Verdial;False
+448834162;;False
+448834163;Rua Coronel Hélder Ribeiro;False
+448850568;Praça de Almeida Garrett;False
+448850570;Rua de Sá da Bandeira;False
+448860910;Rua de Dom Manuel II;False
+448860912;Praça do Bom Sucesso;False
+448867772;Rua do Bonfim;False
+448867775;Rua do Bonfim;False
+448867778;Rua Pinto Bessa;False
+448867783;Rua 9 de Julho;False
+448867786;Largo da Ramada Alta;False
+448869503;Avenida 25 de Abril;False
+448869504;Praça do Marquês de Pombal;False
+449285398;Via Panorâmica Edgar Cardoso;False
+449725606;;False
+449725607;;False
+449725608;;False
+449725611;;False
+449725612;;False
+449725613;;False
+449725614;;False
+449725615;;False
+449725617;;False
+449726224;;False
+449726225;;False
+449726226;;False
+449726227;;False
+449726228;;False
+449726229;;False
+449728023;Largo do Padre Baltazar Guedes;False
+450409127;;False
+450409128;;False
+450447811;Rua de Chaves de Oliveira;False
+450866001;Rua da Mocidade da Arrábida;False
+450866003;Calçada da Arrábida;False
+450866004;;False
+450877635;Rua do Alto da Arrábida;False
+450877636;Largo de Pinto Correia;False
+450877637;Rua da Sociedade Nacional dos Fósforos;False
+450877638;;False
+450877639;;False
+451891538;;False
+451891539;;False
+452072992;;False
+452072993;;False
+452072994;Travessa do Leal;False
+452072998;Largo do Leal;False
+452073000;Rua das Musas;False
+452073003;Rua do Bonjardim;False
+452073004;Rua das Musas;True
+452073007;Largo da Fontinha;False
+452075654;Praça dos Poveiros;False
+452076635;Rua do Bicalho;False
+452076636;Rua da Boa Viagem;False
+452076637;Rua da Boa Viagem;True
+452076898;Rua do Paraíso;False
+452076977;;False
+452076978;;False
+452158599;Rua de Azevedo Coutinho;False
+452158600;;False
+452158601;Rua de Eugénio de Castro;False
+452441978;Rua da Póvoa;False
+452441983;;False
+452441984;;False
+452441985;;False
+452441986;;False
+452441987;;False
+452441988;;False
+452441989;;False
+452441990;;False
+452441993;Travessa de Anselmo Braancamp;False
+452441996;Rua do Monte de Tadeu;False
+453294700;Via de Cintura Interna;False
+453493822;Rua de Oliveira Monteiro;False
+453761206;Rua de Damião de Góis;False
+453761207;Rua de São Brás;False
+453761208;Rua de João Pedro Ribeiro;False
+453761209;Rua de João Pedro Ribeiro;False
+453761210;Rua de Faria Guimarães;False
+453761211;Rua de João Pedro Ribeiro;False
+453761213;Praça do Marquês de Pombal;False
+453761690;Praça do Marquês de Pombal;False
+453762038;Rua de Latino Coelho;False
+453762039;Rua da Alegria;False
+453762040;Rua de Latino Coelho;False
+453762110;Rua de Latino Coelho;False
+453762149;Praça da Rainha Dona Amélia;False
+453762944;Rua de Serpa Pinto;False
+453762948;Rua da Constituição;False
+453823645;Rua do Ouro;False
+453824706;Rua da Arrábida;False
+453824707;Rua do Alto da Arrábida;False
+453828702;Rua Júlio Lourenço Pinto;False
+453839349;Viela do Monte da Costa;False
+453839350;Rua de Godim;False
+453839351;Rua de Godim;False
+453839352;Rua do Doutor Maurício Esteves Pereira Pinto;False
+453839353;Rua da Lameira de Baixo;False
+453839354;Travessa de Gomes Leal;False
+453839355;Travessa das Eirinhas;False
+453849794;Viela do Sobreirinho;False
+453955769;Via de Cintura Interna;False
+453955770;Via de Cintura Interna;False
+454038641;Avenida da Boavista;False
+454039832;Rua de Agramonte;True
+454039835;;False
+456661949;;False
+456661950;;False
+457584743;;False
+457584744;;False
+457584745;;False
+457584746;Rossio de São Vicente;False
+457584747;Rua Agostinho Albano;False
+457584748;Rua António dos Santos;False
+457584749;Rua António dos Santos;False
+457584751;;False
+457584752;;False
+459407453;Viela da Cadeia;False
+459453160;Largo de São Domingos;False
+459643670;Rua Ofélia Diogo da Costa;False
+459891173;;True
+459895302;;True
+459895303;;False
+459895304;;False
+460206500;Rua do Sol;False
+460233181;Ilha;False
+460234698;Ilha;False
+460243039;;False
+460243046;Ilha;False
+460243048;Ilha;False
+460243612;;False
+460251867;Ilha;False
+460257688;Ilha;False
+460260902;Ilha;False
+460590743;;False
+460594249;;False
+460594258;Ilha;False
+460621918;;False
+460621919;;False
+460621920;;False
+460621921;;False
+460621922;;False
+460621923;;False
+460621924;;False
+460621925;;False
+460621926;;False
+460621927;;False
+460621929;;False
+460624067;;False
+460839284;Via de Cintura Interna;False
+460986037;Via de Cintura Interna;False
+460986038;Via de Cintura Interna;False
+460986072;Via de Cintura Interna;False
+460986073;Ponte da Arrábida;False
+460986074;Ponte da Arrábida;False
+460986075;Via de Cintura Interna;False
+460986076;Travessa Tenente Valadim;True
+460986077;Travessa Tenente Valadim;True
+461172812;Via de Cintura Interna;False
+461172813;Via de Cintura Interna;False
+461172814;Via de Cintura Interna;False
+461172815;Via de Cintura Interna;False
+461932808;Rua Bouça Ribas;False
+461932809;Rua do Falcão;False
+461932811;Rua Manuel Pinheiro da Rocha;False
+461932818;Largo de São Pedro;False
+461937903;Praça da Rainha Dona Amélia;False
+461937904;Rua Nova de São Crispim;False
+461937907;Rua do Pinheiro de Campanhã;False
+461937908;Rua Particular de Bonjóia;False
+461937910;Beco do Monte da Bela;False
+461937911;Rua Ana Plácido;False
+461937912;Rua da Fonte Velha;False
+461937916;Rua do Doutor Carlos Passos;False
+462819034;;False
+462819035;;False
+462839705;;False
+462839706;;False
+462839707;;False
+462839708;;False
+462839709;;False
+462839720;;False
+462839721;;False
+462839722;;False
+462839723;;False
+462839724;;False
+462839725;;False
+462839726;;False
+462839727;;False
+462839729;;False
+462840423;;False
+462840424;;False
+462847850;;False
+462847851;;False
+462847852;;False
+462847853;;False
+463280224;Campo 24 de Agosto;False
+464689863;Rua dos Abraços;False
+465527788;Ilha;False
+465527791;Ilha;False
+465527793;;False
+465527796;;False
+465943201;Viela da Pedreira;False
+465957508;;True
+465957509;;False
+465960771;;False
+465960772;;False
+465960773;;False
+465960774;;False
+465960777;;False
+465991205;;False
+465991206;;False
+465991207;;False
+465991208;;False
+465991214;;False
+465991219;;False
+465991220;;False
+465991221;;False
+465992860;;False
+465992861;;False
+465992862;;False
+465992863;;False
+465992864;;False
+465992865;;False
+466401601;;False
+466401605;;False
+466401606;;False
+466403128;Rua Doutor Mário de Vasconcelos e Sá;False
+466403882;Rua de Serpa Pinto;False
+466403883;Rua Paula Vicente;False
+466418662;;False
+466455973;;True
+466457054;;True
+466467978;;True
+466737770;;True
+466737773;;True
+466738481;;True
+466743722;;True
+466949844;;True
+467547248;;True
+467557877;;True
+467557878;;True
+467557879;;True
+467557880;;True
+467557881;;True
+467557882;;True
+467564423;;True
+469446406;;True
+469446408;;True
+470725292;;True
+471507125;;True
+472702717;Rua da China;True
+472702719;Rua da China;True
+472702722;Rua da China;True
+474647316;Travessa do Pinheiro de Campanhã;True
+474651340;;True
+474651341;;True
+474651342;Rua da China;True
+474651343;Rua da China;True
+474653102;;True
+474653103;;True
+474653104;;True
+474655368;;True
+474655369;;True
+474655370;;True
+474655371;;True
+474655372;;True
+474655373;;True
+474655374;;True
+474655375;;True
+474655377;;True
+474655378;;True
+474655379;;True
+474655381;Largo do Padre Baltazar Guedes;True
+474655384;Rua Joaquim António de Aguiar;False
+474655385;Rua de Gomes Freire;False
+477518914;;False
+477518915;;False
+477518916;;False
+477518923;Travessa de Oliveira Martins;False
+477522541;;False
+477522542;;False
+477524305;;False
+477530375;Rua José Monteiro da Costa;False
+477530377;Via Futebol Clube do Porto;False
+477530378;Rua João Marques Pinto;False
+477530379;;False
+477534918;Campo 24 de Agosto;False
+477534919;Campo 24 de Agosto;False
+477697199;Rua dos Pescadores;False
+477697204;Rua Monte de São Pedro;False
+477847798;;False
+478869511;Rua Ofélia Diogo da Costa;False
+478869519;Rua Moreira de Sá;False
+479165071;Via de Cintura Interna;False
+479165072;Via de Cintura Interna;False
+479165875;Via de Cintura Interna;False
+479178722;Via de Cintura Interna;False
+479178723;Via de Cintura Interna;False
+480494958;Travessa do Gólgota;False
+480494959;Cais do Bicalho;True
+480741614;;False
+480741635;;False
+480743161;Rua de Agramonte;False
+480743163;Rua de Agramonte;False
+481849353;;False
+481849357;Rua da Pena;False
+481849358;Rua da Pena;False
+482122889;;False
+482122892;Rua de Alves Redol;False
+482122893;Rua de Alves Redol;False
+482122894;Rua de Cervantes;False
+482122896;Travessa dos Campos;False
+482122897;Travessa dos Campos;False
+482122899;Rua das Antas;False
+482122916;;False
+482122917;Travessa das Antas;False
+482240913;Rua do Campo Alegre;False
+482240915;Rua do Campo Alegre;False
+482240916;;False
+482261338;Rua do Campo Alegre;True
+482261339;Rua do Campo Alegre;True
+482261341;Rua do Campo Alegre;True
+482263507;Rua Gonçalo Sampaio;True
+482263508;Rua Gonçalo Sampaio;True
+482264025;;False
+482264026;Rua do Campo Alegre;False
+482272231;;False
+482276565;;False
+482276567;Via Panorâmica;False
+482276568;Via Panorâmica;False
+482276569;Via Panorâmica;False
+482289286;;False
+482289287;;False
+482289288;Travessa das Eirinhas;False
+482291294;Rua de Júlio Dinis;True
+482291295;Rua de Júlio Dinis;True
+482291787;Rua de Júlio Dinis;True
+482296560;Rua de Júlio Dinis;True
+482296561;Rua de Júlio Dinis;True
+482296562;Praça da Galiza;False
+482296563;Praça da Galiza;True
+482299102;Travessa de Gomes Leal;True
+482299112;Rua Câmara Pestana;True
+482299458;Túnel Goelas de Pau;False
+482301380;;False
+482301381;;False
+482302806;;False
+482302807;;False
+482302808;;False
+482302809;;False
+482302811;;False
+482307205;;False
+482307206;;False
+482307766;;False
+482307768;;False
+482307769;;False
+482310010;;False
+482310011;;False
+482310021;;False
+482310022;;False
+482310023;;False
+482312806;;False
+482312810;;False
+482312811;;False
+482316438;;False
+482316447;;False
+482316448;;False
+482316449;;False
+482316451;;False
+482316452;;False
+482316458;;False
+482316459;;False
+482316463;Rua de Godim;True
+482316464;Largo de Godim;True
+482316465;Rua de Godim;False
+482316795;;False
+482316797;;False
+482316798;;False
+482318527;Rua da Lomba;False
+482318528;Rua de Vera Cruz;True
+482318529;Rua de Barros Lima;False
+482324635;Rua Dom Agostinho de Jesus e Sousa;False
+482324638;Avenida de Fernão de Magalhães;False
+482324641;Rua Doutor Henrique de Miranda;False
+482324643;Avenida de Fernão de Magalhães;False
+482324646;Rua da Nau Trindade;False
+482324647;Rua de Brás Cubas;False
+482324649;Rua Coutinho de Azevedo;False
+482324651;Avenida de Fernão de Magalhães;False
+482327701;Rua do Bonfim;False
+482327702;Avenida 25 de Abril;False
+482327703;Avenida de Fernão de Magalhães;False
+482327707;Rua Aires de Ornelas;False
+482327709;Rua do Duque de Loulé;True
+482331421;Praça da Rainha Dona Amélia;False
+482331422;Praça da Rainha Dona Amélia;False
+482331424;Rua de Costa Cabral;False
+482557484;;False
+482557492;;False
+482557522;;False
+482557523;;False
+482557524;;False
+482557526;;False
+482557527;;False
+482557534;;False
+482557536;;False
+482561015;;False
+482561016;Travessa das Eirinhas;False
+482561023;;False
+482561024;;False
+482561026;;False
+482561027;;False
+482561037;;False
+482561038;;False
+482561047;;False
+482561048;;False
+482561049;;False
+482561050;;False
+482561051;;False
+482561064;;False
+482561068;;False
+482561071;;False
+482561072;;False
+482561078;;False
+482561807;Travessa da Póvoa;False
+482561808;Rua da Póvoa;False
+482561809;Rua da Póvoa;False
+482563074;Rua da Póvoa;False
+482563077;;False
+482563078;;False
+482563087;;False
+482563088;;False
+482564821;;False
+482564822;;False
+482564823;;False
+482564824;;False
+482564826;;False
+482564828;;False
+482568730;;False
+483497792;;False
+483497793;;False
+483497794;;False
+483695120;Avenida da República;False
+483715752;Rua Rei Ramiro;True
+483715753;;True
+483715754;;False
+483715755;;False
+483715756;;False
+483715757;;False
+483715758;;False
+483715759;;False
+483715760;;False
+483715761;Via Engenheiro Edgar Cardoso;False
+483715762;;False
+483715763;;False
+483715764;;False
+483715765;Via de Cintura Interna;False
+483715766;Avenida da França;False
+484592256;Rua do Cativo;False
+484592257;Rua da Madeira;True
+484592258;Passeio das Fontaínhas;True
+484608229;Rua do Senhor da Boa Morte;True
+484608231;Praça do Conde de Samodães;False
+484608232;Praça do Conde de Samodães;False
+484986691;;False
+485343201;;False
+485343202;;False
+487977832;Rua Rinque;False
+487977833;Rua Rinque;False
+488690793;Rua Doutor António R. de S. Barroca;False
+488690794;Rua Doutor António R. de S. Barroca;False
+488690795;Rua Doutor António R. de S. Barroca;False
+488690796;Rua Doutor António R. de S. Barroca;False
+488690797;Rua Doutor António R. de S. Barroca;False
+488698537;;False
+490662623;Rua do Espinheiro;False
+490967803;Rua de São Paio;False
+490967804;Rampa de São Paio;False
+490967805;Recanto São Paio;False
+490967806;Rua de São Paio;False
+490967808;;False
+490967809;;False
+490967810;Praceta de Bustes;False
+490967811;;False
+490967812;Rua Circular da Pedra Alta;False
+490967813;Rua Nova da Pedra Alta;False
+490967814;Travessa da Bélgica;False
+490967815;Travessa da Bélgica;False
+490967816;Travessa Nova do Fontão;False
+490967817;Rua do Fontão;False
+490967821;Rua da Associação;False
+490967822;Passeio da Associação;False
+490967823;Travessa das Escadas de São Paio;False
+490967824;Rua do Monte da Luz;False
+490967825;Rua Doutor Ribeiro Magalhães;False
+490967827;Rua Doutor Eduardo de Matos;False
+490967828;Rua 29 de Junho;False
+490967829;Rua da Encosta;False
+490967830;Largo da Encosta;False
+490967831;Rua António dos Santos;False
+490971368;Rua do Cais do Norte;False
+490971369;Rua Alto da Camponesa;False
+490971370;Alameda dos Jardins da Arrábida;False
+490978704;Rua Margarida da Silva Cruz;False
+490978705;Vereda de Bustes;False
+490978706;Rampa do Espinheiro;False
+490978707;Rua Sol Vida;False
+490978708;Travessa Sol Vida;False
+490978709;Rua Sol Poente;False
+497150660;;False
+497150661;;False
+497150662;;False
+497150663;;False
+497150664;;False
+497150665;;False
+497150666;;False
+497153702;;False
+497153705;;False
+497386364;;False
+497386365;;False
+497386366;;False
+497386367;Rua do Mártir São Sebastião;False
+497386368;;False
+497386369;Rua de São Pedro;False
+497924851;;False
+497925444;;False
+498298756;Praça da República;False
+498298757;Praça da República;False
+498604771;;False
+500316825;;False
+500316827;;False
+501277146;Rua do Loureiro;False
+501848099;;False
+501848100;;False
+501848104;;False
+501849003;;False
+501849008;;False
+501854770;;False
+501856969;;False
+501856972;;False
+501874269;Rua de Dom Hugo;False
+502139965;;False
+502160137;;False
+502160138;;False
+502160139;;False
+502160140;;False
+502160141;;False
+502160142;;False
+502160859;;False
+502160860;;False
+502160861;;False
+502160862;;False
+504045799;;False
+504045800;Rua do Duque da Saldanha;False
+504048287;;False
+504048289;Rua da Estação;False
+504048290;Rua da Estação;False
+504048291;Rua do Paraíso do Freixo;False
+505628322;Quay access;False
+507100640;;False
+507100642;;False
+507100643;;False
+507100645;;False
+507100647;;False
+507100649;;False
+507100654;;False
+507100656;;False
+507100658;;False
+507100659;;False
+507100661;;False
+507100667;Avenida 25 de Abril;False
+507100669;Avenida 25 de Abril;False
+507100671;;False
+507522243;Largo de Ferreira Lapa;False
+507815972;;False
+507834337;;False
+507834338;;False
+507834339;;False
+507834340;;False
+507835921;Avenida Ramos Pinto;False
+507836125;Rua General Torres;True
+508107793;;False
+508107795;;False
+508107800;;False
+508107803;;False
+508107809;;False
+508107814;;False
+508107818;;False
+508109546;Praça das Flores;False
+508109549;Praça das Flores;False
+508109553;Praça das Flores;False
+508109562;Avenida 25 de Abril;False
+510727704;;False
+517693947;Rua da China;False
+517693950;Rua de Noeda;False
+517693952;Rua da Igreja de Campanhã;False
+517693954;Rua de Bonjóia;True
+517693955;Rua de Bonjóia;True
+517711042;Avenida Vímara Peres;True
+518375240;;True
+519421628;;True
+519436760;Rua da Creche;True
+526113266;Ponte do Freixo;False
+526113274;Ponte do Freixo;False
+533485441;;False
+533487706;;False
+533487707;;False
+533487708;;False
+533487709;;False
+534709226;;False
+534709227;;False
+534709228;;False
+534709229;;False
+534709230;;False
+534709237;Travessa de São Pedro;False
+534709238;Rua da Granja;False
+534714199;;False
+540751622;;False
+541915333;Travessa do Bacelo;False
+542445802;Rua do Cerco do Porto;False
+542447866;Associação Nun'Álvares de Campanhã;False
+542447867;;False
+542447868;;False
+542447869;;False
+542614686;;False
+543909124;Rua do Arco da Noeda;False
+543909125;Rua do Arco da Noeda;False
+544594833;Rua de São Rosendo;False
+544594838;Rua da Lomba;False
+544594841;Rua da Lomba;False
+544594845;Rua da Lomba;False
+544594848;;False
+544594851;Travessa de Vera Cruz;False
+544597110;Rua de Vera Cruz;False
+544599534;;False
+544604405;Travessa de Nova Sintra;False
+544604406;Travessa de Nova Sintra;False
+544604407;Rua da Formiga;False
+544755687;Rua de Dom Lopo de Almeida;False
+544755688;Rua do Bonfim;False
+545035488;Rua de São Gonçalo;False
+545056948;;False
+545062850;;False
+545062851;;False
+545063194;;False
+545282697;Largo de São Pedro;False
+546116105;;False
+546116106;;False
+546123665;Rua do Rêgo Lameiro;False
+546123666;Rua do Rêgo Lameiro;False
+546123673;;False
+546123677;;False
+546123678;;False
+546128914;;False
+546128915;;False
+546128916;;False
+546128921;;False
+546128922;;False
+546128925;;False
+546312893;;False
+546315413;;False
+546315414;;False
+546317153;;False
+546348997;;False
+546348998;;False
+546349000;;False
+546349001;;False
+546349002;;False
+546349003;;False
+546349004;;False
+546349006;;False
+546349007;;False
+546349008;;False
+546349009;;False
+546349010;;False
+546349017;;False
+546349018;;False
+546349019;;False
+546400389;;False
+546400943;Largo do Padre Baltazar Guedes;True
+546566663;;True
+546566667;;True
+546566669;;True
+546566680;;True
+546566682;;True
+546566690;;True
+546568940;;True
+546568942;;True
+546568944;;True
+546568946;;True
+546568949;;True
+546568951;;True
+546568955;;True
+546873589;;True
+546881507;;False
+546881508;Rua de Agramonte;True
+546881510;Rua de Agramonte;False
+546881512;Avenida da Boavista;False
+546881514;Rua do Tenente Valadim;False
+546881515;Rua de Pedro Hispano;False
+546881517;Rua de Pedro Hispano;False
+546885675;Rua Professor Bento de Jesus Caraça;False
+546895498;;False
+546895499;;False
+547021253;;True
+547021254;;False
+547650633;Largo da Lapa;False
+547650634;Rua do Paraíso;False
+547702460;;False
+547702475;Travessa de Maceda;False
+547760939;;False
+547760940;;False
+548108520;;True
+548108524;;False
+548108525;;False
+548108526;;False
+548108527;;False
+548108528;;False
+548109186;;False
+548109187;Rua do Choupelo;True
+548109188;Rua do Choupelo;True
+548109192;;True
+548110436;;True
+548110437;Rua do Choupelo;True
+548110438;Rua do Choupelo;True
+548182156;;True
+548346476;;True
+548351355;Largo do Cruzinho;True
+548351356;Travessa de Santo Amaro;True
+548373860;Rua da Boa Viagem;True
+548373861;Rua do Alto da Arrábida;True
+548373862;Rua do Alto da Arrábida;True
+548373863;Rua do Professor Carlos Alberto Ferreira de Almeida;True
+548373864;Rua do Professor José Valente;True
+548373865;Travessa da Boa Viagem;True
+548374656;Travessa do Campo do Rou;True
+549244849;Largo da Estação;False
+549244851;Rua de Justino Teixeira;False
+549244855;Rua de Justino Teixeira;False
+549245878;Largo da Estação;False
+549245879;Largo da Estação;False
+549249237;Rua do Bonfim;False
+549249239;Rua do Bonfim;False
+549253232;Avenida de Fernão de Magalhães;False
+549253233;Avenida de Fernão de Magalhães;False
+549253234;Avenida de Fernão de Magalhães;False
+549266388;Avenida de Fernão de Magalhães;False
+549266389;Avenida de Fernão de Magalhães;False
+549266390;Avenida de Fernão de Magalhães;False
+549266391;Avenida de Fernão de Magalhães;False
+549266392;Avenida de Fernão de Magalhães;False
+549266393;Avenida de Fernão de Magalhães;False
+549266394;Avenida de Fernão de Magalhães;False
+549266395;Avenida de Fernão de Magalhães;False
+549266396;Avenida de Fernão de Magalhães;False
+549266397;Avenida de Fernão de Magalhães;False
+549266398;Avenida de Fernão de Magalhães;False
+549266399;Avenida de Fernão de Magalhães;False
+549266400;Avenida de Fernão de Magalhães;False
+549266401;Avenida de Fernão de Magalhães;False
+549266402;;False
+549266403;Avenida de Fernão de Magalhães;False
+549266404;Avenida de Fernão de Magalhães;False
+549266406;Avenida de Fernão de Magalhães;True
+549266408;Avenida de Fernão de Magalhães;False
+549266409;Avenida de Fernão de Magalhães;False
+549266412;Avenida de Fernão de Magalhães;False
+549266415;Avenida de Fernão de Magalhães;True
+549269428;Avenida de Fernão de Magalhães;False
+549269430;Avenida de Fernão de Magalhães;False
+549269431;Avenida de Fernão de Magalhães;False
+549269433;Avenida de Fernão de Magalhães;False
+549392133;Rua 13;False
+549392134;;False
+549392135;Rua 5;False
+549392136;Rua 2;False
+549392137;Rua 1;False
+549392138;Rua 7;False
+549392139;Caminho da Bela;False
+549392140;Caminho da Bela;False
+549392141;;False
+549392143;Rua do Doutor José Marques;False
+549392144;;False
+549444986;Avenida de Fernão de Magalhães;False
+549962105;Rua do Freixo;False
+551619530;Rua do Monte dos Judeus;False
+552877507;;False
+553250012;;False
+553252623;;False
+553252624;;False
+553252625;;False
+553252626;Largo do Padre José de Oliveira;False
+553252627;Rua do Pinheiro de Campanhã;False
+553252631;;False
+553520161;;False
+553522534;Rua da Granja;False
+553524659;Rua da Presa Velha;False
+553528125;Rua General Sousa Dias;True
+557478465;Rua Rocha Leão;True
+557478467;Rua Rocha Leão;False
+557662759;Avenida da República;False
+557662760;Avenida da República;False
+557662761;;False
+557662762;;False
+557662765;Avenida da República;False
+557662766;Avenida da República;False
+563933245;;False
+565091881;Rua do Bolhão;False
+566126195;;False
+566126198;;False
+571754733;;False
+571754734;;False
+571754735;;False
+571754736;;False
+571754737;;False
+571754738;;False
+571754739;;False
+571754740;;False
+571754741;Rua do Instituto de Cegos de São Manuel;False
+571754954;Largo de Ferreira Lapa;True
+571754958;;True
+571755121;;True
+571755122;;True
+571755123;;True
+571755124;;True
+571755125;;True
+571755126;;True
+571755129;;True
+571755224;;False
+571755274;;False
+571755278;;True
+571755279;;True
+571755280;;True
+571755288;;False
+571755289;;False
+571755453;;False
+571755454;;False
+571755500;;False
+571755502;;True
+571755503;;True
