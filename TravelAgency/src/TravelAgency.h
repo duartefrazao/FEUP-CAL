@@ -12,10 +12,19 @@ private:
 	Location * destination;
 	std::string nodeFilename;
 	std::string edgeFilename;
+	std::string namesFilename;
 	Graph<Location, Link> *graph;
 	GraphViewer *graphView;
-	std::unordered_map<unsigned long int, Location *> locations;
+
+	std::unordered_map<int, Location *> locations;
 	std::unordered_map<unsigned long int, int> idNodes;
+	std::unordered_map<unsigned long int, std::string> edgeNames;
+	bool realMap;
+
+	double minLat = 0;
+	double maxLat = 0;
+	double minLon = 0;
+	double maxLon = 0;
 
 public:
 	TravelAgency();
@@ -24,12 +33,16 @@ public:
 	void processGraph();
 	void createGraphViewer();
 	void visualizeGraph();
-	void user();
+	void mainMenu();
+	void closeGraphView();
+	void travelMenu();
 	void shortestPath();
 	void tsp();
+	bool drawPath();
+	Location * getLocation(std::string);
 
-	double distanceHeuristic(Location * l1, Location *l2);
-	double costHeuristic(Location * l1, Location *l2);
+	static double distanceHeuristic(Location * l1, Location *l2);
+	static double costHeuristic(Location * l1, Location *l2);
 
 };
 

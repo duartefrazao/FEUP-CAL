@@ -26,7 +26,7 @@ void geneateRandomGridGraph(int n, Graph<Location, Link> & g) {
 	int idVertex = 0;
 	for (int i = 0; i < n; i++)
 		for (int j = 0; j < n; j++){
-			Location * location = new Location(idVertex, i*600/n, j*600/n, i*600/n, j*600/n, "");
+			Location * location = new Location(idVertex, (int) i*600/n, (int) j*600/n, "");
 			locations->insert(std::make_pair(idVertex, location));
 			g.addVertex(location);
 			idVertex++;
@@ -41,7 +41,7 @@ void geneateRandomGridGraph(int n, Graph<Location, Link> & g) {
 					if (i+di >= 0 && i+di < n && j+dj >= 0 && j+dj < n){
 						Location * start = locations->at(i*n + j);
 						Location * dest = locations->at((i+di) * n + (j+dj));
-						g.addEdge(start, dest , start->distance(dest), idEdge++);
+						g.addEdge(start, dest , start->distance(dest), idEdge++, "");
 					}
 
 	delete graphView;

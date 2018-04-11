@@ -20,15 +20,18 @@ class Location : public Vertex<Link>{
 	std::string name;
 
 public:
-	Location(unsigned long int id, int x, int y, double lat, double lon, std::string name);
+	Location(unsigned long int id, int x, int y, std::string name);
+	Location(unsigned long int id, double lat, double lon, std::string name);
 	bool operator==(const Location &l);
 	bool operator<(const Location &l);
 	double distance(Location *l);
 	virtual ~Location();
-	void addEdge(Location *d, double w, unsigned long int id);
+	void addEdge(Location *d, double w, unsigned long int id, std::string string);
 	int getId() const;
 	double getX() const;
 	double getY() const;
+	double getLat() const;
+	double getLon() const;
 };
 
 

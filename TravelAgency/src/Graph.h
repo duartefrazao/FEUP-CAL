@@ -19,39 +19,49 @@ double heuristic(Vertex<T> * v1, Vertex<T> *v2) {
 
 template<class V, class E>
 class Graph {
-	vector<V *> vertexSet;    // vertex set
+
+public:
+	typedef double (*Heuristic)(Vertex<E>* v1, Vertex<E> *v2);
+
+private:
+	vector<V *> vertexSet;
 	vector<vector<double>> weights;
 	vector<vector<int>> next;
 	vector<map<vector<V*>, pair<double, vector<V*>>>> hkAuxMemory;
 	V* hkBegin;
 
-public:
+protected:
+	pair<double, vector<V*>> heldKarpAlgorithm(V* dest, vector<V*> places);
+	bool aStarAlgorithm(V *origin, V *dest);
+	void dijkstraShortestPath(V *s);
 
+	void floydWarshallShortestPath();
+	vector<int> getfloydWarshallPath(const V &origin, const V &dest) const;
+
+public:
+	/*Graph manipulation functions*/
 	Graph<V, E>();
 	V *findVertex(const V &in) const;
 	bool inVertexSet(V *in) const;
 	bool addVertex(V *in);
-	bool addEdge(V *sourc, V *dest, double w, unsigned long int id);
+	bool addEdge(V *sourc, V *dest, double w, unsigned long int id, std::string string);
 	int getNumVertex() const;
-	vector<V *> getVertexSet() const;
+	const vector<V *> &getVertexSet() const;
+//	Heuristic heuristic;
 
-	// Fp05 - single source
-	void dijkstraShortestPath(V *s);
-	bool aStarAlgorithm(V *origin, V *dest);
-	void floydWarshallShortestPath();
-	vector<int> getfloydWarshallPath(const V &origin, const V &dest) const;
+	/*Shortest path algorithms*/
 	vector<V *> dijkstra(V *origin, V *dest);
 	vector<V *> aStar(V *origin, V *dest);
 
-	//other algorithms
+	/*TSP algorithms*/
 	vector<V*> heldKarpAlgorithm(vector<V*> dest);
-	pair<double, vector<V*>> heldKarpAlgorithm(V* dest, vector<V*> places);
-	//vector<V*> Graph<V, E>::opt2(vector<V*> dest);
+
 };
 
 template<class V, class E>
 Graph<V, E>::Graph() {
 	V::counter = 0;
+	hkBegin = NULL;
 }
 
 template<class V, class E>
@@ -60,20 +70,11 @@ int Graph<V, E>::getNumVertex() const {
 }
 
 template<class V, class E>
-vector<V *> Graph<V, E>::getVertexSet() const {
+const vector<V *> &Graph<V, E>::getVertexSet() const {
 	return vertexSet;
 }
 
-///*
-// * Auxiliary function to find a vertex with a given content.
-// */
-//template <class V, class E>
-//V * Graph<V,E>::findVertex(const V &in) const {
-//	for (auto v : vertexSet)
-//		if (v->info == in)
-//			return v;
-//	return NULL;
-//}
+
 template<class V, class E>
 bool Graph<V, E>::inVertexSet(V *in) const {
 	for (auto v : vertexSet)
@@ -89,7 +90,7 @@ bool Graph<V, E>::inVertexSet(V *in) const {
  */
 template<class V, class E>
 bool Graph<V, E>::addVertex(V *in) {
-	if (inVertexSet(in) != NULL)
+	if (inVertexSet(in))
 		return false;
 	vertexSet.push_back(in);
 	return true;
@@ -101,11 +102,11 @@ bool Graph<V, E>::addVertex(V *in) {
  * Returns true if successful, and false if the source or destination vertex does not exist.
  */
 template<class V, class E>
-bool Graph<V, E>::addEdge(V *sourc, V *dest, double w, unsigned long int id) {
+bool Graph<V, E>::addEdge(V *sourc, V *dest, double w, unsigned long int id, std::string string) {
 	if (!inVertexSet(sourc) || !inVertexSet(dest))
 		return false;
 
-	sourc->addEdge(dest, w, id);
+	sourc->addEdge(dest, w, id,string);
 	return true;
 }
 
@@ -185,7 +186,6 @@ bool Graph<V, E>::aStarAlgorithm(V *origin, V *dest) {
 	while (!openSet.empty()) {
 
 		V * v = openSet.extractMin();
-//		std::cerr << "Id: " << v->getId()<< std::endl;
 		v->inClosedSet = true;
 		v->inOpenSet = false;
 		if (v == end) {
@@ -194,7 +194,6 @@ bool Graph<V, E>::aStarAlgorithm(V *origin, V *dest) {
 
 		for (E edge : v->adj) {
 			V * destV = edge.getDest();
-//			std::cerr << "IdA: " << destV->getId() << std::endl;
 			if (destV->inClosedSet)
 				continue;
 
@@ -267,8 +266,8 @@ void Graph<V, E>::floydWarshallShortestPath() {
 	vector<vector<int>> newNext(vertexSet.size(), lineV);
 
 	//Initialize array
-	for (int i = 0; i < vertexSet.size(); i++) {
-		for (int j = 0; j < vertexSet.size(); j++) {
+	for (unsigned int i = 0; i < vertexSet.size(); i++) {
+		for (unsigned int j = 0; j < vertexSet.size(); j++) {
 			j == i ? newV.at(i).at(j) = 0 : newV.at(i).at(j) = INF;
 		}
 	}
@@ -282,9 +281,9 @@ void Graph<V, E>::floydWarshallShortestPath() {
 	}
 
 	//Algorithm
-	for (int k = 0; k < vertexSet.size(); k++) {
-		for (int i = 0; i < vertexSet.size(); i++) {
-			for (int j = 0; j < vertexSet.size(); j++) {
+	for (unsigned int k = 0; k < vertexSet.size(); k++) {
+		for (unsigned int i = 0; i < vertexSet.size(); i++) {
+			for (unsigned int j = 0; j < vertexSet.size(); j++) {
 				if (newV.at(i).at(j)
 						> newV.at(i).at(k)
 						+ newV.at(k).at(
@@ -351,7 +350,7 @@ vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 
 	dest.at(0)->auxIndex = 0;
 
-	for (int i = 1; i < dest.size(); i++) {
+	for (unsigned int i = 1; i < dest.size(); i++) {
 		hkAuxMemory[i][ { }].first = weights[dest.at(0)->index][i];
 		hkAuxMemory[i][ {}].second = {dest.at(i), hkBegin};
 		dest.at(i)->auxIndex = i;
@@ -402,7 +401,7 @@ pair<double, vector<V*>> Graph<V, E>::heldKarpAlgorithm(V* dest,
 			vector<V*> bestPath;
 			double bestWeight = INF;
 
-			for (int i = 0; i < places.size(); i++) {
+			for (unsigned int i = 0; i < places.size(); i++) {
 
 				vector<V*> nextPlaces = places;
 				V* nextDest = nextPlaces.at(i);

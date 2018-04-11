@@ -9,6 +9,8 @@ template <class T> class Edge;
 
 template <class E>
 class Vertex {
+	typedef  double (*Heuristic)(Vertex<E>* v1, Vertex<E> *v2);
+
 	static int counter;
 	const int index;
 	int auxIndex;
@@ -33,8 +35,8 @@ public:
 	double getDist() const;
 	Vertex *getPath() const;
 	std::vector<E> getAdj();
-	double calculateF(double (*h) (Vertex<E> *v1, Vertex<E> *v2), Vertex<E> *dest);
-	void updateF(double (*h) (Vertex<E> *v1, Vertex<E> *v2), Vertex<E> *dest);
+	double calculateF(Heuristic h, Vertex<E> *dest);
+	void updateF(Heuristic h, Vertex<E> *dest);
 	template <class V, class U> friend class Graph;
 	template <class T> friend class MutablePriorityQueue;
 };
@@ -73,7 +75,7 @@ vector<E> Vertex<E>::getAdj(){
 }
 
 template <class E>
-double Vertex<E>::calculateF(double (*heuristic) (Vertex<E> *v1, Vertex<E> *v2), Vertex<E> *dest){
+double Vertex<E>::calculateF(Heuristic heuristic, Vertex<E> *dest){
 
 	double g = dist;
 	double h = heuristic(this,dest);
@@ -83,7 +85,7 @@ double Vertex<E>::calculateF(double (*heuristic) (Vertex<E> *v1, Vertex<E> *v2),
 }
 
 template <class E>
-void Vertex<E>::updateF(double (*heuristic) (Vertex<E> *v1, Vertex<E> *v2), Vertex<E> *dest){
+void Vertex<E>::updateF(Heuristic heuristic, Vertex<E> *dest){
 
 	this->g = dist;
 	this->h = heuristic(this,dest);

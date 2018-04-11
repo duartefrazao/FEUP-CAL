@@ -9,12 +9,13 @@ class Location;
 class Link : public Edge<Location>{
 
 	int id;
-	std::string transport;
+	std::string name;
 
 public:
-	Link(Location *d, double w, int id);
+	Link(Location *d, double w, int id,std::string name);
 	virtual ~Link();
 	int getId();
+	const std::string& getName() const;
 };
 
 #endif /* SRC_LINK_H_ */

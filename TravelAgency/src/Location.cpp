@@ -3,8 +3,11 @@
 #include "Vertex.h"
 
 
-Location::Location(unsigned long int id, int x, int y, double lat, double lon, std::string name)
-	: id(id), x(x), y(y), lat(lat), lon(lon) , name(name){}
+Location::Location(unsigned long int id, double lat, double lon, std::string name)
+	: id(id), x{0}, y{0}, lat(lat), lon(lon) , name(name){}
+
+Location::Location(unsigned long int id, int x, int y, std::string name)
+	: id(id), x(x), y(y), lat(0), lon(0), name(name){}
 
 
 Location::~Location() {}
@@ -24,8 +27,8 @@ double Location::distance(Location *l){
 	return res;
 }
 
-void Location::addEdge(Location *d, double w, unsigned long int id) {
-	adj.push_back(Link(d, w, id));
+void Location::addEdge(Location *d, double w, unsigned long int id, std::string string) {
+	adj.push_back(Link(d, w, id, string));
 }
 
 double Location::getX() const {
@@ -40,3 +43,10 @@ double Location::getY() const {
 	return y;
 }
 
+double Location::getLat() const {
+	return lat;
+}
+
+double Location::getLon() const {
+	return lon;
+}
