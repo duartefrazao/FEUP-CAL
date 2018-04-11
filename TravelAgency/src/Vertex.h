@@ -35,6 +35,15 @@ public:
 	std::vector<E> getAdj();
 	double calculateF(double (*h) (Vertex<E> *v1, Vertex<E> *v2), Vertex<E> *dest);
 	void updateF(double (*h) (Vertex<E> *v1, Vertex<E> *v2), Vertex<E> *dest);
+
+	double getF() const {
+		return f;
+	}
+
+	void setF(double f) {
+		this->f = f;
+	}
+
 	template <class V, class U> friend class Graph;
 	template <class T> friend class MutablePriorityQueue;
 };

@@ -5,8 +5,7 @@
 
 #include "TravelAgency.h"
 #include "Graph.h"
-
-
+#include "tspSolver.h"
 
 TravelAgency::TravelAgency() {
 
@@ -16,49 +15,45 @@ TravelAgency::~TravelAgency() {
 }
 
 void TravelAgency::chooseGraph() {
-		int input;
-		std::cout << "1 - Graph 1" << std::endl;
-		std::cout << "2 - Graph 2" << std::endl;
-		std::cout << "3 - Real Map" << std::endl;
-		std::cout << "4 - Real Map 2" << std::endl;
-		std::cout << "Select graph: ";
-		std::cin >> input;
+	int input;
+	std::cout << "1 - Graph 1" << std::endl;
+	std::cout << "2 - Graph 2" << std::endl;
+	std::cout << "3 - Real Map" << std::endl;
+	std::cout << "4 - Real Map 2" << std::endl;
+	std::cout << "Select graph: ";
+	std::cin >> input;
 
-		switch (input) {
-		case 1:
-			nodeFilename = "nos.txt";
-			edgeFilename = "arestas.txt";
-			break;
-		case 2:
-			nodeFilename = "nos2.txt";
-			edgeFilename = "arestas2.txt";
-			break;
-		case 3:
-			nodeFilename = "nos3.txt";
-			edgeFilename = "arestas3.txt";
-			break;
-		case 4:
-			nodeFilename = "nos4.txt";
-			edgeFilename = "arestas4.txt";
-			break;
-		default:
-			break;
-		}
+	switch (input) {
+	case 1:
+		nodeFilename = "nos.txt";
+		edgeFilename = "arestas.txt";
+		break;
+	case 2:
+		nodeFilename = "nos2.txt";
+		edgeFilename = "arestas2.txt";
+		break;
+	case 3:
+		nodeFilename = "nos3.txt";
+		edgeFilename = "arestas3.txt";
+		break;
+	case 4:
+		nodeFilename = "nos4.txt";
+		edgeFilename = "arestas4.txt";
+		break;
+	default:
+		break;
+	}
 }
 
 void TravelAgency::processGraph() {
 
-	if(nodeFilename == "" || edgeFilename == ""){
+	if (nodeFilename == "" || edgeFilename == "") {
 		exit(12);
 	}
 
-
 	graph = new Graph<Location, Link>();
 
-
-
 	ifstream inFile;
-
 
 	/*--------Nodes--------*/
 	inFile.open(nodeFilename);
@@ -85,21 +80,20 @@ void TravelAgency::processGraph() {
 		std::getline(linestream, data, ';'); // read up-to the first ; (discard ;).
 		linestream >> Y;
 
-		int x = (X*750000 - 41.14022*750000);
-		int y = (Y*92965.6 - -8.616468*92965.6);
+		int x = (X * 750000 - 41.14022 * 750000);
+		int y = (Y * 92965.6 - -8.616468 * 92965.6);
 
 //		std::cerr <<"Id: " << idNo << "\t" << "X: " << x << "\t" << "Y: " << y << std::endl;
 
-		std::cerr << idNo << "\t" << X << "\t"  << Y << "\n";
+		std::cerr << idNo << "\t" << X << "\t" << Y << "\n";
 
-		idNodes.insert({idNo, ++id});
+		idNodes.insert( { idNo, ++id });
 		Location * location = new Location(id, x, y, x, y, "");
-		locations.insert({id, location});
+		locations.insert( { id, location });
 		graph->addVertex(location);
 	}
 
 	inFile.close();
-
 
 	/*--------Edges--------*/
 	inFile.open(edgeFilename);
@@ -110,7 +104,7 @@ void TravelAgency::processGraph() {
 	}
 
 	int idAresta = 0;
-	id  = 0;
+	id = 0;
 	unsigned long int idNoOrigem = 0;
 	unsigned long int idNoDestino = 0;
 
@@ -125,10 +119,12 @@ void TravelAgency::processGraph() {
 		std::getline(linestream, data, ';'); // read up-to the first ; (discard ;).
 		linestream >> idNoDestino;
 
-		std::cerr << idAresta << "\t" << idNoOrigem << "\t" << idNoDestino << std::endl;
+		std::cerr << idAresta << "\t" << idNoOrigem << "\t" << idNoDestino
+				<< std::endl;
 		Location * locationOrigem = locations.at(idNodes.at(idNoOrigem));
 		Location * locationDestino = locations.at(idNodes.at(idNoDestino));
-		graph->addEdge(locationOrigem, locationDestino, locationOrigem->distance(locationDestino), id++);
+		graph->addEdge(locationOrigem, locationDestino,
+				locationOrigem->distance(locationDestino), id++);
 	}
 
 	inFile.close();
@@ -142,14 +138,15 @@ void TravelAgency::createGraphViewer() {
 	graphView->defineVertexColor("yellow");
 	graphView->defineEdgeCurved(false);
 
-
 	vector<Location *> locations = graph->getVertexSet();
 
-	for(Location * pLocation: locations){
-		graphView->addNode(pLocation->getId(), pLocation->getX(), pLocation->getY());
+	for (Location * pLocation : locations) {
+		graphView->addNode(pLocation->getId(), pLocation->getX(),
+				pLocation->getY());
 		graphView->setVertexSize(pLocation->getId(), 5);
-		for(Link link : pLocation->getAdj()){
-			graphView->addEdge(link.getId(), pLocation->getId(), link.getDest()->getId(), EdgeType::DIRECTED);
+		for (Link link : pLocation->getAdj()) {
+			graphView->addEdge(link.getId(), pLocation->getId(),
+					link.getDest()->getId(), EdgeType::DIRECTED);
 		}
 
 	}
@@ -160,13 +157,9 @@ void TravelAgency::visualizeGraph() {
 	graphView->rearrange();
 }
 
-
 void TravelAgency::user() {
 
-
-
 }
-
 
 void TravelAgency::shortestPath() {
 
@@ -180,38 +173,79 @@ void TravelAgency::shortestPath() {
 	Location * origin = locations.at(startNodeI);
 	Location * dest = locations.at(endNodeI);
 
-
 	vector<Location *> path;
 
 	int algorithm;
-	std::cout << "\nAlgorithm: "<<std::endl;
-	std::cout << "1 - Dijkstra"<<std::endl;
-	std::cout << "2 - A*"<<std::endl;
+	std::cout << "\nAlgorithm: " << std::endl;
+	std::cout << "1 - Dijkstra" << std::endl;
+	std::cout << "2 - A*" << std::endl;
 	std::cout << "Select: ";
 	std::cin >> algorithm;
 
-	switch(algorithm){
-	case 1: path = graph->dijkstra(origin, dest); break;
-	case 2: path = graph->aStar(origin, dest); break;
+	switch (algorithm) {
+	case 1:
+		path = graph->dijkstra(origin, dest);
+		break;
+	case 2:
+		path = graph->aStar(origin, dest);
+		break;
 	}
 
-	while(dest->path != NULL){
-			int oldId = dest->getId();
-			dest = static_cast<Location *> (dest->path);
-			graphView->setVertexColor(dest->getId(), "green");
+	while (dest->path != NULL) {
+		int oldId = dest->getId();
+		dest = static_cast<Location *>(dest->path);
+		graphView->setVertexColor(dest->getId(), "green");
 
-			for(Link link : dest->getAdj()){
-				if(link.getDest()->getId() == oldId){
-					graphView->setEdgeColor(link.getId(), "green");
-					break;
-				}
+		for (Link link : dest->getAdj()) {
+			if (link.getDest()->getId() == oldId) {
+				graphView->setEdgeColor(link.getId(), "green");
+				break;
 			}
-
 		}
+
+	}
 	visualizeGraph();
 }
 
-
 void TravelAgency::tsp() {
+	int startNodeI, endNodeI;
+	std::cout << "\nStart node index: ";
+	std::cin >> startNodeI;
+
+	std::cout << "End node index: ";
+	std::cin >> endNodeI;
+
+	Location * origin = locations.at(startNodeI);
+	Location * dest = locations.at(endNodeI);
+
+	vector<Location *> path;
+
+	vector<Location*> places;
+	int node = 0;
+	while (true) {
+		cout << "Node: ";
+		cin >> node;
+		if (node == 1000)
+			break;
+		Location * place = locations.at(node);
+		places.push_back(place);
+	}
+	tspSolver* tsp = new tspSolver(graph,origin, dest, places);
+	tsp->solveTSPGreedy();
+
+	while (dest->path != NULL) {
+		int oldId = dest->getId();
+		dest = static_cast<Location *>(dest->path);
+		graphView->setVertexColor(dest->getId(), "green");
+
+		for (Link link : dest->getAdj()) {
+			if (link.getDest()->getId() == oldId) {
+				graphView->setEdgeColor(link.getId(), "green");
+				break;
+			}
+		}
+
+	}
+	visualizeGraph();
 
 }

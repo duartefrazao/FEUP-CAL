@@ -20,6 +20,7 @@ double heuristic(Vertex<T> * v1, Vertex<T> *v2) {
 template<class V, class E>
 class Graph {
 	vector<V *> vertexSet;    // vertex set
+
 	vector<vector<double>> weights;
 	vector<vector<int>> next;
 	vector<map<vector<V*>, pair<double, vector<V*>>>> hkAuxMemory;
@@ -300,19 +301,7 @@ void Graph<V, E>::floydWarshallShortestPath() {
 	weights = newV;
 	next = newNext;
 
-	/*
-	 // for tests
-	 for (int i = 0; i < weights.size(); i++) {
-	 cout << vertexSet.at(i)->getId();
-	 for (int j = 0; j < weights[0].size(); j++) {
-	 if (weights[i][j] == INF)
-	 cout << "INF" << " ";
-	 else
-	 cout << weights[i][j] << " ";
-	 }
-	 cout << endl;
-	 }
-	 */
+
 }
 
 template<class V, class E>
