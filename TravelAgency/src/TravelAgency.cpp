@@ -5,6 +5,7 @@
 
 #include "TravelAgency.h"
 #include "Graph.h"
+#include "tspSolver.h"
 
 #define GV_WIDTH 600
 #define GV_HEIGHT 600
@@ -18,39 +19,10 @@ TravelAgency::~TravelAgency() {
 }
 
 void TravelAgency::chooseGraph() {
-		int input;
-		std::cout << "1 - Graph 1" << std::endl;
-		std::cout << "2 - Graph 2" << std::endl;
-		std::cout << "3 - Real Map" << std::endl;
-		std::cout << "4 - Real Map 2" << std::endl;
-		std::cout << "Select graph: ";
-		std::cin >> input;
-
-		switch (input) {
-		case 1:
-			nodeFilename = "nos.txt";
-			edgeFilename = "arestas.txt";
-			realMap = false;
-			break;
-		case 2:
-			nodeFilename = "nos2.txt";
-			edgeFilename = "arestas2.txt";
-			realMap = false;
-			break;
-		case 3:
-			nodeFilename = "nos3.txt";
-			edgeFilename = "arestas3.txt";
-			realMap = true;
-			break;
-		case 4:
-			nodeFilename = "nos4.txt";
-			edgeFilename = "arestas4.txt";
-			namesFilename = "names4.txt";
-			realMap = true;
-			break;
-		default:
-			break;
-		}
+	nodeFilename = "maps/nodes.txt";
+	edgeFilename = "maps/routes.txt";
+	namesFilename = "maps/names.txt";
+	realMap = true;
 }
 
 void TravelAgency::processGraph() {
@@ -60,16 +32,14 @@ void TravelAgency::processGraph() {
 	}
 
 	graph = new Graph<Location, Link>();
-//	graph->heuristic = (Graph<Location, Link>::Heuristic) &TravelAgency::distanceHeuristic;
 
 	ifstream inFile;
-
 
 	/*--------Nodes--------*/
 	inFile.open(nodeFilename);
 
 	if (!inFile) {
-		cerr << "Unable to open file datafile.txt";
+		cerr << "Unable to open file " << nodeFilename;
 		exit(1);   // call system to stop
 	}
 
@@ -129,7 +99,7 @@ void TravelAgency::processGraph() {
 	inFile.open(namesFilename);
 
 	if (!inFile) {
-		cerr << "Unable to open file datafile.txt";
+		cerr << "Unable to open file " << namesFilename;
 		exit(1);   // call system to stop
 	}
 
@@ -152,8 +122,9 @@ void TravelAgency::processGraph() {
 	/*--------Edges--------*/
 	inFile.open(edgeFilename);
 
+
 	if (!inFile) {
-		cerr << "Unable to open file datafile.txt";
+		cerr << "Unable to open file " << edgeFilename;
 		exit(1);   // call system to stop
 	}
 
@@ -204,7 +175,6 @@ void TravelAgency::createGraphViewer() {
 	graphView->defineEdgeColor("blue");
 	graphView->defineVertexColor("yellow");
 	graphView->defineEdgeCurved(false);
-	int id = 0;
 
 	vector<Location *> vLocations = graph->getVertexSet();
 
@@ -239,6 +209,8 @@ void TravelAgency::createGraphViewer() {
 	}
 }
 
+
+
 void TravelAgency::visualizeGraph() {
 	createGraphViewer();
 	graphView->rearrange();
@@ -247,6 +219,8 @@ void TravelAgency::visualizeGraph() {
 	getchar();
 	closeGraphView();
 }
+
+
 
 void TravelAgency::mainMenu() {
 
@@ -290,9 +264,7 @@ void TravelAgency::mainMenu() {
 
 
 void TravelAgency::travelMenu(){
-	int day;
-	int month;
-	char c;
+
 	std::string originStr;
 	std::string destStr;
 	char ans;
@@ -304,10 +276,7 @@ void TravelAgency::travelMenu(){
 
 	std::cout << std::endl;
 
-	std::cout << "[?] Insert date (dd/mm): ";
-	std::cin >> day >> c >> month;
-	std::cin.ignore();
-	std::cout << std::endl;
+	std::cin.ignore(1000, '\n');
 
 	std::cout << "[?] Travel from: ";
 	std::getline(std::cin, originStr);
@@ -333,25 +302,13 @@ void TravelAgency::travelMenu(){
 
 	std::cout << "[?] Do you want to specify places to visit (Y/N): ";
 	std::cin >> ans;
+	std::cin.ignore();
 
 
 	switch(toupper(ans)){
-	case 'Y':{
-		placesToVisit.push_back(origin);
-		int locationID = 0;
-		std::cout << "[?] Places (-1 to quit): "<<std::endl;
-		while (true) {
-			std::cout << " ->";
-			cin >> locationID;
-			if (locationID == -1)
-				break;
-			Location * location = locations.at(locationID);
-			placesToVisit.push_back(location);
-		}
-		placesToVisit.push_back(destination);
+	case 'Y':
 		tsp();
 		break;
-	}
 	case 'N':
 		shortestPath();
 		break;
@@ -359,8 +316,6 @@ void TravelAgency::travelMenu(){
 		break;
 	}
 }
-
-
 
 void TravelAgency::shortestPath() {
 	vector<Location *> path;
@@ -414,7 +369,24 @@ void TravelAgency::shortestPath() {
 }
 
 
+
 void TravelAgency::tsp() {
+
+	std::string locationStr;
+	std::cout << "[?] Places (ENTER to quit): "<<std::endl;
+	while (true) {
+		std::cout << " ->";
+		std::getline(std::cin, locationStr);
+		if (locationStr == "") break;
+		Location * location = getLocation(locationStr);
+
+		if(location == NULL){
+			std::cerr << "[!] Node inexistent"<< std::endl;
+		}else{
+			placesToVisit.push_back(location);
+		}
+
+	}
 
 	vector<Location *> path;
 
@@ -430,7 +402,7 @@ void TravelAgency::tsp() {
 	std::cout << std::endl;
 
 	std::cout << "\t[1] Held-Karp"<<std::endl;
-	std::cout << "\t[2] Greedy(renomear)"<<std::endl;
+	std::cout << "\t[2] Greedy"<<std::endl;
 
 	std::cout << std::endl;
 
@@ -444,16 +416,18 @@ void TravelAgency::tsp() {
 	case 1:
 		path = graph->heldKarpAlgorithm(placesToVisit);
 		break;
-	case 2:
-		//TODO: Acrescentar algoritmo Duarte
-		//path = graph->aStar(origin, destination);
+	case 2:{
+		tspSolver* tsp = new tspSolver(graph,origin, destination, placesToVisit);
+		tsp->solveTSPGreedy();
 		break;
-	default: return;
+	}
+	default:
+		return;
 	}
 
 
 
-	if(destination->path == NULL || path.size() == 1){
+	if(destination->path == NULL){
 		std::cout << "[!] Impossible path"<<std::endl;
 	}
 	else{
@@ -501,11 +475,6 @@ bool TravelAgency::drawPath(){
 	return true;
 }
 
-double TravelAgency::distanceHeuristic(Location* l1, Location* l2) {
-	std::cerr << "Called " << l1->distance(l2) << std::endl;
-	return l1->distance(l2);
-}
-
 Location* TravelAgency::getLocation(std::string allocator) {
 
 	for(auto pr : locations){
@@ -519,6 +488,11 @@ Location* TravelAgency::getLocation(std::string allocator) {
 
 	return NULL;
 
+}
+
+double TravelAgency::distanceHeuristic(Location* l1, Location* l2) {
+	std::cerr << "Called " << l1->distance(l2) << std::endl;
+	return l1->distance(l2);
 }
 
 double TravelAgency::costHeuristic(Location* l1, Location* l2) {

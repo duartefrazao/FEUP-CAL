@@ -1,0 +1,228 @@
+8366901;Rua de Avis
+8367055;Rua do Rosário
+8367089;Rua de Carlos Alberto
+8367147;Rua Doutor Alves da Veiga
+12300169;Rua Ferreira Borges
+12544650;Túnel da Ribeira
+13278020;Rua do Infante Dom Henrique
+13278159;Rua Clube Fluvial Portuense
+13801323;Rua de Dom Manuel II
+13801868;Rua de Alberto Aires de Gouveia
+13802005;Rua da Restauração
+14326464;Rua de São Filipe de Nery
+14326487;Rua Doutor Ferreira da Silva
+14326493;Campo dos Mártires da Pátria
+14326558;Rua dos Clérigos
+14326733;Rua de Clemente Meneres
+14327260;Rua das Fontainhas
+14327318;Rua de Alexandre Herculano
+14327351;Rua de Alexandre Herculano
+14327438;Avenida de Rodrigues de Freitas
+14327505;Avenida de Rodrigues de Freitas
+14327545;Rua de Santo Ildefonso
+14327867;Praça dos Poveiros
+14327868;Rua do Campinho
+14327876;Rua de Entreparedes
+14333465;Rua Cândido dos Reis
+14333474;Rua da Galeria de Paris
+14333500;Rua Arquitecto Nicolau Nasoni
+14333733;Rua Chã
+14333888;Rua do Bonjardim
+14333954;Rua do Morgado de Mateus
+26119844;Praça Guilherme Gomes Fernandes
+26119862;Rua Doutor Tiago de Almeida
+26119900;Rua Elísio de Melo
+26207695;Rua de Dom João I
+26207784;Rua de Trás
+26207794;Rua da Vitória
+26207858;Rua da Fonte Taurina
+26207885;Rua de O Comércio do Porto
+26207889;Rua da Bolsa
+26207896;Rua de São Francisco
+28193881;Rua Professor Vicente José de Carvalho
+28193886;Rua de Clemente Meneres
+28618235;Rua das Taipas
+30417987;Rua Duque de Loulé
+30417989;Avenida Dom Afonso Henriques
+31261920;Rua da Reboleira
+31573135;Rua de Augusto Rosa
+34607518;Rua do Almada
+34683791;Rua do Carmo
+34684086;Rua de São João
+35171965;Rua Saraiva de Carvalho
+39658831;Rua Ateneu Comercial do Porto
+39668434;Rua do Conde de Vizela
+39668885;Rua de Sampaio Bruno
+39669069;Largo da Porta do Olival
+39669178;Rua dos Caldeireiros
+39669207;Rua de São Miguel
+39669380;Travessa de São Bartolomeu
+39670022;Rua Francisco da Rocha Soares
+39670043;Rua de Tomás Gonzaga
+39670412;Rua das Virtudes
+39670422;Rua Doutor Barbosa de Castro
+39670508;Rua de Azevedo de Albuquerque
+39670518;Passeio das Virtudes
+39670525;Calçada das Virtudes
+39671211;Largo do Viriato
+39679893;Cais da Estiva
+39679967;Rua do Cais da Ribeira
+39682329;Rua do Ferraz
+39685406;Travessa de São Sebastião
+39690284;Calçada da Vandoma
+39690472;Rua dos Pelames
+39701842;Rua de São Sebastião
+51230332;Rua Professor Vicente José de Carvalho
+95841157;Túnel dos Almadas
+96151239;Rua Nova da Alfândega
+98835856;Rua Tareija Vaz de Altaro
+110334887;Rua de Belomonte
+112064480;Rua de Arnaldo Gama
+112448957;Rua de São João
+112631100;Rua de São João Novo
+112631504;Rua de São Bento da Vitória
+112635323;Rua Sá de Noronha
+125102901;Rua da Madeira
+133211822;Rua da Bandeirinha
+141444180;Largo Primeiro de Dezembro
+141444234;Rua da Corticeira
+142214758;Rua de Santa Catarina
+142214759;Rua de Passos Manuel
+142214763;Rua 31 de Janeiro
+154505299;Rua do Sol
+156208919;Túnel dos Almadas
+156211619;Rua de Clemente Meneres
+156211620;Rua de Dom Manuel II
+165660759;Ponte Dom Luís I (tabuleiro inferior)
+174689857;Rua da Fábrica
+190128487;Rua Doutor Magalhães Lemos
+190128490;Rua de José Falcão
+197434949;Rua do Loureiro
+197464423;Rua de Santa Teresa
+197464424;Rua Actor João Guedes
+198515632;Rua de São Filipe de Nery
+206720846;Rua Formosa
+210328149;Praça de Almeida Garrett
+210336696;Travessa de Passos Manuel
+210336697;Travessa de Cimo de Vila
+210336698;Rua do Cativo
+210336707;Beco Passos Manuel
+210339821;Rua da Porta do Sol
+210339822;Rua de Santa Clara
+210346011;Rua do Miradouro
+210365854;Rua Escura
+210365858;Rua do Corpo da Guarda
+210365861;Travessa da Bainharia
+210365864;Rua da Bainharia
+210444158;Calçada de Dom Pedro Pitões
+210444160;Rua de São Sebastião
+210444161;Rua de São Sebastião
+210507317;Rua de Santa Ana
+210831460;Praça de Almeida Garrett
+210851328;Praça da Batalha
+211119459;Largo de São Domingos
+211119460;Largo de São Domingos
+211119461;Largo de São Domingos
+211120097;Largo do Terreiro
+211122347;Praça da Ribeira
+211127713;Praça da Ribeira
+211292798;Rua de Belomonte
+211297734;Largo de São João Novo
+211297742;Largo da Esperança
+211314340;Rua das Taipas
+211436103;Campo dos Mártires da Pátria
+211482370;Largo Actor Dias
+211483668;Largo Actor Dias
+211641911;Rua General Sousa Dias
+211656637;Passeio das Fontaínhas
+211898766;Terminal Rodoviário da Batalha
+212361874;Rua Central do Bairro Herculano
+215135703;Praça da Liberdade
+215162241;Avenida dos Aliados
+215194131;Rua da Fábrica
+215210562;Rua das Carmelitas
+215301975;Rua das Carmelitas
+215301977;Praça Gomes Teixeira
+215331280;Rua de Carlos Alberto
+215331285;Rua de Carlos Alberto
+216159806;Rua Doutor António Sousa Macedo
+216262193;Largo de São Pedro de Miragaia
+216269248;Terreiro da Sé
+216416642;Viela de Sant'Ana
+216483076;Rua da Laje
+216490935;Largo da Alfândega
+216891254;Rua de Mouzinho da Silveira
+216891255;Rua Trindade Coelho
+216969809;Praça de Gomes Teixeira
+216972581;Avenida dos Aliados
+216972801;Praça da Liberdade
+217344337;Rua de Mouzinho da Silveira
+217628814;Largo do Viriato
+217628815;Largo do Viriato
+218279465;Rua de Miragaia
+220232893;Rua de Sá da Bandeira
+223053869;Rua da Madeira
+226452170;Rua Bateria da Vitória
+226908041;Rua do Infante Dom Henrique
+226908049;Rua do Infante Dom Henrique
+226921792;Rua da Bolsa
+228931095;Rua de Santa Catarina
+233055818;Túnel dos Almadas
+238831062;Rua Tareija Vaz de Altaro
+238831761;Rua do Corpo da Guarda
+238872916;Avenida Gustavo Eiffel
+238873106;Ilha
+241248489;Rua dos Armazéns
+241248490;Rua de São Pedro de Miragaia
+252518644;Rua da Restauração
+252526951;Rua da Alegria
+258853579;Rua do Carmo
+258853580;Rua do Carmo
+258853581;Rua de Alberto Aires de Gouveia
+259888928;Rua da Restauração
+275860210;Travessa do Cativo
+289161877;Rua de São Luís
+304682487;Largo dos Lóios
+304684297;Rua de Mouzinho da Silveira
+307804459;Praça de Almeida Garrett
+307804461;Praça de Almeida Garrett
+349620089;Avenida Dom Afonso Henriques
+349620090;Avenida Dom Afonso Henriques
+349620091;Rua Trindade Coelho
+374346167;Largo Doutor Pedro Vitorino
+374346168;Largo de São Domingos
+374346172;Rua das Flores
+374346173;Rua dos Caldeireiros
+386286210;Rua de Dom Manuel II
+394998026;Rua do Bonjardim
+400077009;Rua de Cimo de Vila
+419935503;Rua de Mouzinho da Silveira
+419935504;Rua de Mouzinho da Silveira
+420021609;Rua do Infante Dom Henrique
+420021610;Rua do Infante Dom Henrique
+434857293;Rua Doutor Ferreira da Silva
+434860177;Rua de Dom Manuel II
+434872534;Avenida dos Aliados
+448850568;Praça de Almeida Garrett
+448850570;Rua de Sá da Bandeira
+452075654;Praça dos Poveiros
+459407453;Viela da Cadeia
+459453160;Largo de São Domingos
+460206500;Rua do Sol
+460233181;Ilha
+460234698;Ilha
+460243046;Ilha
+460243048;Ilha
+460251867;Ilha
+460257688;Ilha
+460260902;Ilha
+460594258;Ilha
+482327709;Rua do Duque de Loulé
+484592256;Rua do Cativo
+484592257;Rua da Madeira
+484592258;Passeio das Fontaínhas
+501277146;Rua do Loureiro
+501874269;Rua de Dom Hugo
+517711042;Avenida Vímara Peres
+551619530;Rua do Monte dos Judeus
+553528125;Rua General Sousa Dias

@@ -35,8 +35,7 @@ protected:
 	bool aStarAlgorithm(V *origin, V *dest);
 	void dijkstraShortestPath(V *s);
 
-	void floydWarshallShortestPath();
-	vector<int> getfloydWarshallPath(const V &origin, const V &dest) const;
+
 
 public:
 	/*Graph manipulation functions*/
@@ -52,9 +51,13 @@ public:
 	/*Shortest path algorithms*/
 	vector<V *> dijkstra(V *origin, V *dest);
 	vector<V *> aStar(V *origin, V *dest);
+	void floydWarshallShortestPath();
+	vector<int> getfloydWarshallPath(const V &origin, const V &dest) const;
 
 	/*TSP algorithms*/
 	vector<V*> heldKarpAlgorithm(vector<V*> dest);
+
+
 
 };
 
@@ -299,19 +302,7 @@ void Graph<V, E>::floydWarshallShortestPath() {
 	weights = newV;
 	next = newNext;
 
-	/*
-	 // for tests
-	 for (int i = 0; i < weights.size(); i++) {
-	 cout << vertexSet.at(i)->getId();
-	 for (int j = 0; j < weights[0].size(); j++) {
-	 if (weights[i][j] == INF)
-	 cout << "INF" << " ";
-	 else
-	 cout << weights[i][j] << " ";
-	 }
-	 cout << endl;
-	 }
-	 */
+
 }
 
 template<class V, class E>

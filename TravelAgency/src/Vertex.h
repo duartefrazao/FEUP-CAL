@@ -37,6 +37,9 @@ public:
 	std::vector<E> getAdj();
 	double calculateF(Heuristic h, Vertex<E> *dest);
 	void updateF(Heuristic h, Vertex<E> *dest);
+	double getF() const;
+	void setF(double f);
+
 	template <class V, class U> friend class Graph;
 	template <class T> friend class MutablePriorityQueue;
 };
@@ -82,6 +85,15 @@ double Vertex<E>::calculateF(Heuristic heuristic, Vertex<E> *dest){
 	double f = g + h;
 
 	return f;
+}
+
+template <class E>
+inline double Vertex<E>::getF() const {
+	return f;
+}
+template <class E>
+inline void Vertex<E>::setF(double f) {
+	this->f = f;
 }
 
 template <class E>

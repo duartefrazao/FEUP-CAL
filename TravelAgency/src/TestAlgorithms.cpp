@@ -10,7 +10,7 @@
 #include "graphviewer.h"
 #include <fstream>
 #include <unordered_map>
-
+#include "tspSolver.h"
 
 using namespace std;
 
@@ -102,10 +102,156 @@ void test_performance_dijkstra() {
 	std::cout << "--------------------------" << endl;
 }
 
+void test_performance_warshall() {
+	ofstream status;
+	ofstream grid;
+
+	for (int n = 10; n <= 20; n += 1) {
+		Graph<Location, Link>  gp;
+		//cout << "TSP greedy generating grid " << n << " x " << n << " ..." << endl;
+		geneateRandomGridGraph(n, gp);
+		//cout << "TSP greedy processing grid " << n << " x " << n << " ..." << endl;
+		auto start = std::chrono::high_resolution_clock::now();
+
+		Graph<Location,Link> * g = &gp;
+
+		for (int i = 0; i < n; i++) {
+
+				Location * dest = locations->at(n-1-i);
+				Location * ori = locations->at(i);
+				g->floydWarshallShortestPath();
+				g->getfloydWarshallPath(*ori,*dest);
+
+
+		}
+		auto finish = std::chrono::high_resolution_clock::now();
+		auto elapsed = chrono::duration_cast<chrono::microseconds>(finish - start).count();
+		std::cout << "TSP greedy processing grid " << n << " x " << n << " average time (micro-seconds)=" << (elapsed / (n*n)) << endl;
+		std::cout << n * n << "\t" << (elapsed / (n * n)) << std::endl;
+	}
+	std::cout << "--------------------------" << endl;
+}
+
+void test_performance_tspGreedy() {
+	ofstream status;
+	ofstream grid;
+
+	for (int n = 10; n <= 20; n += 1) {
+		Graph<Location, Link>  gp;
+		//cout << "TSP greedy generating grid " << n << " x " << n << " ..." << endl;
+		geneateRandomGridGraph(n, gp);
+		//cout << "TSP greedy processing grid " << n << " x " << n << " ..." << endl;
+		auto start = std::chrono::high_resolution_clock::now();
+
+		Graph<Location,Link> * g = &gp;
+
+		for (int i = 0; i < n; i++) {
+
+				Location * dest = locations->at(n-1-i);
+				Location * ori = locations->at(i);
+
+				vector<Location* > p;
+
+				for(int k = 0; k < n;k+=n/10) p.push_back(g->getVertexSet().at(k));
+
+
+				tspSolver * tsp = new tspSolver(g,ori,dest,p);
+
+				tsp->solveTSPGreedy();
+
+
+		}
+		auto finish = std::chrono::high_resolution_clock::now();
+		auto elapsed = chrono::duration_cast<chrono::microseconds>(finish - start).count();
+		std::cout << "TSP greedy processing grid " << n << " x " << n << " average time (micro-seconds)=" << (elapsed / (n*n)) << endl;
+		std::cout << n * n << "\t" << (elapsed / (n * n)) << std::endl;
+	}
+	std::cout << "--------------------------" << endl;
+}
+
+void test_performance_tspGreedyBack() {
+	ofstream status;
+	ofstream grid;
+
+	for (int n = 10; n <= 20; n += 1) {
+		Graph<Location, Link>  gp;
+		//cout << "TSP greedy generating grid " << n << " x " << n << " ..." << endl;
+		geneateRandomGridGraph(n, gp);
+		//cout << "TSP greedy processing grid " << n << " x " << n << " ..." << endl;
+		auto start = std::chrono::high_resolution_clock::now();
+
+		Graph<Location,Link> * g = &gp;
+
+		for (int i = 0; i < n; i++) {
+
+				Location * dest = locations->at(i);
+				Location * ori = locations->at(n-1-i);
+
+				vector<Location* > p;
+
+				for(int k = 0; k < n;k+=n/10) p.push_back(g->getVertexSet().at(k));
+				p.push_back(dest);
+
+				tspSolver * tsp = new tspSolver(g,ori,ori,p);
+
+				tsp->solveTSPGreedy();
+
+		}
+		auto finish = std::chrono::high_resolution_clock::now();
+		auto elapsed = chrono::duration_cast<chrono::microseconds>(finish - start).count();
+		std::cout << "TSP greedy Back processing grid " << n << " x " << n << " average time (micro-seconds)=" << (elapsed / (n*n)) << endl;
+		std::cout << n * n << "\t" << (elapsed / (n * n)) << std::endl;
+	}
+	std::cout << "--------------------------" << endl;
+}
+
+
+void test_performance_tspHK() {
+	ofstream status;
+	ofstream grid;
+
+	for (int n = 10; n <= 20; n += 1) {
+		Graph<Location, Link>  gp;
+		//cout << "TSP HK generating grid " << n << " x " << n << " ..." << endl;
+		geneateRandomGridGraph(n, gp);
+		//cout << "TSP HK processing grid " << n << " x " << n << " ..." << endl;
+		auto start = std::chrono::high_resolution_clock::now();
+
+		Graph<Location,Link> * g = &gp;
+
+		for (int i = 0; i < n; i++) {
+				Location * dest = locations->at(i);
+				Location * ori = locations->at(n-1);
+
+
+				vector<Location* > p;
+
+				p.push_back(ori);
+
+				for(int k = 0; k < n;k+=n/10) p.push_back(g->getVertexSet().at(k));
+
+				p.push_back(dest);
+
+				g->heldKarpAlgorithm(p);
+
+
+		}
+		auto finish = std::chrono::high_resolution_clock::now();
+		auto elapsed = chrono::duration_cast<chrono::microseconds>(finish - start).count();
+		std::cout << "TSP HK processing grid " << n << " x " << n << " average time (micro-seconds)=" << (elapsed / (n*n)) << endl;
+		std::cout << n * n << "\t" << (elapsed / (n * n)) << std::endl;
+	}
+	std::cout << "--------------------------" << endl;
+}
+
 
 bool runAllTests(int argc, char const *argv[]) {
 	cute::suite s { };
-	s.push_back(CUTE(test_performance_dijkstra));
+	//s.push_back(CUTE(test_performance_dijkstra));
+	//s.push_back(CUTE(test_performance_tspGreedy));
+	//s.push_back(CUTE(test_performance_tspGreedyBack));
+	//s.push_back(CUTE(test_performance_tspHK));
+	s.push_back(CUTE(test_performance_warshall));
 	cute::xml_file_opener xmlfile(argc, argv);
 	cute::xml_listener<cute::ide_listener<>> lis(xmlfile.out);
 	auto runner = cute::makeRunner(lis, argc, argv);
