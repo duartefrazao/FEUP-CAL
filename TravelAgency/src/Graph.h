@@ -407,6 +407,7 @@ pair<double, vector<V*>> Graph<V, E>::heldKarpAlgorithm(V* dest,
 				}
 
 			}
+
 			vector<V*> finalPath = bestPath;
 			finalPath.insert(finalPath.begin(), dest);
 
