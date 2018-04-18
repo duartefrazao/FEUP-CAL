@@ -19,9 +19,9 @@ TravelAgency::~TravelAgency() {
 }
 
 void TravelAgency::chooseGraph() {
-	nodeFilename = "maps/nodes3.txt";
-	edgeFilename = "maps/routes3.txt";
-	namesFilename = "maps/names3.txt";
+	nodeFilename = "maps/nodes2.txt";
+	edgeFilename = "maps/routes2.txt";
+	namesFilename = "maps/names2.txt";
 	realMap = true;
 }
 
@@ -199,7 +199,7 @@ void TravelAgency::createGraphViewer() {
 			graphView->setVertexSize(link.getDest()->getId(), GV_VERTEX_SIZE);
 			graphView->addEdge(link.getId(), pLocation->getId(),
 					link.getDest()->getId(), EdgeType::DIRECTED);
-			//graphView->setEdgeLabel(link.getId(), link.getName());
+			graphView->setEdgeLabel(link.getId(), link.getName());
 		}
 	}
 }
@@ -398,23 +398,32 @@ void TravelAgency::tsp() {
 
 	std::cout << "Calculating..." << std::endl;
 
+	vector<Location*> hkPlaces = placesToVisit;
+	hkPlaces.insert(hkPlaces.begin(), origin);
+	hkPlaces.push_back(destination);
+
+
 	bool test = false;
 	tspSolver* tsp;
+	bool impossible;
+
 	switch (algorithm) {
 	case 1:
-		path = graph->heldKarpAlgorithm(placesToVisit);
+		path = graph->heldKarpAlgorithm(hkPlaces);
+		impossible = path.empty();
 		break;
 	case 2: {
 		test = true;
 		tsp = new tspSolver(graph, origin, destination, placesToVisit);
 		tsp->solveTSPGreedy();
+		impossible = destination->path == NULL;
 		break;
 	}
 	default:
 		return;
 	}
 
-	if (destination->path == NULL) {
+	if (impossible) {
 		std::cout << "[!] Impossible path" << std::endl;
 	} else {
 		createGraphViewer();
@@ -422,7 +431,8 @@ void TravelAgency::tsp() {
 			//drawPath();
 			testDrawPath(tsp->getFinalPath());
 		} else {
-			drawPath();
+			//drawPath();
+			testDrawPath(path);
 		}
 		std::cout << "[!] Finished" << std::endl;
 		graphView->rearrange();

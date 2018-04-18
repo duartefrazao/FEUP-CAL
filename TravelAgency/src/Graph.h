@@ -287,6 +287,7 @@ void Graph<V, E>::floydWarshallShortestPath() {
 	for (unsigned int k = 0; k < vertexSet.size(); k++) {
 		for (unsigned int i = 0; i < vertexSet.size(); i++) {
 			for (unsigned int j = 0; j < vertexSet.size(); j++) {
+				cout << "k: " << k << " i: " << i << " j: " << j << endl;
 				if (newV.at(i).at(j)
 						> newV.at(i).at(k)
 						+ newV.at(k).at(
@@ -337,7 +338,7 @@ vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 	this->hkAuxMemory = vector<map<vector<V*>, pair<double, vector<V*>>>>(
 			dest.size());
 	this->floydWarshallShortestPath();
-	hkBegin = dest.at(0);
+	hkBegin = dest.at(dest.size()-1);
 
 	dest.at(0)->auxIndex = 0;
 
@@ -350,12 +351,13 @@ vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 	vector<V*> copyDest = dest;
 	copyDest.erase(copyDest.begin());
 
-	pair<double, vector<V*>> p = this->heldKarpAlgorithm(hkBegin, copyDest);
+	pair<double, vector<V*>> p = this->heldKarpAlgorithm(dest.at(0), copyDest);
 	vector<V*> result = p.second;
 	vector<V*> fullPath;
 	if (p.first == INF) return fullPath;
 	int endResult = result.size()-1;
 	for (int i = 0; i < endResult; i++) {
+		cout << (result.at(i)->index) << "->" << endl;
 		fullPath.push_back(result.at(i));
 		vector<int> intermediate = this->getfloydWarshallPath(*result.at(i),
 				*result.at(i + 1));
@@ -369,6 +371,7 @@ vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 
 	}
 	fullPath.push_back(result.at(endResult));
+	cout << fullPath.size() << " size" << endl;
 	return fullPath;
 
 }
