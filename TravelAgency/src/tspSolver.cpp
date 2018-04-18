@@ -16,21 +16,45 @@ tspSolver::~tspSolver() {
 
 }
 bool tspSolver::solveTSPGreedy() {
-	//cout << "Starting TSP solver" << endl;
+
+	vector<Location * > final;
+
 
 	if (nearestNeighbour(source, dest, poi) && path.size() == poi.size()) {
 
 		formatPath();
-
 		twoOpt();
 
-//		for (int i = 0; i < path.size(); i++) {
-//			cout << path.at(i)->getId() << "-> ";
-//		}
+		vector<Location * > temp;
 
-	} //else
-//		//cout << "Couldn't solve" << endl;
-//	//cout << "Terminated" << endl;
+		vector<Location * > savedPath =path;
+
+
+
+		Location * s = source;
+
+		for(int i = 0; i < savedPath.size() -1;i++){
+
+				temp=this->graph->aStar(savedPath.at(i),savedPath.at(i+1));
+
+				s=savedPath.at(i);
+				if(i != savedPath.size()-2)temp.pop_back();
+
+				final.insert(final.end(),temp.begin(),temp.end());
+
+		}
+
+		for(int i = final.size()-1; i>0;i--){
+			final.at(i)->path= final.at(i-1);
+		}
+		final.at(0)->path=NULL;
+
+		path=final;
+
+		finalPath=final;
+		//std::reverse(final.begin(), final.end());
+
+	}
 }
 
 bool tspSolver::solveTSPexperiments() {
@@ -39,8 +63,6 @@ bool tspSolver::solveTSPexperiments() {
 	for (int i = 0; i < path.size(); i++) {
 		cout << path.at(i)->getId() << "-> ";
 	}
-	//graph->floydWarshallShortestPath();
-	//vector<Location * > = graph->getfloydWarshallPathObj();
 
 }
 bool tspSolver::nearestNeighbour(Location* s, Location* d,
@@ -108,7 +130,6 @@ double tspSolver::calculateTotalDistance(vector<Location*> route) {
 }
 
 void tspSolver::twoOpt() {
-	//cout << "Starting 2opt" << endl;
 	double bestDistance, newDistance;
 
 	vector<Location*> newPath;
@@ -205,6 +226,7 @@ bool tspSolver::haveConnection(Location* a, Location* b) {
 void tspSolver::formatPath() {
 
 	vector<Location*> final;
+
 	final.push_back(source);
 	for (int i = path.size() - 1; i >= 0; i--) {
 		final.push_back(path.at(i));
@@ -316,3 +338,10 @@ void tspSolver::duartegoritmo() {
 
 }
 
+const vector<Location*>& tspSolver::getFinalPath() const {
+	return finalPath;
+}
+
+void tspSolver::setFinalPath(const vector<Location*>& finalPath) {
+	this->finalPath = finalPath;
+}

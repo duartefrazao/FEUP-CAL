@@ -39,6 +39,7 @@ public:
 	void shortestPath();
 	void tsp();
 	bool drawPath();
+	bool testDrawPath(vector<Location *> v);
 	Location * getLocation(std::string);
 
 	static double distanceHeuristic(Location * l1, Location *l2);

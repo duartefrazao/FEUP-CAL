@@ -26,9 +26,11 @@ public:
 	bool haveConnection(Location* a, Location* b);
 	bool solveTSPGreedy();
 	bool solveTSPexperiments();
-
+	const vector<Location*>& getFinalPath() const;
+	void setFinalPath(const vector<Location*>& finalPath);
 
 private:
+	vector<Location * > finalPath;
 	double currentBest;
 	Graph<Location, Link> *graph;
 	Location * source;

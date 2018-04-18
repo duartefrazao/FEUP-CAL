@@ -69,7 +69,7 @@ void test_performance_dijkstra() {
 
 	for (int n = 10; n <= 200; n += 10) {
 		Graph<Location, Link> g;
-		//cout << "Dijkstra generating grid " << n << " x " << n << " ..." << endl;
+		cout << "Dijkstra generating grid " << n << " x " << n << " ..." << endl;
 		geneateRandomGridGraph(n, g);
 		//cout << "Dijkstra processing grid " << n << " x " << n << " ..." << endl;
 		auto start = std::chrono::high_resolution_clock::now();
@@ -247,11 +247,11 @@ void test_performance_tspHK() {
 
 bool runAllTests(int argc, char const *argv[]) {
 	cute::suite s { };
-	//s.push_back(CUTE(test_performance_dijkstra));
+	s.push_back(CUTE(test_performance_dijkstra));
 	//s.push_back(CUTE(test_performance_tspGreedy));
 	//s.push_back(CUTE(test_performance_tspGreedyBack));
 	//s.push_back(CUTE(test_performance_tspHK));
-	s.push_back(CUTE(test_performance_warshall));
+	//s.push_back(CUTE(test_performance_warshall));
 	cute::xml_file_opener xmlfile(argc, argv);
 	cute::xml_listener<cute::ide_listener<>> lis(xmlfile.out);
 	auto runner = cute::makeRunner(lis, argc, argv);

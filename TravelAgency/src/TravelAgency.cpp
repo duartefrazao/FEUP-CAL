@@ -19,15 +19,15 @@ TravelAgency::~TravelAgency() {
 }
 
 void TravelAgency::chooseGraph() {
-	nodeFilename = "maps/nodes.txt";
-	edgeFilename = "maps/routes.txt";
-	namesFilename = "maps/names.txt";
+	nodeFilename = "maps/nodes3.txt";
+	edgeFilename = "maps/routes3.txt";
+	namesFilename = "maps/names3.txt";
 	realMap = true;
 }
 
 void TravelAgency::processGraph() {
 
-	if(nodeFilename == "" || edgeFilename == ""){
+	if (nodeFilename == "" || edgeFilename == "") {
 		exit(1);
 	}
 
@@ -63,37 +63,34 @@ void TravelAgency::processGraph() {
 
 		Location * location;
 
-		if(realMap){
-			if(minLon == 0 || X < minLon){
+		if (realMap) {
+			if (minLon == 0 || X < minLon) {
 				minLon = X;
-			}
-			else if(maxLon == 0 || X > maxLon){
+			} else if (maxLon == 0 || X > maxLon) {
 				maxLon = X;
 			}
 
-			if(minLat == 0 || Y < minLat){
+			if (minLat == 0 || Y < minLat) {
 				minLat = Y;
-			}
-			else if(maxLat == 0 || Y > maxLat){
+			} else if (maxLat == 0 || Y > maxLat) {
 				maxLat = Y;
 			}
 
-			idNodes.insert({idNo, id});
+			idNodes.insert( { idNo, id });
 			location = new Location(id, Y, X, "");
-		}
-		else{
-			idNodes.insert({idNo, id});
+		} else {
+			idNodes.insert( { idNo, id });
 			location = new Location(id, (int) X, (int) Y, "");
 		}
 
-		locations.insert({id, location});
+		locations.insert( { id, location });
 		graph->addVertex(location);
 	}
 
 	inFile.close();
 
 	int idAresta = 0;
-	id  = 0;
+	id = 0;
 
 	/*--------Names--------*/
 	inFile.open(namesFilename);
@@ -112,22 +109,18 @@ void TravelAgency::processGraph() {
 		std::getline(linestream, data, ';');
 		std::getline(linestream, data, '\n');
 		data.pop_back();
-		edgeNames.insert({idAresta, data});
+		edgeNames.insert( { idAresta, data });
 	}
 
 	inFile.close();
 
-
-
 	/*--------Edges--------*/
 	inFile.open(edgeFilename);
-
 
 	if (!inFile) {
 		cerr << "Unable to open file " << edgeFilename;
 		exit(1);   // call system to stop
 	}
-
 
 	unsigned long int idNoOrigem = 0;
 	unsigned long int idNoDestino = 0;
@@ -149,25 +142,22 @@ void TravelAgency::processGraph() {
 
 		auto it = edgeNames.find(idAresta);
 
-		if (it != edgeNames.end())
-		{
-			graph->addEdge(locationOrigem, locationDestino, locationOrigem->distance(locationDestino), id, it->second);
-		}
-		else
-		{
-			graph->addEdge(locationOrigem, locationDestino, locationOrigem->distance(locationDestino), id, "");
+		if (it != edgeNames.end()) {
+			graph->addEdge(locationOrigem, locationDestino,
+					locationOrigem->distance(locationDestino), id, it->second);
+		} else {
+			graph->addEdge(locationOrigem, locationDestino,
+					locationOrigem->distance(locationDestino), id, "");
 		}
 
-//		id++;
-//		graph->addEdge(locationDestino, locationOrigem , locationOrigem->distance(locationDestino), id);
+		id++;
+		graph->addEdge(locationDestino, locationOrigem,
+				locationOrigem->distance(locationDestino), id, "");
 	}
 
 	inFile.close();
 
-
-
 }
-
 
 void TravelAgency::createGraphViewer() {
 	graphView = new GraphViewer(GV_WIDTH, GV_HEIGHT, false);
@@ -178,19 +168,24 @@ void TravelAgency::createGraphViewer() {
 
 	vector<Location *> vLocations = graph->getVertexSet();
 
-	double coefX = GV_WIDTH/(maxLon - minLon);
-	double coefY = GV_HEIGHT/(maxLat - minLat);
+	double coefX = GV_WIDTH / (maxLon - minLon);
+	double coefY = GV_HEIGHT / (maxLat - minLat);
 
-
-	for(Location * pLocation: vLocations){
+	for (Location * pLocation : vLocations) {
 		int x;
 		int y;
 
-		if(realMap){
+		int temp;
+
+		if (realMap) {
 			x = coefX * (pLocation->getLon() - minLon);
 			y = coefY * (pLocation->getLat() - minLat);
-		}
-		else{
+
+			temp = x;
+			x = y;
+			y = temp;
+
+		} else {
 			x = pLocation->getX();
 			y = pLocation->getY();
 		}
@@ -199,17 +194,15 @@ void TravelAgency::createGraphViewer() {
 		graphView->setVertexSize(pLocation->getId(), GV_VERTEX_SIZE);
 	}
 
-
-	for(Location * pLocation: vLocations){
-		for(Link link : pLocation->getAdj()){
+	for (Location * pLocation : vLocations) {
+		for (Link link : pLocation->getAdj()) {
 			graphView->setVertexSize(link.getDest()->getId(), GV_VERTEX_SIZE);
-			graphView->addEdge(link.getId(), pLocation->getId(), link.getDest()->getId(), EdgeType::DIRECTED);
-			graphView->setEdgeLabel(link.getId(), link.getName());
+			graphView->addEdge(link.getId(), pLocation->getId(),
+					link.getDest()->getId(), EdgeType::DIRECTED);
+			//graphView->setEdgeLabel(link.getId(), link.getName());
 		}
 	}
 }
-
-
 
 void TravelAgency::visualizeGraph() {
 	createGraphViewer();
@@ -220,16 +213,14 @@ void TravelAgency::visualizeGraph() {
 	closeGraphView();
 }
 
-
-
 void TravelAgency::mainMenu() {
 
 	bool exit = false;
 
-	do{
+	do {
 		int option;
 
-		std::cout << std::endl<<std::endl;
+		std::cout << std::endl << std::endl;
 		std::cout << "\t---------------" << std::endl;
 		std::cout << "\t|Travel Agency|" << std::endl;
 		std::cout << "\t---------------" << std::endl;
@@ -245,7 +236,7 @@ void TravelAgency::mainMenu() {
 		std::cout << "[?] Select option: ";
 		std::cin >> option;
 
-		switch(option){
+		switch (option) {
 		case 1:
 			visualizeGraph();
 			break;
@@ -258,12 +249,10 @@ void TravelAgency::mainMenu() {
 		default:
 			break;
 		}
-	}while(exit == false);
+	} while (exit == false);
 }
 
-
-
-void TravelAgency::travelMenu(){
+void TravelAgency::travelMenu() {
 
 	std::string originStr;
 	std::string destStr;
@@ -282,8 +271,8 @@ void TravelAgency::travelMenu(){
 	std::getline(std::cin, originStr);
 	origin = getLocation(originStr);
 
-	if(origin == NULL){
-		std::cerr << "[!] Node inexistent"<< std::endl;
+	if (origin == NULL) {
+		std::cerr << "[!] Node inexistent" << std::endl;
 		return;
 	}
 
@@ -293,8 +282,8 @@ void TravelAgency::travelMenu(){
 	std::getline(std::cin, destStr);
 	destination = getLocation(destStr);
 
-	if(destination == NULL){
-		std::cerr << "[!] Node inexistent"<< std::endl;
+	if (destination == NULL) {
+		std::cerr << "[!] Node inexistent" << std::endl;
 		return;
 	}
 
@@ -304,8 +293,7 @@ void TravelAgency::travelMenu(){
 	std::cin >> ans;
 	std::cin.ignore();
 
-
-	switch(toupper(ans)){
+	switch (toupper(ans)) {
 	case 'Y':
 		tsp();
 		break;
@@ -325,37 +313,35 @@ void TravelAgency::shortestPath() {
 	std::cout << std::endl;
 	std::cout << std::endl;
 
-
 	std::cout << "\tAlgorithm" << std::endl;
-	std::cout << "\t----------"<< std::endl;
+	std::cout << "\t----------" << std::endl;
 
 	std::cout << std::endl;
 
-	std::cout << "\t[1] Dijkstra"<<std::endl;
-	std::cout << "\t[2] A*"<<std::endl;
+	std::cout << "\t[1] Dijkstra" << std::endl;
+	std::cout << "\t[2] A*" << std::endl;
 
 	std::cout << std::endl;
 
 	std::cout << "[?] Select option: ";
 	std::cin >> algorithm;
 
-	std::cout << "Calculating..."<<std::endl;
+	std::cout << "Calculating..." << std::endl;
 
-
-	switch(algorithm){
+	switch (algorithm) {
 	case 1:
 		path = graph->dijkstra(origin, destination);
 		break;
 	case 2:
 		path = graph->aStar(origin, destination);
 		break;
-	default: return;
+	default:
+		return;
 	}
 
-	if(destination->path == NULL){
-		std::cout << "[!] Impossible path"<<std::endl;
-	}
-	else{
+	if (destination->path == NULL) {
+		std::cout << "[!] Impossible path" << std::endl;
+	} else {
 		createGraphViewer();
 		drawPath();
 		std::cout << "[!] Finished" << std::endl;
@@ -368,25 +354,27 @@ void TravelAgency::shortestPath() {
 	}
 }
 
-
-
 void TravelAgency::tsp() {
 
 	std::string locationStr;
-	std::cout << "[?] Places (ENTER to quit): "<<std::endl;
+	std::cout << "[?] Places (ENTER to quit): " << std::endl;
 	while (true) {
 		std::cout << " ->";
 		std::getline(std::cin, locationStr);
-		if (locationStr == "") break;
+		if (locationStr == "")
+			break;
 		Location * location = getLocation(locationStr);
 
-		if(location == NULL){
-			std::cerr << "[!] Node inexistent"<< std::endl;
-		}else{
+		if (location == NULL) {
+			std::cerr << "[!] Node inexistent" << std::endl;
+		} else {
 			placesToVisit.push_back(location);
 		}
 
 	}
+
+	if (placesToVisit.empty())
+		shortestPath();
 
 	vector<Location *> path;
 
@@ -395,29 +383,30 @@ void TravelAgency::tsp() {
 	std::cout << std::endl;
 	std::cout << std::endl;
 
-
 	std::cout << "\tAlgorithm" << std::endl;
-	std::cout << "\t----------"<< std::endl;
+	std::cout << "\t----------" << std::endl;
 
 	std::cout << std::endl;
 
-	std::cout << "\t[1] Held-Karp"<<std::endl;
-	std::cout << "\t[2] Greedy"<<std::endl;
+	std::cout << "\t[1] Held-Karp" << std::endl;
+	std::cout << "\t[2] Greedy" << std::endl;
 
 	std::cout << std::endl;
 
 	std::cout << "[?] Select option: ";
 	std::cin >> algorithm;
 
-	std::cout << "Calculating..."<<std::endl;
+	std::cout << "Calculating..." << std::endl;
 
-
-	switch(algorithm){
+	bool test = false;
+	tspSolver* tsp;
+	switch (algorithm) {
 	case 1:
 		path = graph->heldKarpAlgorithm(placesToVisit);
 		break;
-	case 2:{
-		tspSolver* tsp = new tspSolver(graph,origin, destination, placesToVisit);
+	case 2: {
+		test = true;
+		tsp = new tspSolver(graph, origin, destination, placesToVisit);
 		tsp->solveTSPGreedy();
 		break;
 	}
@@ -425,14 +414,16 @@ void TravelAgency::tsp() {
 		return;
 	}
 
-
-
-	if(destination->path == NULL){
-		std::cout << "[!] Impossible path"<<std::endl;
-	}
-	else{
+	if (destination->path == NULL) {
+		std::cout << "[!] Impossible path" << std::endl;
+	} else {
 		createGraphViewer();
-		drawPath();
+		if (test) {
+			//drawPath();
+			testDrawPath(tsp->getFinalPath());
+		} else {
+			drawPath();
+		}
 		std::cout << "[!] Finished" << std::endl;
 		graphView->rearrange();
 		std::cout << std::endl;
@@ -443,27 +434,25 @@ void TravelAgency::tsp() {
 	}
 }
 
-
-
 void TravelAgency::closeGraphView() {
-	if(graphView != NULL){
+	if (graphView != NULL) {
 		graphView->closeWindow();
 		delete graphView;
 		graphView = NULL;
 	}
 }
 
-bool TravelAgency::drawPath(){
+bool TravelAgency::drawPath() {
 
 	graphView->setVertexColor(destination->getId(), "green");
 
-	while(destination->path != NULL){
+	while (destination->path != NULL) {
 		int oldId = destination->getId();
-		destination = static_cast<Location *> (destination->path);
+		destination = static_cast<Location *>(destination->path);
 		graphView->setVertexColor(destination->getId(), "green");
 
-		for(Link link : destination->getAdj()){
-			if(link.getDest()->getId() == oldId){
+		for (Link link : destination->getAdj()) {
+			if (link.getDest()->getId() == oldId) {
 				graphView->setEdgeColor(link.getId(), "green");
 				graphView->setEdgeThickness(link.getId(), GV_EDGE_THICKNESS);
 				break;
@@ -477,10 +466,10 @@ bool TravelAgency::drawPath(){
 
 Location* TravelAgency::getLocation(std::string allocator) {
 
-	for(auto pr : locations){
+	for (auto pr : locations) {
 		Location * pLocation = pr.second;
-		for(Link link : pLocation->getAdj()){
-			if(link.getName() == allocator){
+		for (Link link : pLocation->getAdj()) {
+			if (link.getName() == allocator) {
 				return pLocation;
 			}
 		}
@@ -493,6 +482,31 @@ Location* TravelAgency::getLocation(std::string allocator) {
 double TravelAgency::distanceHeuristic(Location* l1, Location* l2) {
 	std::cerr << "Called " << l1->distance(l2) << std::endl;
 	return l1->distance(l2);
+}
+
+bool TravelAgency::testDrawPath(vector<Location*> v) {
+
+	graphView->setVertexColor(v.at(0)->getId(), "green");
+
+	Location * temp;
+
+	for (int i = 0; i < v.size(); i++) {
+		int oldId = v.at(i)->getId();
+		temp = static_cast<Location *>(v.at(i)->path);
+		graphView->setVertexColor(v.at(i)->getId(), "green");
+
+		for (Link link : v.at(i)->getAdj()) {
+			if (link.getDest()->getId() == oldId) {
+				graphView->setEdgeColor(link.getId(), "green");
+				graphView->setEdgeThickness(link.getId(), GV_EDGE_THICKNESS);
+				break;
+			}
+		}
+	}
+
+
+
+	return true;
 }
 
 double TravelAgency::costHeuristic(Location* l1, Location* l2) {
