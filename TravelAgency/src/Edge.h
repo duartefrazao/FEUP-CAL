@@ -15,6 +15,10 @@ public:
 	template <class T>friend class Vertex;
 	V* getDest();
 	void setWeight(double w);
+
+	double getWeight() const {
+		return weight;
+	}
 };
 
 template <class V>

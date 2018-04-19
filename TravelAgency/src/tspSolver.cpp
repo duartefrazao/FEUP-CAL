@@ -40,6 +40,8 @@ bool tspSolver::solveTSPGreedy() {
 				s=savedPath.at(i);
 				if(i != savedPath.size()-2)temp.pop_back();
 
+				//cout << "Astar size: "<< temp.size()<< endl;
+
 				final.insert(final.end(),temp.begin(),temp.end());
 
 		}
@@ -51,7 +53,19 @@ bool tspSolver::solveTSPGreedy() {
 
 		path=final;
 
+
+		//cout << "SIze: "<< path.size()<< endl;
 		finalPath=final;
+
+		double wey=0;
+
+		for(int i = 0; i < finalPath.size()-1;i++){
+			for(Link e:finalPath.at(i)->getAdj()){
+				if(e.getDest()->getId() == finalPath.at(i+1)->getId()){wey+=e.getWeight();}
+			}
+		}
+
+		cout << "The time taken to perform the trip will be: "<< wey*1300 <<  " minutes"<<endl;
 		//std::reverse(final.begin(), final.end());
 
 	}

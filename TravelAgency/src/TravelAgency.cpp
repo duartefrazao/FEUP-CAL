@@ -208,8 +208,8 @@ void TravelAgency::createGraphViewer() {
 		for (Link link : pLocation->getAdj()) {
 			graphView->setVertexSize(link.getDest()->getId(), GV_VERTEX_SIZE);
 			graphView->addEdge(link.getId(), pLocation->getId(),
-					link.getDest()->getId(), EdgeType::DIRECTED);
-			graphView->setEdgeLabel(link.getId(), link.getName());
+			link.getDest()->getId(), EdgeType::DIRECTED);
+			//graphView->setEdgeLabel(link.getId(), link.getName());
 		}
 	}
 }
@@ -412,7 +412,7 @@ void TravelAgency::tsp() {
 	hkPlaces.insert(hkPlaces.begin(), origin);
 	hkPlaces.push_back(destination);
 
-	bool test = false;
+
 	tspSolver* tsp;
 	bool impossible;
 
@@ -422,7 +422,6 @@ void TravelAgency::tsp() {
 		impossible = path.empty();
 		break;
 	case 2: {
-		test = true;
 		tsp = new tspSolver(graph, origin, destination, placesToVisit);
 		tsp->solveTSPGreedy();
 		impossible = destination->path == NULL;
@@ -436,13 +435,7 @@ void TravelAgency::tsp() {
 		std::cout << "[!] Impossible path" << std::endl;
 	} else {
 		createGraphViewer();
-		if (test) {
-			//drawPath();
-			testDrawPath(tsp->getFinalPath());
-		} else {
-			//drawPath();
-			testDrawPath(path);
-		}
+		testDrawPath(tsp->getFinalPath());
 		std::cout << "[!] Finished" << std::endl;
 		graphView->rearrange();
 		std::cout << std::endl;
@@ -504,6 +497,8 @@ double TravelAgency::distanceHeuristic(Location* l1, Location* l2) {
 }
 
 bool TravelAgency::testDrawPath(vector<Location*> v) {
+
+	if(!v.empty())graphView->setVertexColor(v.at(0)->getId(), "green");
 
 	graphView->setVertexColor(v.at(0)->getId(), "green");
 	vector<bool> t(graph->getVertexSet().size(), false);
