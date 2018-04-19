@@ -20,8 +20,12 @@ class Location : public Vertex<Link>{
 	std::string name;
 
 public:
+
+	Location *path = NULL;
 	Location(unsigned long int id, int x, int y, std::string name);
 	Location(unsigned long int id, double lat, double lon, std::string name);
+	void setX(double x);
+	void setY(double y);
 	bool operator==(const Location &l);
 	bool operator<(const Location &l);
 	double distance(Location *l);

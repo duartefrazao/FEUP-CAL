@@ -29,10 +29,12 @@ protected:
 	std::vector<E> adj;  // outgoing edgess
 
 public:
+
 	Vertex<E> *path = NULL;
 	Vertex();
 	bool operator<(Vertex<E> & vertex) const;	// required by MutablePriorityQueue
 	double getDist() const;
+	void setDist(double dist);
 	Vertex *getPath() const;
 	std::vector<E> getAdj();
 	double calculateF(Heuristic h, Vertex<E> *dest);
@@ -65,6 +67,12 @@ bool Vertex<E>::operator<(Vertex<E> & vertex) const {
 template <class E>
 double Vertex<E>::getDist() const {
 	return this->dist;
+}
+
+
+template <class E>
+void Vertex<E>::setDist(double dist){
+	return this->dist = dist;
 }
 
 template <class E>

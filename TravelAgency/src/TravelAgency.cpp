@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-
+#include <unistd.h>
 #include "TravelAgency.h"
 #include "Graph.h"
 #include "tspSolver.h"
@@ -19,9 +19,9 @@ TravelAgency::~TravelAgency() {
 }
 
 void TravelAgency::chooseGraph() {
-	nodeFilename = "maps/nodes2.txt";
-	edgeFilename = "maps/routes2.txt";
-	namesFilename = "maps/names2.txt";
+	nodeFilename = "maps/nodes3.txt";
+	edgeFilename = "maps/routes3.txt";
+	namesFilename = "maps/names3.txt";
 	realMap = true;
 }
 
@@ -150,9 +150,13 @@ void TravelAgency::processGraph() {
 					locationOrigem->distance(locationDestino), id, "");
 		}
 
+
 		id++;
 		graph->addEdge(locationDestino, locationOrigem,
 				locationOrigem->distance(locationDestino), id, "");
+
+
+
 	}
 
 	inFile.close();
@@ -185,6 +189,10 @@ void TravelAgency::createGraphViewer() {
 			x = y;
 			y = temp;
 
+			pLocation->setX(x);
+			pLocation->setY(y);
+
+
 		} else {
 			x = pLocation->getX();
 			y = pLocation->getY();
@@ -192,6 +200,12 @@ void TravelAgency::createGraphViewer() {
 
 		graphView->addNode(pLocation->getId(), x, y);
 		graphView->setVertexSize(pLocation->getId(), GV_VERTEX_SIZE);
+	}
+
+	for (Location * plocation : vLocations){
+		for (Link adj : plocation->getAdj()){
+			adj.setWeight(plocation->distance(adj.getDest()));
+		}
 	}
 
 	for (Location * pLocation : vLocations) {
@@ -503,11 +517,15 @@ bool TravelAgency::testDrawPath(vector<Location*> v) {
 	for (int i = 0; i < v.size(); i++) {
 		int oldId = v.at(i)->getId();
 		temp = static_cast<Location *>(v.at(i)->path);
+		usleep(500000);
 		graphView->setVertexColor(v.at(i)->getId(), "green");
+		graphView->rearrange();
 
 		for (Link link : v.at(i)->getAdj()) {
 			if (link.getDest()->getId() == oldId) {
+				usleep(500000);
 				graphView->setEdgeColor(link.getId(), "green");
+				graphView->rearrange();
 				graphView->setEdgeThickness(link.getId(), GV_EDGE_THICKNESS);
 				break;
 			}

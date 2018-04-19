@@ -143,6 +143,7 @@ void Graph<V, E>::dijkstraShortestPath(V *origin) {
 
 			double newDist = v->dist + it->weight;
 
+
 			if(newDist < it->dest->dist){
 				it->dest->dist = newDist;
 				it->dest->path = v;
@@ -246,6 +247,7 @@ vector<V *> Graph<V, E>::dijkstra(V *origin, V *dest) {
 	this->dijkstraShortestPath(origin);
 	vector<V *> res;
 	V * v = dest;
+	double distance = 0;
 
 	while (v->path != NULL) {
 		res.push_back(v);
@@ -287,7 +289,6 @@ void Graph<V, E>::floydWarshallShortestPath() {
 	for (unsigned int k = 0; k < vertexSet.size(); k++) {
 		for (unsigned int i = 0; i < vertexSet.size(); i++) {
 			for (unsigned int j = 0; j < vertexSet.size(); j++) {
-				cout << "k: " << k << " i: " << i << " j: " << j << endl;
 				if (newV.at(i).at(j)
 						> newV.at(i).at(k)
 						+ newV.at(k).at(
@@ -357,7 +358,6 @@ vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 	if (p.first == INF) return fullPath;
 	int endResult = result.size()-1;
 	for (int i = 0; i < endResult; i++) {
-		cout << (result.at(i)->index) << "->" << endl;
 		fullPath.push_back(result.at(i));
 		vector<int> intermediate = this->getfloydWarshallPath(*result.at(i),
 				*result.at(i + 1));
@@ -371,7 +371,6 @@ vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 
 	}
 	fullPath.push_back(result.at(endResult));
-	cout << fullPath.size() << " size" << endl;
 	return fullPath;
 
 }
