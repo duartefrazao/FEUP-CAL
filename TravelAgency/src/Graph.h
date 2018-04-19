@@ -351,6 +351,7 @@ vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 
 	vector<V*> copyDest = dest;
 	copyDest.erase(copyDest.begin());
+	copyDest.erase(copyDest.end()-1);
 
 	pair<double, vector<V*>> p = this->heldKarpAlgorithm(dest.at(0), copyDest);
 	vector<V*> result = p.second;

@@ -12,7 +12,7 @@ class Vertex {
 	typedef  double (*Heuristic)(Vertex<E>* v1, Vertex<E> *v2);
 
 	static int counter;
-	const int index;
+
 	int auxIndex;
 
 	bool inClosedSet;         	 	// auxiliary field
@@ -29,7 +29,7 @@ protected:
 	std::vector<E> adj;  // outgoing edgess
 
 public:
-
+	const int index;
 	Vertex<E> *path = NULL;
 	Vertex();
 	bool operator<(Vertex<E> & vertex) const;	// required by MutablePriorityQueue

@@ -19,9 +19,9 @@ TravelAgency::~TravelAgency() {
 }
 
 void TravelAgency::chooseGraph() {
-	nodeFilename = "maps/nodes3.txt";
-	edgeFilename = "maps/routes3.txt";
-	namesFilename = "maps/names3.txt";
+	nodeFilename = "maps/nodes2.txt";
+	edgeFilename = "maps/routes2.txt";
+	namesFilename = "maps/names2.txt";
 	realMap = true;
 }
 
@@ -150,12 +150,9 @@ void TravelAgency::processGraph() {
 					locationOrigem->distance(locationDestino), id, "");
 		}
 
-
 		id++;
 		graph->addEdge(locationDestino, locationOrigem,
 				locationOrigem->distance(locationDestino), id, "");
-
-
 
 	}
 
@@ -192,7 +189,6 @@ void TravelAgency::createGraphViewer() {
 			pLocation->setX(x);
 			pLocation->setY(y);
 
-
 		} else {
 			x = pLocation->getX();
 			y = pLocation->getY();
@@ -202,8 +198,8 @@ void TravelAgency::createGraphViewer() {
 		graphView->setVertexSize(pLocation->getId(), GV_VERTEX_SIZE);
 	}
 
-	for (Location * plocation : vLocations){
-		for (Link adj : plocation->getAdj()){
+	for (Location * plocation : vLocations) {
+		for (Link adj : plocation->getAdj()) {
 			adj.setWeight(plocation->distance(adj.getDest()));
 		}
 	}
@@ -416,7 +412,6 @@ void TravelAgency::tsp() {
 	hkPlaces.insert(hkPlaces.begin(), origin);
 	hkPlaces.push_back(destination);
 
-
 	bool test = false;
 	tspSolver* tsp;
 	bool impossible;
@@ -511,28 +506,45 @@ double TravelAgency::distanceHeuristic(Location* l1, Location* l2) {
 bool TravelAgency::testDrawPath(vector<Location*> v) {
 
 	graphView->setVertexColor(v.at(0)->getId(), "green");
-
+	vector<bool> t(graph->getVertexSet().size(), false);
 	Location * temp;
 
 	for (int i = 0; i < v.size(); i++) {
 		int oldId = v.at(i)->getId();
 		temp = static_cast<Location *>(v.at(i)->path);
 		usleep(500000);
-		graphView->setVertexColor(v.at(i)->getId(), "green");
+		if (t[v[i]->index]) {
+			graphView->setVertexColor(v.at(i)->getId(), "blue");
+			graphView->setVertexSize(v.at(i)->getId(), 10);
+			t[v[i]->index] = false;
+		} else {
+			graphView->setVertexColor(v.at(i)->getId(), "green");
+			graphView->setVertexSize(v.at(i)->getId(), 10);
+			t[v[i]->index] = true;
+		}
 		graphView->rearrange();
 
 		for (Link link : v.at(i)->getAdj()) {
 			if (link.getDest()->getId() == oldId) {
 				usleep(500000);
-				graphView->setEdgeColor(link.getId(), "green");
+				if (t[v[i]->index]) {
+
+					cout << "else";
+					graphView->setVertexColor(v.at(i)->getId(), "blue");
+					graphView->setVertexSize(v.at(i)->getId(), 10);
+					t[v[i]->index] = false;
+				} else {
+					graphView->setVertexColor(v.at(i)->getId(), "green");
+					graphView->setVertexSize(v.at(i)->getId(), 10);
+					t[v[i]->index] = true;
+				}
+
 				graphView->rearrange();
 				graphView->setEdgeThickness(link.getId(), GV_EDGE_THICKNESS);
 				break;
 			}
 		}
 	}
-
-
 
 	return true;
 }
