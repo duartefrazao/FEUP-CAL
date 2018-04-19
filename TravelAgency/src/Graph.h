@@ -35,15 +35,14 @@ protected:
 	bool aStarAlgorithm(V *origin, V *dest);
 	void dijkstraShortestPath(V *s);
 
-
-
 public:
 	/*Graph manipulation functions*/
 	Graph<V, E>();
 	V *findVertex(const V &in) const;
 	bool inVertexSet(V *in) const;
 	bool addVertex(V *in);
-	bool addEdge(V *sourc, V *dest, double w, unsigned long int id, std::string string);
+	bool addEdge(V *sourc, V *dest, double w, unsigned long int id,
+			std::string string);
 	int getNumVertex() const;
 	const vector<V *> &getVertexSet() const;
 //	Heuristic heuristic;
@@ -56,8 +55,6 @@ public:
 
 	/*TSP algorithms*/
 	vector<V*> heldKarpAlgorithm(vector<V*> dest);
-
-
 
 };
 
@@ -76,7 +73,6 @@ template<class V, class E>
 const vector<V *> &Graph<V, E>::getVertexSet() const {
 	return vertexSet;
 }
-
 
 template<class V, class E>
 bool Graph<V, E>::inVertexSet(V *in) const {
@@ -105,11 +101,12 @@ bool Graph<V, E>::addVertex(V *in) {
  * Returns true if successful, and false if the source or destination vertex does not exist.
  */
 template<class V, class E>
-bool Graph<V, E>::addEdge(V *sourc, V *dest, double w, unsigned long int id, std::string string) {
+bool Graph<V, E>::addEdge(V *sourc, V *dest, double w, unsigned long int id,
+		std::string string) {
 	if (!inVertexSet(sourc) || !inVertexSet(dest))
 		return false;
 
-	sourc->addEdge(dest, w, id,string);
+	sourc->addEdge(dest, w, id, string);
 	return true;
 }
 
@@ -118,7 +115,7 @@ bool Graph<V, E>::addEdge(V *sourc, V *dest, double w, unsigned long int id, std
 template<class V, class E>
 void Graph<V, E>::dijkstraShortestPath(V *origin) {
 
-	for(auto it = vertexSet.begin(); it != vertexSet.end(); ++it){
+	for (auto it = vertexSet.begin(); it != vertexSet.end(); ++it) {
 		(*it)->dist = INF;
 		(*it)->inClosedSet = false;
 		(*it)->path = NULL;
@@ -135,24 +132,22 @@ void Graph<V, E>::dijkstraShortestPath(V *origin) {
 
 	V * v;
 
-	while(!q.empty()){
+	while(!q.empty()) {
 
 		v = q.extractMin();
 
-		for(auto it = v->adj.begin(); it != v->adj.end(); ++it){
+		for(auto it = v->adj.begin(); it != v->adj.end(); ++it) {
 
 			double newDist = v->dist + it->weight;
 
-
-			if(newDist < it->dest->dist){
+			if(newDist < it->dest->dist) {
 				it->dest->dist = newDist;
 				it->dest->path = v;
 
-
-				if(it->dest->inClosedSet){
+				if(it->dest->inClosedSet) {
 					q.decreaseKey(it->dest);
 				}
-				else{
+				else {
 					q.insert(it->dest);
 					it->dest->inClosedSet = true;
 				}
@@ -254,6 +249,8 @@ vector<V *> Graph<V, E>::dijkstra(V *origin, V *dest) {
 		v = static_cast<V *>(v->path);
 	}
 
+
+
 	res.push_back(v);
 	std::reverse(res.begin(), res.end());
 
@@ -304,7 +301,6 @@ void Graph<V, E>::floydWarshallShortestPath() {
 	weights = newV;
 	next = newNext;
 
-
 }
 
 template<class V, class E>
@@ -339,7 +335,7 @@ vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 	this->hkAuxMemory = vector<map<vector<V*>, pair<double, vector<V*>>>>(
 			dest.size());
 	this->floydWarshallShortestPath();
-	hkBegin = dest.at(dest.size()-1);
+	hkBegin = dest.at(dest.size() - 1);
 
 	dest.at(0)->auxIndex = 0;
 
@@ -351,19 +347,19 @@ vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 
 	vector<V*> copyDest = dest;
 	copyDest.erase(copyDest.begin());
-	copyDest.erase(copyDest.end()-1);
+	copyDest.pop_back();
 
 	pair<double, vector<V*>> p = this->heldKarpAlgorithm(dest.at(0), copyDest);
 	vector<V*> result = p.second;
 	vector<V*> fullPath;
 	if (p.first == INF) return fullPath;
-	int endResult = result.size()-1;
+	int endResult = result.size() - 1;
 	for (int i = 0; i < endResult; i++) {
 		fullPath.push_back(result.at(i));
 		vector<int> intermediate = this->getfloydWarshallPath(*result.at(i),
 				*result.at(i + 1));
 		if (intermediate.size() > 2) {
-			int interEnd = intermediate.size() -1;
+			int interEnd = intermediate.size() - 1;
 			for (int j = 1; j < interEnd; j++) {
 				int index = intermediate.at(j);
 				fullPath.push_back(vertexSet.at(index));
@@ -372,6 +368,20 @@ vector<V*> Graph<V, E>::heldKarpAlgorithm(vector<V*> dest) {
 
 	}
 	fullPath.push_back(result.at(endResult));
+
+	double wey = 0;
+
+	for (int i = 0; i < fullPath.size() - 1; i++) {
+		for (Link e : fullPath.at(i)->getAdj()) {
+			if (e.getDest()->getId() == fullPath.at(i + 1)->getId()) {
+				wey += e.getWeight();
+			}
+		}
+	}
+
+	cout << "The time taken to perform the trip will be: " << wey * 1300
+			<< " minutes" << endl;
+
 	return fullPath;
 
 }

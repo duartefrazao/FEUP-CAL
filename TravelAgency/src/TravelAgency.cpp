@@ -161,6 +161,8 @@ void TravelAgency::processGraph() {
 }
 
 void TravelAgency::createGraphViewer() {
+	cout << "Here"<< endl;
+	delete(graphView);
 	graphView = new GraphViewer(GV_WIDTH, GV_HEIGHT, false);
 	graphView->createWindow(GV_WIDTH, GV_HEIGHT);
 	graphView->defineEdgeColor("blue");
@@ -458,6 +460,7 @@ bool TravelAgency::drawPath() {
 
 	graphView->setVertexColor(destination->getId(), "green");
 
+	double wey=0;
 	while (destination->path != NULL) {
 		int oldId = destination->getId();
 		destination = static_cast<Location *>(destination->path);
@@ -465,6 +468,7 @@ bool TravelAgency::drawPath() {
 
 		for (Link link : destination->getAdj()) {
 			if (link.getDest()->getId() == oldId) {
+				wey+=link.getWeight();
 				graphView->setEdgeColor(link.getId(), "green");
 				graphView->setEdgeThickness(link.getId(), GV_EDGE_THICKNESS);
 				break;
@@ -472,6 +476,7 @@ bool TravelAgency::drawPath() {
 		}
 
 	}
+	cout << "The time taken to perform the trip will be: "<< wey*1300 <<  " minutes"<<endl;
 
 	return true;
 }
@@ -507,7 +512,7 @@ bool TravelAgency::testDrawPath(vector<Location*> v) {
 	for (int i = 0; i < v.size(); i++) {
 		int oldId = v.at(i)->getId();
 		temp = static_cast<Location *>(v.at(i)->path);
-		usleep(500000);
+		usleep(200000);
 		if (t[v[i]->index]) {
 			graphView->setVertexColor(v.at(i)->getId(), "blue");
 			graphView->setVertexSize(v.at(i)->getId(), 10);
@@ -521,7 +526,7 @@ bool TravelAgency::testDrawPath(vector<Location*> v) {
 
 		for (Link link : v.at(i)->getAdj()) {
 			if (link.getDest()->getId() == oldId) {
-				usleep(500000);
+				usleep(200000);
 				if (t[v[i]->index]) {
 
 					cout << "else";
