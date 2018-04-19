@@ -161,8 +161,7 @@ void TravelAgency::processGraph() {
 }
 
 void TravelAgency::createGraphViewer() {
-	cout << "Here"<< endl;
-	delete(graphView);
+	delete (graphView);
 	graphView = new GraphViewer(GV_WIDTH, GV_HEIGHT, false);
 	graphView->createWindow(GV_WIDTH, GV_HEIGHT);
 	graphView->defineEdgeColor("blue");
@@ -188,9 +187,6 @@ void TravelAgency::createGraphViewer() {
 			x = y;
 			y = temp;
 
-			pLocation->setX(x);
-			pLocation->setY(y);
-
 		} else {
 			x = pLocation->getX();
 			y = pLocation->getY();
@@ -200,17 +196,11 @@ void TravelAgency::createGraphViewer() {
 		graphView->setVertexSize(pLocation->getId(), GV_VERTEX_SIZE);
 	}
 
-	for (Location * plocation : vLocations) {
-		for (Link adj : plocation->getAdj()) {
-			adj.setWeight(plocation->distance(adj.getDest()));
-		}
-	}
-
 	for (Location * pLocation : vLocations) {
 		for (Link link : pLocation->getAdj()) {
 			graphView->setVertexSize(link.getDest()->getId(), GV_VERTEX_SIZE);
 			graphView->addEdge(link.getId(), pLocation->getId(),
-			link.getDest()->getId(), EdgeType::DIRECTED);
+					link.getDest()->getId(), EdgeType::DIRECTED);
 			//graphView->setEdgeLabel(link.getId(), link.getName());
 		}
 	}
@@ -414,7 +404,6 @@ void TravelAgency::tsp() {
 	hkPlaces.insert(hkPlaces.begin(), origin);
 	hkPlaces.push_back(destination);
 
-
 	tspSolver* tsp;
 	bool impossible;
 
@@ -426,6 +415,7 @@ void TravelAgency::tsp() {
 	case 2: {
 		tsp = new tspSolver(graph, origin, destination, placesToVisit);
 		tsp->solveTSPGreedy();
+		path = tsp->getFinalPath();
 		impossible = destination->path == NULL;
 		break;
 	}
@@ -437,7 +427,7 @@ void TravelAgency::tsp() {
 		std::cout << "[!] Impossible path" << std::endl;
 	} else {
 		createGraphViewer();
-		testDrawPath(tsp->getFinalPath());
+		testDrawPath(path);
 		std::cout << "[!] Finished" << std::endl;
 		graphView->rearrange();
 		std::cout << std::endl;
@@ -460,7 +450,7 @@ bool TravelAgency::drawPath() {
 
 	graphView->setVertexColor(destination->getId(), "green");
 
-	double wey=0;
+	double wey = 0;
 	while (destination->path != NULL) {
 		int oldId = destination->getId();
 		destination = static_cast<Location *>(destination->path);
@@ -468,7 +458,7 @@ bool TravelAgency::drawPath() {
 
 		for (Link link : destination->getAdj()) {
 			if (link.getDest()->getId() == oldId) {
-				wey+=link.getWeight();
+				wey += link.getWeight();
 				graphView->setEdgeColor(link.getId(), "green");
 				graphView->setEdgeThickness(link.getId(), GV_EDGE_THICKNESS);
 				break;
@@ -476,7 +466,8 @@ bool TravelAgency::drawPath() {
 		}
 
 	}
-	cout << "The time taken to perform the trip will be: "<< wey*1300 <<  " minutes"<<endl;
+	cout << "The time taken to perform the trip will be: " << wey * 1300
+			<< " minutes" << endl;
 
 	return true;
 }
@@ -503,9 +494,9 @@ double TravelAgency::distanceHeuristic(Location* l1, Location* l2) {
 
 bool TravelAgency::testDrawPath(vector<Location*> v) {
 
-	if(!v.empty())graphView->setVertexColor(v.at(0)->getId(), "green");
+	if (!v.empty())
+		graphView->setVertexColor(v.at(0)->getId(), "green");
 
-	graphView->setVertexColor(v.at(0)->getId(), "green");
 	vector<bool> t(graph->getVertexSet().size(), false);
 	Location * temp;
 
@@ -523,27 +514,28 @@ bool TravelAgency::testDrawPath(vector<Location*> v) {
 			t[v[i]->index] = true;
 		}
 		graphView->rearrange();
+		/*
+		 for (Link link : v.at(i)->getAdj()) {
+		 if (link.getDest()->getId() == oldId) {
+		 usleep(200000);
+		 if (t[v[i]->index]) {
 
-		for (Link link : v.at(i)->getAdj()) {
-			if (link.getDest()->getId() == oldId) {
-				usleep(200000);
-				if (t[v[i]->index]) {
+		 cout << "else";
+		 graphView->setVertexColor(v.at(i)->getId(), "blue");
+		 graphView->setVertexSize(v.at(i)->getId(), 10);
+		 t[v[i]->index] = false;
+		 } else {
+		 graphView->setVertexColor(v.at(i)->getId(), "green");
+		 graphView->setVertexSize(v.at(i)->getId(), 10);
+		 t[v[i]->index] = true;
+		 }
 
-					cout << "else";
-					graphView->setVertexColor(v.at(i)->getId(), "blue");
-					graphView->setVertexSize(v.at(i)->getId(), 10);
-					t[v[i]->index] = false;
-				} else {
-					graphView->setVertexColor(v.at(i)->getId(), "green");
-					graphView->setVertexSize(v.at(i)->getId(), 10);
-					t[v[i]->index] = true;
-				}
-
-				graphView->rearrange();
-				graphView->setEdgeThickness(link.getId(), GV_EDGE_THICKNESS);
-				break;
-			}
-		}
+		 graphView->rearrange();
+		 graphView->setEdgeThickness(link.getId(), GV_EDGE_THICKNESS);
+		 break;
+		 }
+		 }
+		 */
 	}
 
 	return true;
