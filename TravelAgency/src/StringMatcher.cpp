@@ -1,6 +1,8 @@
 #include "StringMatcher.h"
 
 
+
+
 void preKmpMatcher(std::string pattern, int pi[]) {
 	int m = pattern.length(), k = 0;
 	pi[0] = 0;
@@ -52,10 +54,34 @@ int numStringMatching(std::string filename,std::string toSearch) {
 }
 
 
+
 int editDistance(std::string pattern, std::string text) {
-        // TODO
-        return 0;
+
+	int t=text.length(),p=pattern.length();
+
+	int vecSize= t>p?t:p;
+
+	vector<int> d (p+1,0);
+	for(uint j = 1;j<=p;j++ ) d.at(j)=j;
+
+	int old,newV;
+
+
+	for(uint i =1;i<= t;i++){
+		old=d.at(0);
+		d.at(0)= i;
+
+		for(uint j=1; j<=p;j++){
+			if(pattern.at(j-1) == text.at(i-1))newV=old;
+			else newV=1+min(old,min(d.at(j),d.at(j-1)));
+
+			old=d.at(j);
+			d.at(j) = newV;
+		}
+	}
+	return d.at(p);
 }
+
 
 float numApproximateStringMatching(std::string filename,std::string toSearch) {
         // TODO
