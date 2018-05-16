@@ -61,7 +61,7 @@ int editDistance(std::string pattern, std::string text) {
 
 	int vecSize= t>p?t:p;
 
-	vector<int> d (p+1,0);
+	std::vector<int> d (p+1,0);
 	for(uint j = 1;j<=p;j++ ) d.at(j)=j;
 
 	int old,newV;
@@ -73,7 +73,7 @@ int editDistance(std::string pattern, std::string text) {
 
 		for(uint j=1; j<=p;j++){
 			if(pattern.at(j-1) == text.at(i-1))newV=old;
-			else newV=1+min(old,min(d.at(j),d.at(j-1)));
+			else newV=1+std::min(old,std::min(d.at(j),d.at(j-1)));
 
 			old=d.at(j);
 			d.at(j) = newV;
