@@ -1,4 +1,5 @@
 #include "StringUtilities.h"
+#include "StringMatcher.h"
 
 using namespace std;
 
@@ -40,6 +41,16 @@ string preProcessingChars(string text){
 	return text;
 }
 
+bool isCommmonConjunction(string text){
+	vector<string> conjs{"de","da","e", "a","do","o"};
+
+
+	for(int i = 0; i < conjs.size();i++){
+		if(conjs.at(i).length() ==text.length() &&kmpMatcher(text,conjs.at(i))>0) return true;
+	}
+	return false;
+}
+
 vector<string> preProcessString(string text){
 
 	for(int i =0; i < text.length();i++){
@@ -52,7 +63,7 @@ vector<string> preProcessString(string text){
 	while(!s.eof()){
 		string temp;
 		s>>temp;
-		result.push_back(temp);
+		if(!isCommmonConjunction(temp))result.push_back(temp);
 	}
 
 
