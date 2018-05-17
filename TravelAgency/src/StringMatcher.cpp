@@ -2,6 +2,22 @@
 
 
 
+std::vector<unsigned int> naiveMatcher(std::string text, std::string pattern){
+	std::vector<unsigned int> occurrences;
+
+	for(int i = 0; i < text.length(); i++){
+		bool match = true;
+		for(int j = 0; j < pattern.length(); j++){
+			if (text[i + j] != pattern[j]){
+				match = false;
+				break;
+			}
+			if (match)
+				occurrences.push_back(i);
+		}
+	}
+	return occurrences;
+}
 
 void preKmpMatcher(std::string pattern, int pi[]) {
 	int m = pattern.length(), k = 0;
@@ -19,6 +35,8 @@ void preKmpMatcher(std::string pattern, int pi[]) {
 
 	}
 }
+
+
 int kmpMatcher(std::string text, std::string pattern) {
 	int length = pattern.length();
 	int pi[length];
