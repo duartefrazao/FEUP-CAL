@@ -1,4 +1,5 @@
 #include "StringMatcher.h"
+#include "StringUtilities.h"
 
 
 
