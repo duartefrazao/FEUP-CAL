@@ -6,6 +6,7 @@
 #include "TravelAgency.h"
 #include "Graph.h"
 #include "tspSolver.h"
+#include "StringMatcher.h"
 
 #define GV_WIDTH 600
 #define GV_HEIGHT 600
@@ -19,9 +20,9 @@ TravelAgency::~TravelAgency() {
 }
 
 void TravelAgency::chooseGraph() {
-	nodeFilename = "maps/nodes2.txt";
-	edgeFilename = "maps/routes2.txt";
-	namesFilename = "maps/names2.txt";
+	nodeFilename = "maps/nodes3.txt";
+	edgeFilename = "maps/routes3.txt";
+	namesFilename = "maps/names3.txt";
 	realMap = true;
 }
 
@@ -271,7 +272,10 @@ void TravelAgency::travelMenu() {
 
 	std::cout << "[?] Travel from: ";
 	std::getline(std::cin, originStr);
+
 	origin = getLocation(originStr);
+
+
 
 	if (origin == NULL) {
 		std::cerr << "[!] Node inexistent" << std::endl;
@@ -279,7 +283,7 @@ void TravelAgency::travelMenu() {
 	}
 
 	std::cout << std::endl;
-
+	std::cin.ignore(1000, '\n');
 	std::cout << "[?] Travel to: ";
 	std::getline(std::cin, destStr);
 	destination = getLocation(destStr);
@@ -472,19 +476,78 @@ bool TravelAgency::drawPath() {
 	return true;
 }
 
-Location* TravelAgency::getLocation(std::string allocator) {
+Location* TravelAgency::getLocation(std::string pattern) {
+
+	string processedPattern  = preProcessingChars(pattern);
 
 	for (auto pr : locations) {
 		Location * pLocation = pr.second;
 		for (Link link : pLocation->getAdj()) {
-			if (link.getName() == allocator) {
+			if (kmpMatcher(preProcessingChars(link.getName()), preProcessingChars(pattern))) {
+				cout << "Text: " << link.getName() << endl;
+				cout << "Pattern: " << pattern << endl;
 				return pLocation;
 			}
 		}
 	}
 
-	return NULL;
+	vector<pair<Link, Location *>> similarLocations;
 
+	vector<string> vPattern = preProcessString(processedPattern);
+
+	for (auto pr : locations) {
+		Location * pLocation = pr.second;
+		for (Link link : pLocation->getAdj()) {
+
+			vector<string> vText = preProcessString(preProcessingChars(link.getName()));
+
+			int distance = 0;
+			int patternSize = 0;
+
+			for(unsigned int i = 0; i < vPattern.size(); i++){
+				int minDistance = vPattern.at(i).length();
+				patternSize += minDistance;
+
+				for(unsigned int j = 0; j < vText.size(); j++){
+					int d = editDistance(vPattern.at(i), vText.at(j));
+
+					if(d < minDistance)
+						minDistance = d;
+
+				}
+
+				distance += minDistance;
+
+			}
+
+
+			if(1 - distance * 1.0 / patternSize > HIT_RATE){
+				similarLocations.push_back(make_pair(link, pLocation));
+			}
+
+		}
+	}
+
+
+	if(similarLocations.size() != 0){
+		for(unsigned int i = 0; i < similarLocations.size(); i++){
+				cout << "[" << i << "] - " << similarLocations.at(i).first.getName() << endl;
+			}
+
+
+
+			int option;
+
+			std::cout << "[?] Select option: ";
+			std::cin >> option;
+
+			if(option >= 0 && option < similarLocations.size()){
+				return similarLocations.at(option).second;
+			}
+	}
+
+
+	return NULL;
 }
 
 double TravelAgency::distanceHeuristic(Location* l1, Location* l2) {

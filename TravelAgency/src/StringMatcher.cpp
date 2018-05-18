@@ -11,7 +11,7 @@ using namespace std;
  */
 string preProcessingChars(string text){
 
-	cout << "String before pre processing: "<< text << endl;
+	//cout << "String before pre processing: "<< text << endl;
 
 	//Get ascii code from the invalid characters
 	string invalidChars= "ãâáàÁÀÃÂéêÉÊíÍóòôõÓÒÔÕũûúŨÛÚçÇ";
@@ -34,8 +34,8 @@ string preProcessingChars(string text){
 			}
 		}
 	}
-	cout << "String after  pre processing: "<< text << endl;
-	cout << "---------"<< endl;
+	//cout << "String after  pre processing: "<< text << endl;
+	//cout << "---------"<< endl;
 
 	return text;
 }
@@ -62,7 +62,8 @@ vector<string> preProcessString(string text){
 	while(!s.eof()){
 		string temp;
 		s>>temp;
-		if(!isCommmonConjunction(temp))result.push_back(temp);
+		if(!isCommmonConjunction(temp))
+			result.push_back(temp);
 	}
 
 
@@ -103,7 +104,6 @@ void preKmpMatcher(std::string pattern, int pi[]) {
 	}
 }
 
-
 int kmpMatcher(std::string text, std::string pattern) {
 	int length = pattern.length();
 	int pi[length];
@@ -139,15 +139,14 @@ int numStringMatching(std::string filename,std::string toSearch) {
 }
 
 
-
 int editDistance(std::string pattern, std::string text) {
 
-	int t=text.length(),p=pattern.length();
+	int t = text.length(), p = pattern.length();
 
-	int vecSize= t>p?t:p;
+	int vecSize = t>p ? t : p;
 
 	std::vector<int> d (p+1,0);
-	for(uint j = 1;j<=p;j++ ) d.at(j)=j;
+	for(uint j = 1; j <= p; j++) d.at(j)=j;
 
 	int old,newV;
 
