@@ -7,6 +7,7 @@
 #include "Graph.h"
 #include "tspSolver.h"
 #include "StringMatcher.h"
+#include <set>
 
 #define GV_WIDTH 600
 #define GV_HEIGHT 600
@@ -495,6 +496,8 @@ Location* TravelAgency::getLocation(std::string pattern) {
 
 	vector<string> vPattern = preProcessString(processedPattern);
 
+	set<string> inSimilar;
+
 	for (auto pr : locations) {
 		Location * pLocation = pr.second;
 		for (Link link : pLocation->getAdj()) {
@@ -522,7 +525,7 @@ Location* TravelAgency::getLocation(std::string pattern) {
 
 
 			if(1 - distance * 1.0 / patternSize > HIT_RATE){
-				similarLocations.push_back(make_pair(link, pLocation));
+				if(inSimilar.insert(link.getName()).second)similarLocations.push_back(make_pair(link, pLocation));
 			}
 
 		}
