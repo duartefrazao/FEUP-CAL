@@ -477,26 +477,59 @@ bool TravelAgency::drawPath() {
 	return true;
 }
 
+Location * selectOption(unordered_map<string, Location *> & similarLocations){
+
+	unordered_map<unsigned int, Location *> optionsMap;
+
+	if(!similarLocations.empty()){
+
+		unsigned int i = 0;
+		for(auto it = similarLocations.begin(); it != similarLocations.end(); ++it, ++i){
+				optionsMap.insert(make_pair(i, (*it).second));
+				cout << "\t(" << i << ") - " << (*it).first << endl;
+		}
+
+
+
+		int option;
+
+		std::cout << "\n[?] Select option: ";
+		std::cin >> option;
+
+		if(option >= 0 && option < similarLocations.size()){
+			auto it = optionsMap.find(option);
+			return it->second;
+		}
+	}
+
+	return NULL;
+}
+
+
 Location* TravelAgency::getLocation(std::string pattern) {
 
-	string processedPattern  = preProcessingChars(pattern);
+	unordered_map<string, Location *> similarLocations;
+	Location * returnLocation;
+
+	string processedPattern = preProcessingChars(pattern);
 
 	for (auto pr : locations) {
 		Location * pLocation = pr.second;
 		for (Link link : pLocation->getAdj()) {
-			if (kmpMatcher(preProcessingChars(link.getName()), preProcessingChars(pattern))) {
-				cout << "Text: " << link.getName() << endl;
-				cout << "Pattern: " << pattern << endl;
-				return pLocation;
+			if (kmpMatcher(preProcessingChars(link.getName()),processedPattern)) {
+				similarLocations.insert(make_pair(link.getName(), pLocation));
 			}
 		}
 	}
 
-	vector<pair<Link, Location *>> similarLocations;
+	returnLocation = selectOption(similarLocations);
+	if(returnLocation != NULL){
+		return returnLocation;
+	}
+
+
 
 	vector<string> vPattern = preProcessString(processedPattern);
-
-	set<string> inSimilar;
 
 	for (auto pr : locations) {
 		Location * pLocation = pr.second;
@@ -525,32 +558,15 @@ Location* TravelAgency::getLocation(std::string pattern) {
 
 
 			if(1 - distance * 1.0 / patternSize > HIT_RATE){
-				if(inSimilar.insert(link.getName()).second)similarLocations.push_back(make_pair(link, pLocation));
+				similarLocations.insert(make_pair(link.getName(), pLocation));
 			}
 
 		}
 	}
 
 
-	if(similarLocations.size() != 0){
-		for(unsigned int i = 0; i < similarLocations.size(); i++){
-				cout << "[" << i << "] - " << similarLocations.at(i).first.getName() << endl;
-			}
-
-
-
-			int option;
-
-			std::cout << "[?] Select option: ";
-			std::cin >> option;
-
-			if(option >= 0 && option < similarLocations.size()){
-				return similarLocations.at(option).second;
-			}
-	}
-
-
-	return NULL;
+	returnLocation = selectOption(similarLocations);
+	return returnLocation;
 }
 
 double TravelAgency::distanceHeuristic(Location* l1, Location* l2) {
