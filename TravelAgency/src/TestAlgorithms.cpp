@@ -280,10 +280,26 @@ void comparison_test(){
 
 }
 
+void comparison_test_simple(){
+
+
+	//Patterns size
+	for (int n = 50; n <= 1000; n += 50) {
+		auto start = std::chrono::high_resolution_clock::now();
+		//Texts size
+
+		editDistance(generateRandomString(n),generateRandomString(n));
+
+		auto finish = std::chrono::high_resolution_clock::now();
+		auto elapsed = chrono::duration_cast<chrono::microseconds>(finish - start).count();
+		cout << "Time taken for editDistance algorithm, size=" << n << " average time (micro-seconds)=" << elapsed << std::endl;
+	}
+}
+
 
 bool runAllTests(int argc, char const *argv[]) {
 	cute::suite s { };
-	s.push_back(CUTE(test_performance_dijkstra));
+	//s.push_back(CUTE(test_performance_dijkstra));
 	//s.push_back(CUTE(test_performance_tspGreedy));
 	//s.push_back(CUTE(test_performance_tspGreedyBack));
 	//s.push_back(CUTE(test_performance_tspHK));
@@ -295,7 +311,7 @@ bool runAllTests(int argc, char const *argv[]) {
 	bool success = runner(s, "AllTests");
 	return success;
 }
-
+//
 //int main(int argc, char const *argv[]) {
 //    return runAllTests(argc, argv) ? EXIT_SUCCESS : EXIT_FAILURE;
 //}
