@@ -165,9 +165,3 @@ int editDistance(std::string pattern, std::string text) {
 	}
 	return d.at(p);
 }
-
-
-float numApproximateStringMatching(std::string filename,std::string toSearch) {
-        // TODO
-        return 0;
-}
