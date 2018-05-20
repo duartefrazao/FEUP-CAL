@@ -16,6 +16,7 @@ using namespace std;
 
 std::unordered_map<int, Location *> *locations = new std::unordered_map<int, Location *>();
 GraphViewer *graphView;
+int editDistance(string pattern, string text);
 
 void geneateRandomGridGraph(int n, Graph<Location, Link> & g) {
 //    std::random_device rd;
@@ -244,6 +245,41 @@ void test_performance_tspHK() {
 	std::cout << "--------------------------" << endl;
 }
 
+string generateRandomString(int size){
+	char c;
+	int r;
+
+	string res;
+
+	for (int i=0; i<size; i++)
+	{    r = rand() % 26;
+		  c = 'a' + r;
+		  res+=string(1,c);
+	}
+	return res;
+}
+
+void comparison_test(){
+
+
+	//Patterns size
+	for (int n = 50; n <= 1000; n += 50) {
+		auto start = std::chrono::high_resolution_clock::now();
+		//Texts size
+		for (int i = 50; i <=1000; i+=50){
+			//p,t
+			//string pattern= generateRandomString(n);
+			//string text= generateRandomString(n);
+			editDistance(generateRandomString(n),generateRandomString(i));
+			//cout << "Testing pattern: "<<pattern << " with text: "<< text<< " dist: "<< editDistance(pattern,text) << endl;
+		}
+		auto finish = std::chrono::high_resolution_clock::now();
+		auto elapsed = chrono::duration_cast<chrono::microseconds>(finish - start).count();
+		cout << "Time taken for editDistance algorithm, pattern size=" << n << " average time (micro-seconds)=" << (elapsed / 51) << std::endl;
+	}
+
+}
+
 
 bool runAllTests(int argc, char const *argv[]) {
 	cute::suite s { };
@@ -252,6 +288,7 @@ bool runAllTests(int argc, char const *argv[]) {
 	//s.push_back(CUTE(test_performance_tspGreedyBack));
 	//s.push_back(CUTE(test_performance_tspHK));
 	//s.push_back(CUTE(test_performance_warshall));
+	s.push_back(CUTE(comparison_test));
 	cute::xml_file_opener xmlfile(argc, argv);
 	cute::xml_listener<cute::ide_listener<>> lis(xmlfile.out);
 	auto runner = cute::makeRunner(lis, argc, argv);
